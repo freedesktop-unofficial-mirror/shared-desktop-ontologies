@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+  <link rel="stylesheet" type="text/css" href="nepomuk-ontology-docs.css" />
+  <title>Nepomuk Message Ontology (NMO)</title>
+
+
+</head>
+
+
+<body>
+
+<div class="head">
+<div class="nav"> <a href="http://nepomuk.semanticdesktop.org"> <img style="border: 0px solid ; width: 180px; height: 88px;" alt="NEPOMUK Logo" src="nepomuk.png" /> </a> </div>
+
+<h1>NEPOMUK&nbsp;Message Ontology</h1>
+
+<big style="color: rgb(0, 90, 156);">Task-Force Ontologies<br />
+
+</big>
+<dl>
+
+  <dt>Latest Version:</dt>
+
+  <dd><a href="http://www.semanticdesktop.org/ontologies/nmo">http://www.semanticdesktop.org/ontologies/nmo</a>
+  </dd>
+
+  <dt></dt>
+
+  <dt>This Version:</dt>
+
+  <dd><a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo">http://www.semanticdesktop.org/ontologies/2007/03/22/nmo</a>
+  <br/>This file refers to the Revision 9 of NIE. Minor changes may be implemented in future revisions. 
+       With each new revision, the documentation and all serializations of the ontology will be updated.</dd>
+
+  <dt></dt>
+
+  <dt>Authors:</dt>
+
+  <dd>Antoni Mylka, DFKI, <a href="mailto:antoni.mylka@dfki.de">antoni.mylka@dfki.de</a></dd>
+
+  <dd>Leo Sauermann, DFKI, <a href="mailto:leo.sauermann@dfki.de">leo.sauermann@dfki.de</a></dd>
+
+  <dd>Michael Sintek, DFKI, <a href="mailto:michael.sintek@dfki.de">michael.sintek@dfki.de</a></dd>
+
+  <dd>Ludger van Elst, DFKI, <a href="mailto:elst@dfki.uni-kl.de">elst@dfki.uni-kl.de</a></dd>
+
+  <dt></dt>
+
+  <dt>Editor:</dt>
+
+  <dd>Antoni Mylka, DFKI, <a href="mailto:antoni.mylka@dfki.de">antoni.mylka@dfki.de</a></dd>
+
+  <dt></dt>
+
+  <dt>Contributors:</dt>
+
+  <dd>Evgeny 'phreedom' Egorochkin, KDE Strigi Developer, <a href="mailto:stexx@mail.ru">stexx@mail.ru</a></dd>
+
+  <dd>Christiaan Fluit, Aduna, <a href="mailto:christiaan.fluit@aduna-software.com">christiaan.fluit@aduna-software.com</a></dd>
+
+  <dt><span style="font-weight: bold;"></span></dt>
+
+  <dt><span style="font-weight: bold;">Ontology:</span></dt>
+
+  <dd>XML/RDFS Serialization: <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo/nmo_data.rdfs">NMO
+(Data Graph Only)</a></dd>
+
+  <dd>XML/RDFS Serialization: <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo/nmo_metadata.rdfs">NMO
+(Metadata Graph Only)</a></dd>
+
+  <dd>TriG Serialization: <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo/nmo.trig">NMO
+(Graph Set)</a></dd>
+
+</dl>
+
+</div>
+
+<p class="copyright"> Copyright &copy; 2007 <a href="http://www.dfki.de/"><acronym title="Deutsches Forschungszentrum fuer Kuenstliche Intelligenz">DFKI</acronym></a><sup>&reg;</sup>
+The ontologies are made available under the terms of NEPOMUK <a href="LICENSE.txt">software license</a>
+</p>
+
+<hr />
+<h2>Abstract</h2>
+
+<p style="text-align: justify;"> NEPOMUK Message Ontology
+extends the NEPOMUK Information Element framework into the domain of
+messages. Kinds of messages covered by NMO include Emails and instant
+messages. This document gives an overview of NMO and describes its
+classes and properties.
+</p>
+
+<h2> Status of this document</h2>
+
+<div id="sotd">
+<p style="text-align: justify;"> This document arose from
+the work of the Task-Force ontologies within the <a href="http://nepomuk.semanticdesktop.org">NEPOMUK project</a>.
+This document is a DRAFT made available by the Nepomuk Consortium for
+discussion only. This document is a work in progress and may be
+updated, replaced, or rendered obsolete by other documents at any time.
+</p>
+
+<p style="text-align: justify;"> This document is a part
+in a set of seven documents, which together comprise the complete
+specification of the Nepomuk Information Element Ontology Framework.
+These are: <a href="http://www.semanticdesktop.org/ontologies/nie">NIE</a>,
+<a href="http://www.semanticdesktop.org/ontologies/nfo">NFO</a>,
+<a href="http://www.semanticdesktop.org/ontologies/nco">NCO</a>,
+<a href="http://www.semanticdesktop.org/ontologies/nmo">NMO</a>,
+<a href="http://www.semanticdesktop.org/ontologies/ncal">NCAL</a>,
+<a href="http://www.semanticdesktop.org/ontologies/nexif">NEXIF</a>,
+<a href="http://www.semanticdesktop.org/ontologies/nid3">NID3</a>.</p>
+
+</div>
+
+<div>
+<h2 id="intro">Introduction</h2>
+
+<p style="text-align: justify;"> Messages - the domain of
+the Nepomuk Message Ontology (NMO) form a large part of
+the body of data available on a desktop. The user sends them, receives
+them, forwards them to other users, stores them and recalls them when
+they are needed. They are almost never self contained, always refering
+to something - to events, people, organizations, projects, activities,
+anything the user might be interested in. The purpose of NMO is to
+bring messages to the world of ontologies so that these links can be
+made explicit.
+</p>
+
+<h2>The Concept of a Message</h2>
+
+<p style="text-align: justify;">
+The concept of a message in everyday english is broad. The
+Thesaurus.com website
+lists 'message' under 36 different meanings. NMO had to limit itself to
+a familiar domain of electronic communication. In NMO a message is a
+finite sequence of bytes containing arbitrary information exchanged
+between a sender and at least one receiver. Notice the difference
+between definitions of a Message and a File - the presence of at least
+one sender and receiver, and the absence of the requirement about
+durability. Of course it doesn't exclude the possibility of a file
+interpreted as a message (e.g. a .eml file).</p>
+
+<p style="text-align: justify;">
+Even with these limitations, a taxonomy of messages can be defined.
+Subconcepts may include an Email, a message sent with an instant
+messaging application, an SMS, a voice message, a forum private message
+etc.</p>
+
+<p style="text-align: justify;">
+A message can have multiple receivers. It can be sent to multiple
+Contacts. A mailing list is treated as one contact, since the message
+itself is sent to one email address. The fact that it is forwarded to
+other people is not expressed in the byte sequence that comprises the
+message and therefore falls beyond the scope of NIE. Blog posts and
+forum posts are not considered Messages in the NMO sense. This
+statement may seem arbitrary at first. In the case of a forum post, the
+actual Message according to the NMO definition (and the overall notion
+of nie:DataObject) is the HTTP packet generated by the browser and
+received by the Web Server. It is usually hardly relevant for a typical
+user. There are other ontologies, better suited towards description of
+blogs and forums, most notably <a href="http://sioc-project.org/ontology">SIOC</a>.
+</p>
+
+</div>
+
+<div>
+<h2>Description of a Message</h2>
+
+<p style="text-align: justify;">
+The most important information about each Message is the sender,
+receiver and the dates. NMO provides properties to express this
+information. The choice of those properties has been inspired by header
+fields found in emails, but they are definitely applicable to other
+kinds of messages too. The nmo:references property
+(\ref{nmo:references}) can be used to express relations in dialogues.
+It would link an answer with the message it refers to.
+</p>
+
+</div>
+
+<div>
+<a name="sec-examples"></a>
+<h2><a name="sec-examples">Examples</a></h2>
+
+Example files that show how to use the expressive power of the ontology will be
+published here in near future.
+
+</div>

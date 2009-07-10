@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+  <link rel="stylesheet" type="text/css" href="nepomuk-ontology-docs.css" />
+  <title>Nepomuk EXIF Ontology (NEXIF)</title>
+
+
+</head>
+
+
+<body>
+
+<div class="head">
+<div class="nav"> <a href="http://nepomuk.semanticdesktop.org"> <img style="border: 0px solid ; width: 180px; height: 88px;" alt="NEPOMUK Logo" src="nepomuk.png" /> </a> </div>
+
+<h1>NEPOMUK&nbsp;EXIF Ontology</h1>
+
+<big style="color: rgb(0, 90, 156);">Task-Force Ontologies<br />
+
+<br />
+
+</big>
+<dl>
+
+  <dt>Latest Version:</dt>
+
+  <dd><a href="http://www.semanticdesktop.org/ontologies/nexif">http://www.semanticdesktop.org/ontologies/nexif</a>
+  </dd>
+
+  <dt></dt>
+
+  <dt>This Version:</dt>
+
+  <dd><a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nexif">http://www.semanticdesktop.org/ontologies/2007/05/10/nexif</a>
+  <br/>This file refers to the Revision 9 of NIE. Minor changes may be implemented in future revisions. 
+       With each new revision, the documentation and all serializations of the ontology will be updated.
+  </dd>
+
+</dl>
+
+<dl>
+
+  <dt>Authors:</dt>
+
+  <dd>Antoni Mylka, DFKI, <a href="mailto:antoni.mylka@dfki.de">antoni.mylka@dfki.de</a></dd>
+
+  <dd>Leo Sauermann, DFKI, <a href="mailto:leo.sauermann@dfki.de">leo.sauermann@dfki.de</a></dd>
+
+  <dd>Michael Sintek, DFKI, <a href="mailto:michael.sintek@dfki.de">michael.sintek@dfki.de</a></dd>
+
+  <dd>Ludger van Elst, DFKI, <a href="mailto:elst@dfki.uni-kl.de">elst@dfki.uni-kl.de</a></dd>
+
+</dl>
+
+<dl>
+
+  <dt>Editor:</dt>
+
+  <dd>Antoni Mylka, DFKI, <a href="mailto:antoni.mylka@dfki.de">antoni.mylka@dfki.de</a></dd>
+
+</dl>
+
+<dl>
+
+  <dt>Contributors:</dt>
+
+  <dd>Evgeny 'phreedom' Egorochkin, KDE Strigi Developer, <a href="mailto:stexx@mail.ru">stexx@mail.ru</a></dd>
+
+  <dd>Christiaan Fluit, Aduna, <a href="mailto:christiaan.fluit@aduna-software.com">christiaan.fluit@aduna-software.com</a></dd>
+
+  <dt></dt>
+
+  <dt><span style="font-weight: bold;">Ontology:</span></dt>
+
+  <dd>XML/RDFS Serialization: <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nexif/nexif_data.rdfs">NEXIF
+(Data Graph Only)</a></dd>
+
+  <dd>XML/RDFS Serialization: <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nexif/nexif_metadata.rdfs">NEXIF
+(Metadata Graph Only)</a></dd>
+
+  <dd>TriG Serialization: <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nexif/nexif.trig">NEXIF
+(Graph Set)</a></dd>
+
+</dl>
+
+<dl>
+
+</dl>
+
+</div>
+
+<p class="copyright"> Copyright &copy; 2007 <a href="http://www.dfki.de/"><acronym title="Deutsches Forschungszentrum fuer Kuenstliche Intelligenz">DFKI</acronym></a><sup>&reg;</sup>
+The ontologies are made available under the terms of NEPOMUK <a href="LICENSE.txt">software license</a>
+</p>
+
+<hr />
+<h2>Abstract</h2>
+
+<p style="text-align: justify;"> EXIF is a common standard
+of basic image metadata used in digital cameras and in image management
+software. Masahide Kanzaki created an <a href="http://www.kanzaki.com/ns/exif">ontology</a>
+that allows the EXIF metadata to be expressed in RDF. NEXIF is a simple
+adaptation of the Kanzaki's ontology to fit it into the NEPOMUK
+Information Element Framework. This document gives an overview of
+NEXIF, its classes and properties.
+</p>
+
+<h2> Status of this document</h2>
+
+<div id="sotd">
+<p style="text-align: justify;"> This document arose from
+the work of the Task-Force ontologies within the <a href="http://nepomuk.semanticdesktop.org">NEPOMUK project</a>.
+This document is a DRAFT made available by the Nepomuk Consortium for
+discussion only. This document is a work in progress and may be
+updated, replaced, or rendered obsolete by other documents at any time.</p>
+
+<p style="text-align: justify;"> This document is a part
+in a set of seven documents, which together comprise the complete
+specification of the Nepomuk Information Element Ontology
+Framework.&nbsp;These are: <a href="http://www.semanticdesktop.org/ontologies/nie">NIE</a>,
+<a href="http://www.semanticdesktop.org/ontologies/nfo">NFO</a>,
+<a href="http://www.semanticdesktop.org/ontologies/nco">NCO</a>,
+<a href="http://www.semanticdesktop.org/ontologies/nmo">NMO</a>,
+<a href="http://www.semanticdesktop.org/ontologies/ncal">NCAL</a>,
+<a href="http://www.semanticdesktop.org/ontologies/nexif">NEXIF</a>,
+<a href="http://www.semanticdesktop.org/ontologies/nid3">NID3</a>.
+</p>
+
+</div>
+
+<div>
+<h2 id="intro">Ontology description</h2>
+
+<p style="text-align: justify;">Exchangeable Image Format
+(EXIF) is a specification of image metadata vocabulary
+published by the Japan Electronics and Information Technology
+Industries Association [<a href="#ref-exifspec">EXIFSPEC</a>].
+It has gained wide acceptance within the digital photography community.
+Most of today's digital cameras annotate the pictures with EXIF
+annotations.</p>
+
+<p style="text-align: justify;">
+An Exif description is to a large extent a set of name/value pairs.
+Exif descriptions have little structural information, apart from simple
+part-of relationships. Therefore adapting it to RDF is quite
+straightforward. This has been expertly done by Masahide Kanzaki [<a href="#ref-exifrdf">EXIFRDF</a>]. His ontology
+meticulously recreates all properties defined in the specification
+document as rdf properties. They don't have their domains and ranges
+specified though. Therefore, during the adaptation of Kanzaki ontology
+to the Nepomuk Representational Language the domains and ranges have
+been added.</p>
+
+<p style="text-align: justify;">
+The Nepomuk Exif Ontology (NEXIF) has been linked with two other
+ontologies. The first link allows for easy annotation of image files
+with exif properties. It has been realized with the <a href="#Photo">nexif:Photo</a>
+class, which is a subclass of <a href="http://www.semanticdesktop.org/ontologies/http://www.semanticdesktop.org/ontologies/nfo#Image">nfo:Image</a>.
+</p>
+
+</div>
+
+<div>
+<a name="sec-examples"></a>
+<h2><a name="sec-examples">Examples</a></h2>
+
+Example files that show how to use the expressive power of the ontology will be
+published here in near future.
+
+</div>
+
+<div>
+<h2>References</h2>
+
+<dl>
+
+  <dt><a name="ref-exifspec"></a>[EXIFSPEC]</dt>
+
+  <dd><cite><a href="http://exif.org/Exif2-2.PDF">Exchangeable
+Image Format for digital still cameras: Exif Version 2.2.</a></cite>,
+JEITA Technical Standardization Committee on AV &amp; IT Storage
+Systems and Equipment. Standard of Japan Electronics and Information
+Technology Industries Association: JEITA CP-3451. Japan, April 2002.
+http://exif.org/Exif2-2.PDF</dd>
+
+</dl>
+
+<dl>
+
+  <dt><a name="ref-exifrdf"></a>[EXIFRDF]</dt>
+
+  <dd><cite><a href="http://www.kanzaki.com/ns/exif">Exif
+data description vocabulary</a></cite>, Masahide
+Kanzaki http://www.kanzaki.com/ns/exif</dd>
+
+</dl>
+
+</div>

@@ -1,0 +1,987 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+  <link rel="stylesheet" type="text/css" href="nepomuk-ontology-docs.css" />
+  <title>Nepomuk Information Element Ontology (NIE)</title>
+
+
+</head>
+
+
+<body>
+
+<div class="head">
+<div class="nav"> <a href="http://nepomuk.semanticdesktop.org"> <img style="border: 0px solid ; width: 180px; height: 88px;" alt="NEPOMUK Logo" src="nepomuk.png" /> </a> </div>
+
+<h1>NEPOMUK Information Element Ontology</h1>
+
+<big style="color: rgb(0, 90, 156);">Task-Force Ontologies<br />
+
+</big>
+<dl>
+
+  <dt>Latest Version:</dt>
+
+  <dd><a href="http://www.semanticdesktop.org/ontologies/nie">http://www.semanticdesktop.org/ontologies/nie</a>
+
+  <dt></dt>
+
+  <dt>This Version:</dt>
+
+  <dd><a href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie">http://www.semanticdesktop.org/ontologies/2007/01/19/nie</a>
+  <br/>This file refers to the Revision 9 of NIE. Minor changes may be implemented in future revisions. 
+       With each new revision, the documentation and all serializations of the ontology will be updated.</dd>
+
+  <dt></dt>
+
+  <dt>Authors:</dt>
+
+  <dd>Antoni Mylka, DFKI, <a href="mailto:antoni.mylka@dfki.de">antoni.mylka@dfki.de</a></dd>
+
+  <dd>Leo Sauermann, DFKI, <a href="mailto:leo.sauermann@dfki.de">leo.sauermann@dfki.de</a></dd>
+
+  <dd>Michael Sintek, DFKI, <a href="mailto:michael.sintek@dfki.de">michael.sintek@dfki.de</a></dd>
+
+  <dd>Ludger van Elst, DFKI, <a href="mailto:elst@dfki.uni-kl.de">elst@dfki.uni-kl.de</a></dd>
+
+  <dt></dt>
+
+  <dt>Editor:</dt>
+
+  <dd>Antoni Mylka, DFKI, <a href="mailto:antoni.mylka@dfki.de">antoni.mylka@dfki.de</a></dd>
+
+  <dd></dd>
+
+  <dt>Contributors:</dt>
+
+  <dd>Evgeny 'phreedom' Egorochkin, KDE Strigi Developer, <a href="mailto:stexx@mail.ru">stexx@mail.ru</a></dd>
+
+  <dd>Christiaan Fluit, Aduna, <a href="mailto:christiaan.fluit@aduna-software.com">christiaan.fluit@aduna-software.com</a></dd>
+
+</dl>
+
+<dl>
+
+  <dt><span style="font-weight: bold;">Ontology:</span></dt>
+
+  <dd>XML/RDFS Serialization: <a href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie/nie_data.rdfs">NIE
+(Data Graph Only)</a></dd>
+
+  <dd>XML/RDFS Serialization: <a href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie/nie_metadata.rdfs">NIE
+(Metadata Graph Only)</a></dd>
+
+  <dd>TriG Serialization: <a href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie/nie.trig">NIE
+(Graph Set)</a></dd>
+
+</dl>
+
+</div>
+
+<p class="copyright"> Copyright &copy; 2007 <a href="http://www.dfki.de/"><acronym title="Deutsches Forschungszentrum fuer Kuenstliche Intelligenz">DFKI</acronym></a><sup>&reg;</sup>
+This work is made available under the terms of NEPOMUK <a href="http://nepomuk.semanticdesktop.org/LICENSE.txt">software
+license</a>
+</p>
+
+<hr />
+<h2>Abstract</h2>
+
+<p style="text-align: justify;"> The NEPOMUK Information
+Element Framework is an attempt to provide unified vocabulary for
+describing native resources available on the desktop. This document
+presents the high-level overview of the entire framework, its
+motivations and design decisions, as well as classes and properties
+that comprise the core part of the framework - the NEPOMUK Information
+Element Ontology itself.
+</p>
+
+<h2> Status of this document</h2>
+
+<div id="sotd">
+<p style="text-align: justify;"> This document arose from
+the work of the Task-Force ontologies within the <a href="http://nepomuk.semanticdesktop.org">NEPOMUK project</a>.
+This document is a DRAFT made available by the NEPOMUK Consortium for
+discussion only. This document is a work in progress and may be
+updated, replaced, or rendered obsolete by other documents at any time.</p>
+
+<p style="text-align: justify;"> This document is a part
+in a set of seven documents, which together comprise the complete
+specification of the NEPOMUK Information Element Ontology Framework.
+These are: <a href="http://www.semanticdesktop.org/ontologies/nie">NIE</a>, <a href="http://www.semanticdesktop.org/ontologies/nfo">NFO</a>,
+<a href="http://www.semanticdesktop.org/ontologies/nco">NCO</a>,
+<a href="http://www.semanticdesktop.org/ontologies/nmo">NMO</a>,
+<a href="http://www.semanticdesktop.org/ontologies/ncal">NCAL</a>,
+<a href="http://www.semanticdesktop.org/ontologies/nexif">NEXIF</a>,
+<a href="http://www.semanticdesktop.org/ontologies/nid3">NID3</a>.
+</p>
+
+</div>
+
+<div class="toc">
+<h2 id="contents">Contents</h2>
+
+<blockquote> <a href="#sec-introduction">1.
+Introduction</a><br />
+
+  <a href="#sec-background">2. Background</a><br />
+
+  <a href="#sec-nepomukontologies">3. Overview of the
+NEPOMUK ontology architecture</a><br />
+
+  <a href="#sec-basicdecisions">4. Basic design decisions</a>
+  <blockquote> <a href="#sec-nrl">4.1 Use NEPOMUK
+Representational Language</a><br />
+
+    <a href="#sec-usefullness">4.2 Make NIE usefull for
+the Semantic Desktop</a>
+    <blockquote> <a href="#sec-unification">4.2.1
+Unification of ontologies</a><br />
+
+      <a href="#sec-integration">4.2.2 Integration of
+ontologies</a> </blockquote>
+
+    <a href="#sec-scope">4.3 Don't go beyond the intended
+scope of NIE</a><br />
+
+    <a href="#sec-migration">4.4 Allow for easy migration
+and conform to the standards</a> </blockquote>
+
+  <a href="#sec-overview">5. High-level overview of the
+entire NIE Framework</a><br />
+
+  <a href="#sec-niedescription">6. Description of the NIE
+Ontology</a>
+  <blockquote> <a href="#sec-dataobjects">6.1 Data
+Objects</a><br />
+
+    <a href="#sec-informationelements">6.2 Information
+Elements</a><br />
+
+    <a href="#sec-datasources">6.3 Data Sources</a> </blockquote>
+
+  <a href="#sec-guidelines">7. Guidelines for extending NIE</a> <br />
+  <a href="#sec-examples">8. Examples</a>
+</blockquote>
+
+</div>
+
+<div>
+<a name="sec-introduction"></a>
+<h2><a name="sec-introduction">1. Introduction</a></h2>
+
+<p style="text-align: justify;">
+<a name="sec-introduction">Since the dawn of the Semantic
+Web much effort has been exercised to bring its power to the desktop.
+One of the most important parts of this aim is to leverage
+existing information sources and make them accessible to 'semantic'
+systems. This information is contained within various structures
+maintained by the operating system and a multitude of existing 'legacy'
+applications. These structures include files, messages, documents,
+pictures, calendar entries and contacts in addressbooks. Ludger van
+Elst coined the term `native structures' to
+describe them and 'native resources' for the pieces of information they
+contain.</a></p>
+
+<p style="text-align: justify;">
+<a name="sec-introduction">A successful Semantic Desktop
+system cannot deny the existence of native structures. Dealing with
+them is an issue that needs to be tackled on every attempt to realize
+the Semantic Desktop vision. What follows is an account of the approach
+adopted within the NEPOMUK Social Semantic Desktop project, followed by
+the specification of the NEPOMUK Information Element Framework (NIE),
+vocabulary developed to express native structures in RDF.</a></p>
+
+<p style="text-align: justify;">
+<a name="sec-introduction">Note that the abbreviation NIE
+may refer to the NIE Framework as a whole or to the NIE Ontology - the
+core part of the framework. In most cases the former meaning is used,
+unless explicitly stated otherwise.
+</a></p>
+
+</div>
+
+<div>
+<a name="sec-background"></a>
+<h2><a name="sec-background">2. Background</a></h2>
+
+<p style="text-align: justify;">
+<a name="sec-background">The problem is a difficult one
+given the multitude of applications and data formats. Previous semantic
+desktop projects (e.g. </a><a href="http://haystack.lcs.mit.edu/">Haystack</a> or <a href="http://www.gnowsis.org/">Gnowsis</a>) had to
+develop their solutions. Some attempts at standardization have been
+made (<a href="http://www.adobe.com/products/xmp/">Adobe
+XMP</a> or <a href="http://freedesktop.org/wiki/XesamAbout">Freedesktop.org
+XESAM</a>) but a definite standard hasn't emerged yet.</p>
+
+<p style="text-align: justify;">
+Apart from large metadata description frameworks there exists a
+considerable number of smaller single-purpose ontologies aimed at
+specific types of resources
+(e.g. <a href="http://www.w3.org/2002/12/cal/ical">ICAL</a>
+or <a href="http://www.w3.org/TR/vcard-rdf">VCARD</a>).
+A broad array of utilities has been developed for extracting RDF
+metadata from desktop sources (see <a href="http://simile.mit.edu/wiki/RDFizers">RDFizers website</a>,
+for an overview).</p>
+
+<p style="text-align: justify;">
+Various problems have been identified with those ontologies. They are
+expressed in many languages, often aren't as detailed as one would
+like, sometimes contain
+outright bugs. NEPOMUK Information Element Framework is an attempt to
+build upon
+that experience, to provide unified vocabulary to describe typical
+native resources that may be of interest to the user. These resources
+are intended to serve as raw data for other semantic applications. They
+can be browsed, searched,
+annotated and linked with each other. It is hoped that this framework
+will help to achieve the critical mass of raw RDF data that will ignite
+rapid development of applications which will bring actual value to the
+user and make everyday work
+easier and more productive.</p>
+
+<p style="text-align: justify;">
+The open source community has recently started a widespread
+standardization activity under the name of <a href="http://freedesktop.org/wiki/XesamAbout">XESAM Project</a>.
+It gathers together developers from many important desktop search
+projects like <a href="http://strigi.sourceforge.net/">Strigi</a>,
+<a href="http://beagle-project.org/">Gnome Beagle</a>,
+<a href="http://www.gnome.org/projects/tracker/">Gnome
+Tracker</a>, <a href="http://pinot.berlios.de">Pinot</a>
+and <a href="http://www.lesbonscomptes.com/recoll/">Recol</a>.
+The NEPOMUK project has been involved in this effort. NIE has
+benefitted much from the insight of XESAM developers (most notably
+Evgeny Egorochkin). Even though the ontologies themselves are kept
+separate, due
+to certain differences in requirements, NIE strived to maximize
+interoperability
+with XESAM and provide direct equivalents of XESAM classes an
+properties wherever possible.
+</p>
+
+</div>
+
+<div>
+<a name="sec-nepomukontologies"></a>
+<h2><a name="sec-nepomukontologies">3. Overview of
+the NEPOMUK ontology architecture</a></h2>
+
+<p style="text-align: justify;">
+<a name="sec-nepomukontologies">In order to justify the
+design decisions that were made when creating NIE, a short introduction
+on the ontology architecture of NEPOMUK is necessary. It can be
+conceptually divided in two tiers.
+</a></p>
+
+<div style="text-align: center;"><a name="sec-nepomukontologies">
+<img style="width: 464px; height: 403px;" alt="NEPOMUK Universe" src="nepomukUniverse.png" /></a></div>
+
+<p style="text-align: justify;">
+<a name="sec-nepomukontologies">The lower one is the data
+tier. It stores the native data extracted from various
+data sources on the desktop. These include filesystems, mailboxes,
+calendars, and addressbooks. They are usually maintained
+by external applications, that are not part of NEPOMUK by themselves.
+The user still uses Kontact or MS Outlook for contacts and events,
+OpenOffice or Word for writing documents etc. The upper ontology layer
+is composed of concepts and instances that make up the Personal
+Information Model. They represent more abstract entities. </a></p>
+
+<p style="text-align: justify;"><a name="sec-nepomukontologies">Native resources are extracted,
+converted to
+RDF and made available for Semantic Web software agents. An approach is
+to store
+converted RDF in a repository, making it queryable. Another approach is
+to adapt datasources dynamically, using virtual RDF graphs
+but in general, extraction and storing RDF in a queryable index is the
+common approach, also used by the other desktop search engines.</a></p>
+
+<p style="text-align: justify;"><a name="sec-nepomukontologies">Data represented in NIE has
+three roles. First, NIE data is intended to be generated by an
+extraction process.
+Second, RDF-based systems can create NIE structures natively, without
+building
+on existing applications. Third, data expressed in NIE can be imported
+back to native applications. The ontology is therefore a mediator
+between semantic and
+native applications. </a></p>
+
+<p style="text-align: justify;"><a name="sec-nepomukontologies">These roles explain some
+of the design decisions outlined below. They are a
+direct result of the following assumptions about the NEPOMUK
+architecture:</a></p>
+
+<ul style="text-align: justify;">
+
+  <a name="sec-nepomukontologies"> <li>The 'PIMO'
+layer can much more easily work with native resources if they are
+expressed
+in a single language (see </li>
+
+  </a><a href="#sec-nrl">here</a>), using
+limited vocabulary
+(see <a href="#unification">here</a>), where
+similar entities are always
+expressed in the same way with the same vocabulary elements (see <a href="#integration">here</a>). <li>The task of
+dealing with dynamic nature of the native resources can be more easily
+tackled
+when it is divided into two subtasks :
+    <ul>
+
+      <li>synchronizing the 'real-life' with the data repository,
+that doesn't contain abstract concepts</li>
+
+      <li>synchronizing the data repository with the abstract
+concepts in the personal information model</li>
+
+    </ul>
+
+These subtasks can be assigned to different components that only need
+limited
+knowledge to perform them and can thus be much simpler.</li>
+
+</ul>
+
+<p style="text-align: justify;">
+The authors of this document believe that these assumptions would also
+hold for
+other semantic desktop systems.<a name="sec-basicdecisions"></a></p>
+
+</div>
+
+<div>
+<h2><a name="sec-basicdecisions">4. Basic design
+decisions</a></h2>
+
+<p style="text-align: justify;"><a name="sec-basicdecisions">Requirements stated above led to
+certain guidelines for the ontology design.
+The following sections
+contain a brief outline of them. This is by no means a sound and
+complete set of
+axioms that are always correct, but a set of factors that were taken
+into
+account. They are given in their perceived order of importance.
+Developers of
+ontologies that will extend NIE to describe new kinds of data are
+strongly
+encouraged to be consistent with them.</a></p>
+
+<a name="sec-nrl">
+</a>
+<h3><a name="sec-nrl">4.1 Use NEPOMUK
+Representational Language</a></h3>
+
+<p style="text-align: justify;">
+<a name="sec-nrl">NIE is expressed in the NEPOMUK
+Representational Language as defined in the
+recently published specification (</a><a href="#ref-nrlspec">[NRLSPEC]</a>).
+This
+means, that whenever some existing ontologies are to be reused, they
+need to
+be adapted to NRL. Author's experience suggests that such an adaptation
+would usually entail following steps:</p>
+
+<ol style="text-align: justify;">
+
+  <li> Remove language constructs that are not present in RDFS.
+Some of them have
+their NRL equivalents (like FunctionalProperty or TransitiveProperty in
+OWL or
+Protege ontologies). Others don't (e.g. OWL unions or Protege
+overriding
+properties). If a construct has a NRL equivalent - it may be
+substituted. If
+not, then the information may be expressed in the, rdfs:comment or in
+the
+documentation.</li>
+
+  <li> Create a new namespace for the new ontology, to
+distinguish between the original
+one and the new representation in NRL. </li>
+
+  <li> Let all properties
+have concrete domains and ranges. Bring the ontology to a state where
+the data
+that conforms to it doesn't need to have any untyped nodes.</li>
+
+  <li> Provide links with the original ontology (e.g. via
+rdfs:subClassOf or
+rdfs:subPropertyOf relationships) if possible.</li>
+
+  <li>Examine the ontology for possibilities of alignment with
+existing NIE ontologies, in accordance with the <a href="#sec-integration">integration</a>
+guidelines.</li>
+
+</ol>
+
+<p style="text-align: justify;">
+This decision is fundamental in its nature. It could be interpreted as
+being
+against the spirit of reuse, pervasive in the Semantic Web community.
+It brings
+many benefits though. They include:</p>
+
+<ol>
+
+  <li style="text-align: justify;"> Easier consistency
+checking. There are differences between semantics
+of various ontology languages. Some of them don't specify any
+constraints.
+(e.g. RDF/S domains and ranges aren't interpreted as constraints that
+have to be met, but as rules that entail facts. [<a href="#ref-rdfsemantics">RDFSEMANTICS</a>]) Apart from
+that many well-established ontologies (like Dublin Core [<a href="#ref-dcspec">DCSPEC</a>], Kanzaki EXIF [<a href="#ref-exifrdf">EXIFRDF</a>] or important parts of
+ICAL [<a href="ref-icalrdf">ICALRDF</a>] don't have
+the
+domains and ranges specified at all, so there is nothing to check.</li>
+
+  <li style="text-align: justify;"> Simpler inference. An
+inferencer would have to reason
+over data that uses vocabulary from many ontologies in many languages. </li>
+
+  <li style="text-align: justify;"> Explicit connections
+between ontologies. The application developer would need to be aware of
+the fact
+that an instance of a class from one ontology, might also be annotated
+with
+properties from some other ontology. This is important information,
+that is not
+expressed in the ontology itself. </li>
+
+  <li style="text-align: justify;"> Unified ontology
+universe. Since the Personal Information Model would definitely be
+expressed in NRL
+- leaving the raw data described in its 'original' vocabulary would
+split the
+'NEPOMUK universe' into two parts - one consistent, well checked, where
+inference is efficient and well-implemented - the part in NRL, and the
+chaotic,
+unchecked part in all possible languages.</li>
+
+  <li style="text-align: justify;"> Easier data
+integration. Algorithms would need to have knowledge of multiple
+languages and
+differences in their semantics. Using single language removes this
+burden and
+paves the way for further benefits - described in the next section. </li>
+
+</ol>
+
+<a name="sec-usefullness">
+</a>
+<h3><a name="sec-usefullness">4.2 Make NIE usefull
+for the Semantic Desktop</a></h3>
+
+<p style="text-align: justify;">
+<a name="sec-usefullness">The main goal of the Semantic
+Desktop is to aid the user in his/her everyday
+tasks. In order to achieve this goal - the user wants to have a uniform
+view of
+all his/her data, where application boundaries are not important. This
+requirement is a very important one. It implies that wherever data with
+similar
+'meaning' is stored or processed - it needs to be described using the
+same
+vocabulary. Having multiple disparate vocabularies for dealing with
+similar
+entities would make the task of data integration much more difficult.
+In the
+previous section we mentioned that differences between representational
+languages are to be avoided. Here we fortify that claim by saying that
+overlap
+between multiple ontologies in the same domain is also unadvisable.</a></p>
+
+<p style="text-align: justify;">
+<a name="sec-usefullness">This statement has two practical
+consequences. They are outlined below.
+</a></p>
+
+<a name="sec-unification">
+</a>
+<h4><a name="sec-unification">4.2.1 Unification of
+ontologies</a></h4>
+
+<p style="text-align: justify;">
+<a name="sec-unification">In domains where there are many
+competing 'de facto standard' ontologies - for
+NIE either one of them is chosen (and adapted - see </a><a href="#ref-nrl">sec. 4.1</a>) or both are
+merged into a third one, with incosistencies resolved. It is definitely
+not the
+purpose of NEPOMUK to deny existence of publicly available ontologies.
+NEPOMUK
+wants to provide a platform that would simplify the development of
+semantically-enabled applications. To achieve this goal NEPOMUK aims to
+alleviate the burden of learning and supporting multiple vocabularies.</p>
+
+<p style="text-align: justify;">
+If the user needs to integrate data expressed in the vocabulary of some
+other
+ontology into the NEPOMUK knowledge base it needs to be transformed
+into NRL and
+aligned with other NEPOMUK ontologies. This will enable NEPOMUK
+applications to process it easily. Maintaining a single import/export
+utility is
+much less costly than having all applications support all vocabularies.
+In a
+domain where many applications need to work with many vocabularies,
+there is an
+entire matrix of combinations that need to be supported. A unified
+approach
+encouraged by NEPOMUK aims to reduce this complexity from quadratic to
+linear.</p>
+
+<p style="text-align: justify;">
+NEPOMUK doesn't aim to substitute existing data with their RDF
+counterparts. The
+complexity of existing and future data formats makes round-trip 1 to 1
+transformation between RDF and the native format nearly impossible.
+There were
+attempts at creating vocabularies that would express all complexities
+of a
+non-rdf data format. (e.g. [<a href="ref-icalrdf">ICALRDF</a>],
+or [<a href="ref-vcardrdf">VCARDRDF</a>]). Even
+if they succeeded in achieving high level of conformance, they didn't
+explore
+real benefits of RDF, like common datatypes and URI references.
+Ontologies that
+resulted from these attempts have deficiencies that inhibit their
+usefullness
+within social semantic desktop context.
+</p>
+
+<a name="sec-integration">
+</a>
+<h4><a name="sec-integration">4.2.2 Integration of
+ontologies</a></h4>
+
+<p style="text-align: justify;">
+<a name="sec-integration">Tight integration between
+ontologies is needed. Some data formats contain
+references to entities that fall beyond their intended scope, but are
+nevertheless important. Examples might include references to contacts
+in emails
+(to, from, cc, bcc fields), calendar events (attendee, rsvp) or text
+documents
+(author, reviewer). These references are mostly incomplete. (a 'to'
+field in an
+email usually contains only the address, sometimes a name).
+Nevertheless it is
+better for these occurences to be described as instances of classes
+from a
+specialized ontology (even though these instances might hardly contain
+more that
+one or two fields) than leave them as plain string values.</a></p>
+
+<p style="text-align: justify;">
+<a name="sec-integration">Having such incomplete instances
+facilitates ontology alignment. It is
+comparatively easy to create and algorithm that browses all instances
+of a given
+class and implements some similarity measure to detect duplicates in
+order to
+link them with a unique instance of some higher-level concept. If those
+instances were expressed with plain strings, the problem would become
+more
+difficult.
+</a></p>
+
+<a name="sec-scope">
+</a>
+<h3><a name="sec-scope">4.3 Don't go beyond the
+intended scope of NIE</a></h3>
+
+<p style="text-align: justify;">
+<a name="sec-scope">NIE contains concepts that are
+directly related to native resources available on
+a local desktop or in the network. These are mostly files or can be
+mapped to
+parts of files. (like calendar entries are parts of a calendar file,
+contacts
+are part of an addressbook file etc.) It doesn't contain abstract
+concepts that
+don't have their direct representations as sequences of bytes (like
+'Person',
+'Project', 'Publication', 'Job' etc.) These are delegated to other
+ontologies.
+It is the task of appropriate tools to map between the 'raw' data and
+those
+'high-level' concepts.
+</a></p>
+
+<a name="sec-migration">
+</a>
+<h3><a name="sec-migration">4.4 Allow for easy
+migration and conform to the standards</a></h3>
+
+<p style="text-align: justify;">
+<a name="sec-migration">The most immediate goal of NIE is
+to replace ontologies currently used by
+Aperture, Beagle++ and Strigi. That's why NIE is designed with easy
+migration in
+mind, wherever it didn't clash with above objectives. Moreover existing
+standards are to be observed. This means widespread norms, usually
+issued by
+official standardization bodies like World Wide Web Consortium (W3C
+Recommendations), Internet Engineering Task Force (RFC Documents),
+International
+Organization for Standardization etc. Specific attention is given to
+the
+standardization effort undertaken by the open source community in the
+XESAM
+Project (eXtEnsible Search And Metadata Specification).
+</a></p>
+
+</div>
+
+<div>
+<a name="sec-overview"></a>
+<h2><a name="sec-overview">5. High-level overview of
+the NIE Framework</a></h2>
+
+<div style="text-align: center;"><a name="sec-overview">
+<img style="width: 851px; height: 1220px;" alt="High-Level Overview" src="bigPicture.png" /></a></div>
+
+</div>
+
+<div>
+<a name="sec-niedescription"></a>
+<h2><a name="sec-niedescription">6. Description of
+the NIE Ontology</a></h2>
+
+<p style="text-align: justify;">
+<a name="sec-niedescription">The core of the NEPOMUK
+Information Element Ontology and the entire NIE Framework
+revolves around the concepts of </a><a href="#DataObject">DataObject</a>
+and <a href="#InformationElement">InformationElement</a>.
+They express
+the representation and content of a piece of data. Their specialized
+subclasses can
+be used to classify a wide array of desktop resources and express them
+in RDF.
+</p>
+
+<a name="sec-dataobjects">
+</a>
+<h3><a name="sec-dataobjects">6.1 DataObjects</a></h3>
+
+<p style="text-align: justify;">
+<a href="#DataObject">DataObjects</a> represent
+physical entities that contain data. They are extracted from
+filesystems,
+archives, contact lists, mailboxes etc. The representation itself is
+usually not
+interesting to the user. In order for a piece of data to be actually
+understood,
+it needs to be interpreted as an appropriate type of an
+InformationElement. Such
+an interpretation makes it possible to inspect the content of a <a href="#DataObject">DataObject</a>
+correctly, and possibly divide it into parts - new <a href="#DataObject">DataObjects</a> which can have
+their
+own interpretations. This process is iterative and continues as long as
+needed.</p>
+
+<p style="text-align: justify;">
+All
+resources on the desktop are basically related to each other with two
+most
+fundamental types of relations: interpretation and containment.</p>
+
+<p style="text-align: center;"><img style="width: 488px; height: 478px;" alt="Interpretation/Containment" src="interpretation-containment.png" /> </p>
+
+<p style="text-align: justify;">
+<a href="#DataObject">DataObject</a> represents a
+native entity the user works with. The usage of the term
+'native' is important. It means that a <a href="#DataObject">DataObject</a>
+can usually be directly mapped
+to a sequence of bytes. Examples include a file, a set of files or a
+part of a
+file. The granularity depends on the user. <a href="#DataObject">DataObject</a>
+is atomic in the sense, that in order to
+distinguish any more data objects within, it has to be interpreted
+first.</p>
+
+<p style="text-align: justify;">
+The detailed list of <a href="#DataObject">DataObject</a>
+subclasses is subject to extension. It is
+envisioned that future applications will define their own <a href="#DataObject">DataObject</a> subclasses
+in their own ontologies. The NEPOMUK Information Element Ontology
+defines only
+the most generic properties deemed applicable to all <a href="#DataObject">DataObjects</a>. More specific
+information is to be expressed using vocabularies extending NIE.
+</p>
+
+<a name="sec-informationelements">
+</a>
+<h3><a name="sec-informationelements">6.2
+Information Elements</a></h3>
+
+<p style="text-align: justify;">
+<a href="#InformationElement">InformationElement</a>
+is a piece of information stored within a data object. Content-specific
+properties are defined as
+properties of an <a href="#InformationElement">InformationElement</a>.
+It is separate from the <a href="#DataObject">DataObject</a>
+in order
+to make the interpretation independent of the representation. Research
+has shown
+that this flexibility is necessary to create a framework flexible
+enough to
+accomodate for the complexity of data structures present on the
+desktop. For
+example let's consider a mailbox. It is usually stored in a file (this
+is
+expressed as a FileDataObject interpreted as a Mailbox). An IMAP
+mailbox though is
+stored on a remote server, but from the interpretation point of view it
+doesn't
+differ from a file mailbox (in NIE this is expressed as a
+RemoteHostAddress
+interpreted as a Mailbox). Another representation may be a software
+service
+available through some interprocess communication mechanism (as is the
+case of
+the Outlook mailbox available via a COM interface). In NIE this is
+expressed
+as a SoftwareService interpreted as a mailbox). We have three
+completely
+different representations (file, remote host, software service) with an
+identical interpretation (Mailbox).</p>
+
+<p style="text-align: justify;">
+For a more thorough example see figure below. We see
+an in-file mailbox, containing an email, which contains an attachment.
+Notice
+that entities appearing on the right side can also appear at different
+levels.
+Apart from the already mentioned mailbox, there are other
+possibilities. A
+partition may be interpreted as a filesystem, but also a file
+containing an
+image of a DVD can be interpreted as a filesystem. A <a href="http://www.semanticdesktop.org/ontologies/nmo#MailboxDataObject">MailboxDataObject</a>
+can be
+interpreted as a <a href="http://www.semanticdesktop.org/ontologies/nmo#Message">Message</a>,
+but an .eml file too. The same applies to <a href="http://www.semanticdesktop.org/ontologies/nco#Contact">Contacts</a>.
+We
+may have a single .vcf file containing a single VCARD, which is
+interpreted as a
+<a href="http://www.semanticdesktop.org/ontologies/nco#Contact">Contact</a>,
+but an email
+<a href="http://www.semanticdesktop.org/ontologies/nfo#Attachment">Attachment</a>,
+or a <a href="http://www.semanticdesktop.org/ontologies/nfo#RemoteDataObject">RemoteDataObject</a>
+may have the same
+interpretation.</p>
+
+<div style="text-align: center;"><img style="width: 403px; height: 348px;" alt="Mail Attachment Example" src="exampleMailAttachment.png" />
+</div>
+
+<p style="text-align: justify;">
+This approach gives a uniform overview of data regardless of how it's
+represented.
+</p>
+
+<a name="sec-datasources">
+</a>
+<h3><a name="sec-datasources">6.3 Data Sources</a></h3>
+
+<p style="text-align: justify;">
+<a href="#DataObject">DataObject</a> instances don't
+just come out of thin air. They are usually extracted
+from some data source. These are represented by instances of a <a href="#DataSource">DataSource</a> class. Each instance
+represents a native application or system,
+that manages information. A <a href="#DataSource">DataSource</a>
+instance aggregates information required
+by the data extraction component to gain access to the source. In the
+case of a
+<a href="http://www.semanticdesktop.org/ontologies/nfo#Filesystem">Filesystem</a>,
+this
+may be a path, for a <a href="http://www.semanticdesktop.org/ontologies/nmo#Mailbox">Mailbox</a>
+this may be the hostname, login and password etc.</p>
+
+<p style="text-align: justify;">
+Various subclasses of a <a href="#DataSource">DataSource</a>
+are envisioned. They may include filesystems data sources,
+calendar data sources, website data sources etc. The exact choice of
+types and properties
+is considered specific to a particular rdf extraction application. Data
+extraction applications are encouraged
+to provide their own data source ontologies. Such an ontology should
+contain
+data source types supported by the application coupled with properties
+necessary
+to gain access to them.</p>
+
+<p style="text-align: justify;">
+It is important to notice that certain entities (such as a mailbox or a
+filesystem)
+may appear both as a DataSource and as an InformationElement. They
+should not
+be confused though. They are completely different classes with
+completely different
+meaning. DataSource is an entity for which an rdf extraction framework
+of choice
+has an adapter for. DataObjects are extracted from it, either
+automatically when
+they appear (with some kind of monitoring process) or manually at the
+wish of the user.</p>
+
+<p style="text-align: justify;">
+The choice of subclasses of a DataSource depends specifically
+on the capabilities of the chosen rdf extraction framework. Some
+frameworks prefer to
+use an integrated approach (like the 'personal information space' from
+Beagle) where the Desktop is treated as a whole, and no specific data
+sources are distinguished.
+Other (like Aperture), work with a specific set of data source types
+(e.g.
+FilesystemDataSource, IMAPDataSource, IcalDataSource etc.). In the
+Aperture example
+a Filesystem instance is extracted from a FilesystemDataSource, just as
+all files.</p>
+
+<p style="text-align: justify;">
+The provenance of a DataObject is represented by the <a href="#dataSource">dataSource</a> property. In many
+usage scenarios it is important to keep track of
+the provenance of each data object. This information is useful for a
+number of
+reasons.</p>
+
+<ul style="text-align: justify;">
+
+  <li>It augments the value of the information contained within
+the object itself. </li>
+
+  <li>It could be used to open a resource in it's native
+application for editing.</li>
+
+  <li>If a user wishes to remove a data source from the system,
+or stop monitoring it, the dataSource
+property can be used to identify resources that have been extracted
+from this
+data source, so that they can also be removed.</li>
+
+</ul>
+
+<p style="text-align: justify;">
+Note that this approach itself allows for an arbitrary hierarchy of
+data objects. It
+makes the structure of the extracted data independent of the
+capabilities of a particular extraction framework. It can
+be used by all-encompassing semantic desktop systems, as well as
+smaller libraries specialized in a single type of data
+source. The former would probably begin with some high-level concept
+such as
+<a href="http://www.semanticdesktop.org/ontologies/nfo#HardDiskPartition">HardDiskPartition</a>
+or a <a href="http://www.semanticdesktop.org/ontologies/nfo#SoftwareItem">SoftwareItem</a>
+interpreted as an <a href="http://www.semanticdesktop.org/ontologies/nfo#OperatingSystem">OperatingSystem</a>
+and build a containment tree to the very bottom. The latter could
+begin their work somewhere in the middle (e.g. an mbox file crawler)
+and proceed
+as deep as they like.
+</p>
+
+</div>
+
+<div>
+<a name="sec-guidelines"></a>
+<h2><a name="sec-guidelines">7. Guidelines for
+extending NIE</a></h2>
+
+<p style="text-align: justify;">
+<a name="sec-guidelines">As said before, The NIE Ontology
+is intended to serve as a foundation for a
+broad framework. Extensions are to be added to accomodate for various
+types of
+DataObjects and InformationElements. Each extension is a separate
+ontology,
+housed within a separate namespace. It should accept the assumptions
+outlined in
+section </a><a href="sec-basicdecisions">'Basic
+decisions'</a> - be expressed in NRL and try not to extend
+beyond native desktop resources. A NIE extension can define its own
+types of
+Data entities (subclasses of <a href="#DataObject">DataObject</a>)
+and their interpretations (subclasses
+of <a href="#InformationElement">InformationElement</a>)
+or simply augment vocabulary provided elsewhere. The
+developers are encouraged to reuse classes and properties already
+defined in NIE (as stated <a href="#sec-integration">above</a>)
+or provide specializations for them
+(subclasses and subproperties).
+</p>
+
+</div>
+
+<div>
+<a name="sec-examples"></a>
+<h2><a name="sec-examples">8. Examples</a></h2>
+
+Example files that show how to use the expressive power of the ontology will be
+published here in near future.
+
+</div>
+
+<div>
+<h2>References</h2>
+
+<dl>
+
+  <dt><a name="ref-nrlspec"></a>[NRLSPEC]</dt>
+
+  <dd><cite><a href="http://www.semanticdesktop.org/ontologies/nrl">NEPOMUK
+Representational Language (NRL) Vocabulary Specification.</a></cite>, NEPOMUK Task-Force Ontologies,
+http://www.semanticdesktop.org/ontologies/nrl</dd>
+
+</dl>
+
+<dl>
+
+  <dt><a name="ref-rdfsemantics"></a>[RDFSEMANTICS]</dt>
+
+  <dd><cite><a href="http://www.w3.org/TR/rdf-mt/">RDF
+Semantics</a></cite>, Patrick Hayes, W3C Recommendation
+http://www.w3.org/TR/rdf-mt/</dd>
+
+</dl>
+
+<dl>
+
+  <dt><a name="ref-dcspec"></a>[DCSPEC]</dt>
+
+  <dd><cite><a href="http://www.dublincore.org/documents/dces/"> Dublin
+core metadata element set, version 1.1</a></cite>, DCMI
+Recommendation http://www.dublincore.org/documents/dces/</dd>
+
+</dl>
+
+<dl>
+
+  <dt><a name="ref-icalrdf"></a>[ICALRDF]</dt>
+
+  <dd><cite><a href="http://www.w3.org/TR/rdfcal/">Rdf
+calendar - an application of the resource description framework to
+icalendar data</a></cite>, Dan Connolly and Libby Miller,
+W3C Interest Group Note 29 September 2005 http://www.w3.org/TR/rdfcal/</dd>
+
+</dl>
+
+<dl>
+
+  <dt><a name="ref-vcardrdf"></a>[VCARDRDF]</dt>
+
+  <dd><cite><a href="http://www.w3.org/TR/vcard-rdf">Representing
+vcard objects in rdf/xml</a></cite>, Renato
+Ianella, W3C Note 22 February 2001 http://www.w3.org/TR/vcard-rdf</dd>
+
+</dl>
+
+<dl>
+
+  <dt><a name="ref-exifrdf"></a>[EXIFRDF]</dt>
+
+  <dd><cite><a href="http://www.kanzaki.com/ns/exif">Exif
+data description vocabulary</a></cite>, Masahide
+Kanzaki http://www.kanzaki.com/ns/exif</dd>
+
+</dl>
+
+</div>

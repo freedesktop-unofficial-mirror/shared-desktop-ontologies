@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+  <link rel="stylesheet" type="text/css" href="nepomuk-ontology-docs.css" />
+  <title>Nepomuk File Ontology (NFO)</title>
+
+
+</head>
+
+
+<body>
+
+<div class="head">
+<div class="nav"> <a href="http://nepomuk.semanticdesktop.org"> <img style="border: 0px solid ; width: 180px; height: 88px;" alt="NEPOMUK Logo" src="nepomuk.png" /> </a> </div>
+
+<h1>NEPOMUK&nbsp;File Ontology</h1>
+
+<big style="color: rgb(0, 90, 156);">Task-Force Ontologies</big>
+<dl>
+
+  <dt></dt>
+
+  <dt>Latest Version:</dt>
+
+  <dd><a href="http://www.semanticdesktop.org/ontologies/nfo">http://www.semanticdesktop.org/ontologies/nfo</a></dd>
+
+  <dt></dt>
+
+  <dt>This Version:</dt>
+
+  <dd><a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo">http://www.semanticdesktop.org/ontologies/2007/03/22/nfo</a>
+  <br/>This file refers to the Revision 9 of NIE. Minor changes may be implemented in future revisions. 
+       With each new revision, the documentation and all serializations of the ontology will be updated.</dd>
+
+  <dt></dt>
+
+  <dt>Authors:</dt>
+
+  <dd>Antoni Mylka, DFKI, <a href="mailto:antoni.mylka@dfki.de">antoni.mylka@dfki.de</a></dd>
+
+  <dd>Leo Sauermann, DFKI, <a href="mailto:leo.sauermann@dfki.de">leo.sauermann@dfki.de</a></dd>
+
+  <dd>Michael Sintek, DFKI, <a href="mailto:michael.sintek@dfki.de">michael.sintek@dfki.de</a></dd>
+
+  <dd>Ludger van Elst, DFKI, <a href="mailto:elst@dfki.uni-kl.de">elst@dfki.uni-kl.de</a></dd>
+
+</dl>
+
+<dl>
+
+  <dt>Editor:</dt>
+
+  <dd>Antoni Mylka, DFKI, <a href="mailto:antoni.mylka@dfki.de">antoni.mylka@dfki.de</a></dd>
+
+</dl>
+
+<dl>
+
+  <dt>Contributors:</dt>
+
+  <dd>Evgeny 'phreedom' Egorochkin, KDE Strigi Developer, <a href="mailto:stexx@mail.ru">stexx@mail.ru</a></dd>
+
+  <dd>Christiaan Fluit, Aduna, <a href="mailto:christiaan.fluit@aduna-software.com">christiaan.fluit@aduna-software.com</a></dd>
+
+</dl>
+
+<dl>
+
+  <dt><span style="font-weight: bold;">Ontology:</span></dt>
+
+  <dd>XML/RDFS Serialization: <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/nfo_data.rdfs">NFO
+(Data Graph Only)</a></dd>
+
+  <dd>XML/RDFS Serialization: <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/nfo_metadata.rdfs">NFO
+(Metadata Graph Only)</a></dd>
+
+  <dd>TriG Serialization: <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/nfo.trig">NFO
+(Graph Set)</a></dd>
+
+</dl>
+
+</div>
+
+<p class="copyright"> Copyright &copy; 2007 <a href="http://www.dfki.de/"><acronym title="Deutsches Forschungszentrum fuer Kuenstliche Intelligenz">DFKI</acronym></a><sup>&reg;</sup>
+The ontologies are made available under the terms of NEPOMUK <a href="LICENSE.txt">software license</a>
+</p>
+
+<hr />
+<h2>Abstract</h2>
+
+<p style="text-align: justify;"> NEPOMUK File Ontology
+(NFO) intends to provide vocabulary to express information extracted
+from various sources. They include files, pieces of sotware and remote
+hosts. This document gives an overview of NFO and describes its classes
+and properties.
+</p>
+
+<h2> Status of this document</h2>
+
+<div id="sotd">
+<p style="text-align: justify;"> This document arose from
+the work of the Task-Force ontologies within the <a href="http://nepomuk.semanticdesktop.org">NEPOMUK project</a>.
+This document is a DRAFT made available by the Nepomuk Consortium for
+discussion only. This document is a work in progress and may be
+updated, replaced, or rendered obsolete by other documents at any time.
+</p>
+
+<p style="text-align: justify;"> This document is a part
+in a set of seven documents, which together comprise the complete
+specification of the Nepomuk Information Element Ontology Framework.
+These are: <a href="http://www.semanticdesktop.org/ontologies/nie">NIE</a>,
+<a href="http://www.semanticdesktop.org/ontologies/nfo">NFO</a>,
+<a href="http://www.semanticdesktop.org/ontologies/nco">NCO</a>,
+<a href="http://www.semanticdesktop.org/ontologies/nmo">NMO</a>,
+<a href="http://www.semanticdesktop.org/ontologies/ncal">NCAL</a>,
+<a href="http://www.semanticdesktop.org/ontologies/nexif">NEXIF</a>,
+<a href="http://www.semanticdesktop.org/ontologies/nid3">NID3</a>.
+</p>
+
+</div>
+
+<div>
+<h2 id="intro">Introduction</h2>
+
+<p style="text-align: justify;"> Nepomuk File Ontology
+(NFO) is one of the fundamental parts of NIE. It deals with files and
+other desktop resources. Files are understood as sequences of bytes
+stored in a Filesystem or on a Network. It provides subclasses both of
+a DataObject and an InformationElement. A basic hierarchy of
+FileDataObject subclasses is provided. It includes a 'normal'
+FileDataObject, that usually resides on a typical filesystem, but also
+allows for other kinds of
+files - those embedded in, or attached to other data items, as well as
+deleted and stored in a trash folder. This hierarchy is by no means
+complete. More complete taxonomies, that either add additional
+FileDataObject subclasses or extend ones provided in this ontology may
+appear in future.
+</p>
+
+</div>
+
+<div>
+<h2>FileDataObject</h2>
+
+<p style="text-align: justify;">
+The cornerstone of the NFO is the <a href="#FileDataObject">FileDataObject</a>
+class. It represents files - finite sequences of bytes available from
+some durable storage medium. This definition explicitly exludes streams
+(which are potentially infinite) but includes web documents and other
+resources resolvable via a URL. As mentioned before there are various
+types of files. They are reflected in the hierarchy of subclasses of
+the File class. This
+hierarchy is expected to grow when users add new types of files
+relevant to their work.
+</p>
+
+</div>
+
+<div>
+<h2>Folders and Compressed files</h2>
+
+<p style="text-align: justify;">
+Each file on a hard disk is usually contained within a folder or a
+directory (the naming depends on the Operating System). They are
+represented by the <a href="#Folder">Folder</a>
+class. The containment relation can be expressed with the <a href="#belongsToContainer">belongsToContainer</a>
+property. Note that a Folder is an interpretation. It may be applied to
+a <a href="#FileDataObject">FileDataObject </a>
+(representing a folder on a disk), but it can also be applied to an <a href="#ArchiveItem">ArchiveItem</a>
+(representing a folder inside an archive), or to a <a href="#MailboxDataObject">MailboxDataObject</a>
+(representing a mail folder on an IMAP server).
+</p>
+
+<p style="text-align: justify;">
+Compressed Files are expressed with an Archive class. It is also an
+interpretation that may be applied to any piece of data. An important
+thing to note is that Nepomuk strives for data integration. It
+shouldn't make much difference if a file is within a normal folder or
+within an archive. That's why no special case is made for the <a href="#fileUrl">fileUrl</a> property for files in
+compressed archives. In both cases a file should be accessible with a
+URL. In case of stand-alone files this is simple. Unfortunately there
+are no standards defining the way to construct URL's for files inside
+compressed archives. We encourage applications to use conventions
+established by the <a href="http://jakarta.apache.org/commons/vfs/filesystems.html">Apache
+Virtual File System project.</a> For cases when no URL can be
+constructed for a file (e.g. a picture inside an archive attached to an
+event in an outlook calendar) the entire containment tree needs to be
+examined to find ways for accessing a file.
+</p>
+
+</div>
+
+<div>
+<h2>Remote Resources</h2>
+
+<p style="text-align: justify;">
+NFO includes basic vocabulary to describe remote resources. Its notion
+of a <a href="#FileDataObject">FileDataObject</a>
+is universal. The fileUrl property can just as well be set to a http://
+address. To facilitate processing a <a href="#RemoteDataObject">RemoteDataObject</a>
+class has been introduced. Its purpose is to have a 'semantic' way of
+expressing the fact that an instance of a FileDataObject class actually
+refers to a remote resource. Otherwise the applications would have to
+check manually if the url begins with http://. </p>
+
+</div>
+
+<div>
+<a name="sec-examples"></a>
+<h2><a name="sec-examples">Examples</a></h2>
+
+Example files that show how to use the expressive power of the ontology will be
+published here in near future.
+
+</div>

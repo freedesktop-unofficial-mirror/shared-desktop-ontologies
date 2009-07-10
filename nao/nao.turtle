@@ -1,0 +1,292 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix nrl: <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix nao: <http://www.semanticdesktop.org/ontologies/2007/08/15/nao#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+nao:hasDefaultNamespaceAbbreviation
+    nrl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+    a rdf:Property ;
+    rdfs:comment "Defines the default static namespace abbreviation for a graph" ;
+    rdfs:domain nrl:Data ;
+    rdfs:label "has default namespace abbreviation" ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf nao:annotation .
+
+nao:annotation
+    a rdf:Property ;
+    rdfs:comment "Generic annotation for a resource" ;
+    rdfs:domain rdfs:Resource ;
+    rdfs:label "annotation" .
+
+nao:Symbol
+    a rdfs:Class ;
+    rdfs:comment "Represents a symbol" ;
+    rdfs:label "symbol" ;
+    rdfs:subClassOf rdfs:Resource .
+
+nao:FreeDesktopIcon
+    a rdfs:Class ;
+    rdfs:comment "Represents a desktop icon as defined in the FreeDesktop Icon Naming Standard" ;
+    rdfs:label "freedesktopicon" ;
+    rdfs:subClassOf nao:Symbol .
+
+nao:iconName
+    nrl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    a rdf:Property ;
+    rdfs:comment "Defines a name for a FreeDesktop Icon as defined in the FreeDesktop Icon Naming Standard" ;
+    rdfs:domain nao:FreeDesktopIcon ;
+    rdfs:label "iconname" ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf nao:identifier .
+
+nao:identifier
+    a rdf:Property ;
+    rdfs:comment "Defines a generic identifier for a resource" ;
+    rdfs:domain rdfs:Resource ;
+    rdfs:label "identifier" .
+
+nao:score
+    a rdf:Property ;
+    rdfs:comment "An authorative score for an item valued between 0 and 1" ;
+    rdfs:domain rdfs:Resource ;
+    rdfs:label "score" ;
+    rdfs:range xsd:float ;
+    rdfs:subPropertyOf nao:annotation .
+
+nao:scoreParameter
+    a rdf:Property ;
+    rdfs:comment "A marker property to mark selected properties which are input to a mathematical algorithm to generate scores for resources. Properties are marked by being defined as subproperties of this property" ;
+    rdfs:domain rdfs:Resource ;
+    rdfs:label "scoreparameter" ;
+    rdfs:range xsd:float ;
+    rdfs:subPropertyOf nao:annotation .
+
+nao:isTopicOf
+    nrl:inverseProperty nao:hasTopic ;
+    a rdf:Property ;
+    rdfs:comment "Defines a relationship between two resources, where the subject is a topic of the object" ;
+    rdfs:label "is topic of" ;
+    rdfs:range rdfs:Resource ;
+    rdfs:subPropertyOf nao:isRelated .
+
+nao:isRelated
+    a nrl:SymmetricProperty, rdf:Property ;
+    rdfs:comment "Defines an annotation for a resource in the form of a relationship between the subject resource and another resource" ;
+    rdfs:label "is related to" ;
+    rdfs:range rdfs:Resource ;
+    rdfs:subPropertyOf nao:annotation .
+
+nao:hasTopic
+    nrl:inverseProperty nao:isTopicOf ;
+    a rdf:Property ;
+    rdfs:comment "Defines a relationship between two resources, where the object is a topic of the subject" ;
+    rdfs:label "has topic" ;
+    rdfs:range rdfs:Resource ;
+    rdfs:subPropertyOf nao:isRelated .
+
+nao:hasSubResource
+    nrl:inverseProperty nao:hasSuperResource ;
+    a nrl:SymmetricProperty, rdf:Property ;
+    rdfs:comment "Defines a relationship between a resource and one or more sub resources" ;
+    rdfs:label "has Subresource" ;
+    rdfs:range rdfs:Resource ;
+    rdfs:subPropertyOf nao:isRelated .
+
+nao:hasSuperResource
+    nrl:inverseProperty nao:hasSubResource ;
+    a nrl:SymmetricProperty, rdf:Property ;
+    rdfs:comment "Defines a relationship between a resource and one or more super resources" ;
+    rdfs:label "has Superresource" ;
+    rdfs:range rdfs:Resource ;
+    rdfs:subPropertyOf nao:isRelated .
+
+nao:isTagFor
+    nrl:inverseProperty nao:hasTag ;
+    a rdf:Property ;
+    rdfs:comment "States which resources a tag is associated with" ;
+    rdfs:domain nao:Tag ;
+    rdfs:label "is tag for" ;
+    rdfs:range rdfs:Resource ;
+    rdfs:subPropertyOf nao:annotation .
+
+nao:Tag
+    a rdfs:Class ;
+    rdfs:comment "Represents a generic tag" ;
+    rdfs:label "tag" ;
+    rdfs:subClassOf rdfs:Resource .
+
+nao:hasTag
+    nrl:inverseProperty nao:isTagFor ;
+    a rdf:Property ;
+    rdfs:comment "Defines an existing tag for a resource" ;
+    rdfs:domain rdfs:Resource ;
+    rdfs:label "has tag" ;
+    rdfs:range nao:Tag ;
+    rdfs:subPropertyOf nao:annotation .
+
+nao:version
+    nrl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+    a rdf:Property ;
+    rdfs:comment "Specifies the version of a graph, in numeric format" ;
+    rdfs:domain nrl:Data ;
+    rdfs:label "version" ;
+    rdfs:range xsd:float ;
+    rdfs:subPropertyOf nao:annotation .
+
+nao:altLabel
+    a rdf:Property ;
+    rdfs:comment "An alternative label alongside the preferred label for a resource" ;
+    rdfs:label "alternative label" ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf rdfs:label .
+
+nao:hasSymbol
+    a rdf:Property ;
+    rdfs:comment "Annotation for a resource in the form of a symbol representation" ;
+    rdfs:domain rdfs:Resource ;
+    rdfs:label "has symbol" ;
+    rdfs:range nao:Symbol .
+
+nao:prefSymbol
+    a rdf:Property ;
+    rdfs:comment "A unique preferred symbol representation for a resource" ;
+    rdfs:domain rdfs:Resource ;
+    rdfs:label "preferred symbol" ;
+    rdfs:range nao:Symbol ;
+    rdfs:subPropertyOf nao:hasSymbol .
+
+nao:altSymbol
+    a rdf:Property ;
+    rdfs:comment "An alternative symbol representation for a resource" ;
+    rdfs:domain rdfs:Resource ;
+    rdfs:label "alternative symbol" ;
+    rdfs:range nao:Symbol ;
+    rdfs:subPropertyOf nao:hasSymbol .
+
+nao:serializationLanguage
+    nrl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+    a rdf:Property ;
+    rdfs:comment "States the serialization language for a named graph that is represented within a document" ;
+    rdfs:domain nrl:DocumentGraph ;
+    rdfs:label "serialization language" ;
+    rdfs:range rdfs:Literal .
+
+nao:creator
+    a rdf:Property ;
+    rdfs:comment "Refers to the single or group of individuals that created the resource" ;
+    rdfs:domain rdfs:Resource ;
+    rdfs:label "creator" ;
+    rdfs:range nao:Party ;
+    rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/creator>, nao:annotation .
+
+nao:Party
+    a rdfs:Class ;
+    rdfs:comment "Represents a single or a group of individuals" ;
+    rdfs:label "party" ;
+    rdfs:subClassOf rdfs:Resource .
+
+nao:rating
+    a rdf:Property ;
+    rdfs:comment "Annotation for a resource in the form of an unrestricted rating" ;
+    rdfs:domain rdfs:Resource ;
+    rdfs:label "rating" ;
+    rdfs:subPropertyOf nao:annotation .
+
+nao:numericRating
+    nrl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+    a rdf:Property ;
+    rdfs:comment " Annotation for a resource in the form of a numeric rating (float value), allowed values are between 1 and 10 whereas 0 is interpreted as not set" ;
+    rdfs:domain rdfs:Resource ;
+    rdfs:label "numeric rating" ;
+    rdfs:range xsd:float ;
+    rdfs:subPropertyOf nao:rating, nao:scoreParameter .
+
+nao:contributor
+    a rdf:Property ;
+    rdfs:comment "Refers to a single or a group of individuals that contributed to a resource" ;
+    rdfs:domain rdfs:Resource ;
+    rdfs:label "contributor" ;
+    rdfs:range nao:Party ;
+    rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/contributor>, nao:annotation .
+
+nao:hasDefaultNamespace
+    nrl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+    a rdf:Property ;
+    rdfs:comment "Defines the default static namespace for a graph" ;
+    rdfs:domain nrl:Data ;
+    rdfs:label "has default namespace" ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf nao:annotation .
+
+nao:modified
+    a rdf:Property ;
+    rdfs:comment "States the modification time for a resource" ;
+    rdfs:domain rdfs:Resource ;
+    rdfs:label "modified at" ;
+    rdfs:range xsd:dateTime ;
+    rdfs:subPropertyOf <http://purl.org/dc/terms/modified>, nao:annotation .
+
+nao:created
+    nrl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+    a rdf:Property ;
+    rdfs:comment "States the creation, or first modification time for a resource" ;
+    rdfs:domain rdfs:Resource ;
+    rdfs:label "created at" ;
+    rdfs:range xsd:dateTime ;
+    rdfs:subPropertyOf nao:modified .
+
+nao:lastModified
+    nrl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+    a rdf:Property ;
+    rdfs:comment "States the last modification time for a resource" ;
+    rdfs:domain rdfs:Resource ;
+    rdfs:label "last modified at" ;
+    rdfs:range xsd:dateTime ;
+    rdfs:subPropertyOf nao:modified .
+
+nao:status
+    nrl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+    a rdf:Property ;
+    rdfs:comment "Specifies the status of a graph, stable, unstable or testing" ;
+    rdfs:domain nrl:Data ;
+    rdfs:label "status" ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf nao:annotation .
+
+nao:description
+    a rdf:Property ;
+    rdfs:comment "A non-technical textual annotation for a resource" ;
+    rdfs:label "description" ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf nao:annotation, rdfs:comment .
+
+nao:prefLabel
+    a rdf:Property ;
+    rdfs:comment "A preferred label for a resource" ;
+    rdfs:label "preferred label" ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf rdfs:label .
+
+nao:pluralPrefLabel
+    a rdf:Property ;
+    rdfs:comment "The plural form of the preferred label for a resource" ;
+    rdfs:label "preferred label plural form" ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf rdfs:label .
+
+nao:engineeringTool
+    a rdf:Property ;
+    rdfs:comment "Specifies the engineering tool used to generate the graph" ;
+    rdfs:domain nrl:Data ;
+    rdfs:label "engineering tool" ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf nao:annotation .
+
+nao:personalIdentifier
+    a nrl:InverseFunctionalProperty, rdf:Property ;
+    rdfs:comment "Defines a personal string identifier for a resource" ;
+    rdfs:label "personal identifier" ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf nao:identifier .
+

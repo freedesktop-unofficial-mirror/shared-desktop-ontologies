@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+
+  
+  <link rel="stylesheet" type="text/css" href="nepomuk-ontology-docs.css" />
+
+  
+  <title>Nepomuk ID3 Ontology (NID3)</title>
+</head>
+
+
+<body>
+
+
+<div class="head">
+<div class="nav"> <a href="http://nepomuk.semanticdesktop.org"> <img style="border: 0px solid ; width: 180px; height: 88px;" alt="NEPOMUK Logo" src="nepomuk.png" /> </a> </div>
+
+
+<h1>NEPOMUK&nbsp;ID3 Ontology</h1>
+
+
+<big style="color: rgb(0, 90, 156);">Task-Force Ontologies</big>
+<dl>
+
+
+  <dt></dt>
+
+
+  <dt></dt>
+
+
+  <dt>Latest Version:</dt>
+
+
+  <dd><a href="http://www.semanticdesktop.org/ontologies/nid3">http://www.semanticdesktop.org/ontologies/nid3</a>
+  </dd>
+
+
+  <dt></dt>
+
+
+  <dt>This Version:</dt>
+
+
+  <dd><a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#">http://www.semanticdesktop.org/ontologies/2007/05/10/nid3</a>
+  <br/>This file refers to the Revision 9 of NIE. Minor changes may be implemented in future revisions. 
+       With each new revision, the documentation and all serializations of the ontology will be updated.</dd>
+
+
+  <dt></dt>
+
+
+  <dt>Authors:</dt>
+
+
+  <dd>Antoni Mylka, DFKI, <a href="mailto:antoni.mylka@dfki.de">antoni.mylka@dfki.de</a></dd>
+
+
+  <dd>Leo Sauermann, DFKI, <a href="mailto:leo.sauermann@dfki.de">leo.sauermann@dfki.de</a></dd>
+
+
+  <dd>Michael Sintek, DFKI, <a href="mailto:michael.sintek@dfki.de">michael.sintek@dfki.de</a></dd>
+
+
+  <dd>Ludger van Elst, DFKI, <a href="mailto:elst@dfki.uni-kl.de">elst@dfki.uni-kl.de</a></dd>
+
+
+</dl>
+
+
+<dl>
+
+
+  <dt>Editor:</dt>
+
+
+  <dd>Antoni Mylka, DFKI, <a href="mailto:antoni.mylka@dfki.de">antoni.mylka@dfki.de</a></dd>
+
+
+</dl>
+
+
+<dl>
+
+
+  <dt>Contributors:</dt>
+
+
+  <dd>Evgeny 'phreedom' Egorochkin, KDE Strigi Developer, <a href="mailto:stexx@mail.ru">stexx@mail.ru</a></dd>
+
+
+  <dd>Christiaan Fluit, Aduna, <a href="mailto:christiaan.fluit@aduna-software.com">christiaan.fluit@aduna-software.com</a></dd>
+
+
+  <dt><span style="font-weight: bold;"></span></dt>
+
+
+  <dt><span style="font-weight: bold;">Ontology:</span></dt>
+
+
+  <dd>XML/RDFS Serialization: <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3/nid3_data.rdfs">NID3
+(Data Graph Only)</a></dd>
+
+
+  <dd>XML/RDFS Serialization: <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3/nid3_metadata.rdfs">NID3
+(Metadata Graph Only)</a></dd>
+
+
+  <dd>TriG Serialization: <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3/nid3.trig">NID3
+(Graph Set)</a></dd>
+
+
+  <dt></dt>
+
+
+</dl>
+
+
+</div>
+
+
+<p class="copyright"> Copyright &copy; 2007 <a href="http://www.dfki.de/"><acronym title="Deutsches Forschungszentrum fuer Kuenstliche Intelligenz">DFKI</acronym></a><sup>&reg;</sup>
+The ontologies are made available under the terms of NEPOMUK <a href="LICENSE.txt">software license</a>
+</p>
+
+
+<hr />
+<h2>Abstract</h2>
+
+
+<p style="text-align: justify;"> ID3 is a common standard
+for audio metadata. It has become widespread with the profusion of MP3
+files. The NEPOMUK ID3 ontology (NID3) makes it possible to express ID3
+information in RDF, thus bringing it within reach of RDF-enabled
+application. This document gives an overview of NID3 and describes its
+classes and properties.
+</p>
+
+
+<h2> Status of this document</h2>
+
+
+<div id="sotd">
+<p style="text-align: justify;"> This document arose from
+the work of the Task-Force ontologies within the <a href="http://nepomuk.semanticdesktop.org">NEPOMUK project</a>.
+This document is a DRAFT made available by the Nepomuk Consortium for
+discussion only. This document is a work in progress and may be
+updated, replaced, or rendered obsolete by other documents at any time.
+</p>
+
+
+<p style="text-align: justify;"> This document is a part
+in a set of seven documents, which together comprise the complete
+specification of the Nepomuk Information Element Ontology
+Framework.&nbsp;These are: <a href="http://www.semanticdesktop.org/ontologies/nie">NIE</a>,
+<a href="http://www.semanticdesktop.org/ontologies/nfo">NFO</a>,
+<a href="http://www.semanticdesktop.org/ontologies/nco">NCO</a>,
+<a href="http://www.semanticdesktop.org/ontologies/nmo">NMO</a>,
+<a href="http://www.semanticdesktop.org/ontologies/ncal">NCAL</a>,
+<a href="http://www.semanticdesktop.org/ontologies/nexif">NEXIF</a>,
+<a href="http://www.semanticdesktop.org/ontologies/nid3">NID3</a>.
+</p>
+
+
+</div>
+
+
+<div>
+<h2 id="intro">Ontology description</h2>
+
+
+<p style="text-align: justify;">
+ID3 is a popular standard of audio metadata. It has gained popularity
+with the profusion of MP3 files, but it's not limited to the MP3
+format. The authors of the Nepomuk ID3 Ontology (NID3) haven't found
+any previous attempts at converting the ID3 specifications to RDF. NID3
+has been created from scratch as an exact adaptation of the <a href="http://www.id3.org/id3v2.3.0">ID3 v. 2.3.0 Standard
+Document</a>. It covers all ID3v2 frames defined in section 4 of
+the standard document with the exception of subsections: 4.6, 4.7, 4.8.
+Subsections from 4.12 to 4.28 inclusive aren't covered either.</p>
+
+
+<p style="text-align: justify;">
+The NID3 properties have been carefully aligned with <a href="http://www.semanticdesktop.org/ontologies/nco">NCO</a>
+(mainly <a href="http://www.semanticdesktop.org/ontologies/nco#creator">nco:creator</a>
+and
+<a href="http://www.semanticdesktop.org/ontologies/nco#contributor">nco:contributor</a>)
+and Dublin Core (e.g. <a href="http://www.dublincore.org/documents/dces/#rights">dc:rights</a>).
+Refer to the documentation for details.
+</p>
+
+
+</div>
+
+<div>
+<a name="sec-examples"></a>
+<h2><a name="sec-examples">Examples</a></h2>
+
+Example files that show how to use the expressive power of the ontology will be
+published here in near future.
+
+</div>
