@@ -79,6 +79,14 @@ nie: {nie:characterSet
           rdfs:range xsd:dateTime ;
           rdfs:subPropertyOf dcterms:created .
 
+    nie:lastModified
+          a       rdf:Property ;
+          rdfs:comment "Last modification date of the DataObject. Note that this date refers to the modification of the DataObject itself (i.e. the physical representation). Compare with nie:contentLastModified." ;
+          rdfs:domain nie:DataObject ;
+          rdfs:label "lastModified" ;
+          rdfs:range xsd:dateTime ;
+          rdfs:subPropertyOf dc:date .
+
     nie:mimeType
           a       rdf:Property ;
           rdfs:comment "The mime type of the resource, if available. Example: \"text/plain\". See http://www.iana.org/assignments/media-types/. This property applies to data objects that can be described with one mime type. In cases where the object as a whole has one mime type, while it's parts have other mime types, or there is no mime type that can be applied to the object as a whole, but some parts of the content have mime types - use more specific properties." ;

@@ -633,7 +633,7 @@ nfo: {nfo:horizontalResolution
           rdfs:domain nfo:FileDataObject ;
           rdfs:label "fileLastModified" ;
           rdfs:range xsd:dateTime ;
-          rdfs:subPropertyOf dc:date .
+          rdfs:subPropertyOf nie:lastModified .
 
     nfo:compressionType
           a       rdf:Property ;
