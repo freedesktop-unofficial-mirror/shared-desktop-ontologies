@@ -238,7 +238,7 @@ nco: {nco:region
           rdfs:label "fullname" ;
           rdfs:range xsd:string ;
           nrl:maxCardinality "1" ;
-          rdfs:subPropertyOf dc:title .
+          rdfs:subPropertyOf nie:title .
 
     nco:ContactGroup
           a       rdfs:Class ;
