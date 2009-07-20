@@ -338,7 +338,7 @@ nie: {nie:characterSet
                   "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#" ;
           nao:hasDefaultNamespaceAbbreviation
                   "nie" ;
-          nao:lastModified "2008-12-28T21:22:09.500Z" ;
+          nao:lastModified "2009-07-20T14:59:09.500Z" ;
           nao:status "Unstable" ;
           nao:updatable "0 " ;
           nao:version "Revision-9" .
