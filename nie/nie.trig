@@ -323,6 +323,13 @@ nie: {nie:characterSet
           rdfs:range nie:InformationElement ;
           rdfs:subPropertyOf dcterms:hasPart ;
           nrl:inverseProperty nie:isLogicalPartOf .
+
+    nfo:url
+          a       rdf:Property ;
+          rdfs:comment "URL of a DataObject. It points to the location of the object. A typial usage is FileDataObject. In cases where creating a simple file:// or http:// URL for a file is difficult (e.g. for files inside compressed archives) the applications are encouraged to use conventions defined by Apache Commons VFS Project at http://jakarta.apache.org/  commons/ vfs/ filesystems.html." ;
+          rdfs:domain nie:DataObject ;
+          rdfs:label "url" ;
+          rdfs:range rdfs:Resource .
 }
 
 <http://www.semanticdesktop.org/ontologies/2007/01/19/nie_metadata#> {nie:  a       nrl:Ontology ;
@@ -334,7 +341,7 @@ nie: {nie:characterSet
           nao:lastModified "2008-12-28T21:22:09.500Z" ;
           nao:status "Unstable" ;
           nao:updatable "0 " ;
-          nao:version "Revision-8" .
+          nao:version "Revision-9" .
 
     <http://www.semanticdesktop.org/ontologies/2007/01/19/nie_metadata#>
           a       nrl:GraphMetadata ;

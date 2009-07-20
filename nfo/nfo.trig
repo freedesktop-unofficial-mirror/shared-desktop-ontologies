@@ -557,13 +557,6 @@ nfo: {nfo:horizontalResolution
           rdfs:label "verticalResolution" ;
           rdfs:range xsd:integer .
 
-    nfo:fileUrl
-          a       rdf:Property ;
-          rdfs:comment "URL of the file. It points at the location of the file. In cases where creating a simple file:// or http:// URL for a file is difficult (e.g. for files inside compressed archives) the applications are encouraged to use conventions defined by Apache Commons VFS Project at http://jakarta.apache.org/  commons/ vfs/ filesystems.html." ;
-          rdfs:domain nfo:FileDataObject ;
-          rdfs:label "fileUrl" ;
-          rdfs:range rdfs:Resource .
-
     nfo:count
           a       rdf:Property ;
           rdfs:comment "A common superproperty for all properties signifying the amount of atomic media data units. Examples of subproperties may include sampleCount and frameCount." ;
@@ -771,10 +764,10 @@ nfo: {nfo:horizontalResolution
                   "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#" ;
           nao:hasDefaultNamespaceAbbreviation
                   "nfo" ;
-          nao:lastModified "2008-12-28T22:23:30.750Z" ;
+          nao:lastModified "2009-07-20T14:59:09.500Z" ;
           nao:status "Unstable" ;
           nao:updatable "0 " ;
-          nao:version "Revision-8" .
+          nao:version "Revision-9" .
 
     <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo_metadata#>
           a       nrl:GraphMetadata ;
