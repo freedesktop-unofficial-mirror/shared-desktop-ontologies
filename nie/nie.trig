@@ -217,7 +217,7 @@ nie: {nie:characterSet
 
     nie:contentLastModified
           a       rdf:Property ;
-          rdfs:comment "The date of the last modification of the content." ;
+          rdfs:comment "The date of the last modification of the original content (not its corresponding DataObject or local copy). Compare with nie:lastModified." ;
           rdfs:domain nie:InformationElement ;
           rdfs:label "contentLastModified" ;
           rdfs:range xsd:dateTime ;
