@@ -22,7 +22,7 @@ nmo: {nmo:IMMessage
           a       rdfs:Class ;
           rdfs:comment "A message sent with Instant Messaging software." ;
           rdfs:label "IMMessage" ;
-          rdfs:subClassOf nmo:MimeEntity , nmo:Message .
+          rdfs:subClassOf nmo:Message .
 
     nmo:Email
           a       rdfs:Class ;
