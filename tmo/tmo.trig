@@ -273,10 +273,6 @@ information is transferred in the \"task space\" of the participating persons.""
           a       tmo:TaskState ;
           rdfs:label "TMO_Instance_TaskState_Archived" .
 
-    nao:description
-          a       rdf:Property ;
-          rdfs:label "nao:description" .
-
     tmo:targetTime
           a       rdf:Property ;
           rdfs:label "targetTime" ;
@@ -523,12 +519,6 @@ This separation may arise as a general Nepomuk issue and may therefore be handle
           rdfs:subPropertyOf tmo:stateTypeRole ;
           nrl:maxCardinality "1" .
 
-    nao:Tag
-          a       rdfs:Class ;
-          rdfs:comment "Represents a generic tag" ;
-          rdfs:label "nao:Tag" ;
-          rdfs:subClassOf rdfs:Resource .
-
     tmo:taskName
           a       rdf:Property ;
           rdfs:comment "The Task Name helps the user to identify a task in a list. It should be expressive enough to give a meaningful recognition. Details should be written in the description attribute instead. A name attribute is not allowed to contain line breaks." ;
@@ -604,10 +594,6 @@ A dependency relation is characterized by the type of the relation and by an add
           rdfs:range tmo:AttachmentRole ;
           rdfs:subPropertyOf tmo:stateTypeRole ;
           nrl:maxCardinality "1" .
-
-    nao:prefLabel
-          a       rdf:Property ;
-          rdfs:label "nao:prefLabel" .
 
     tmo:TMO_Instance_TaskPrivacy_Professional
           a       tmo:TaskPrivacyState ;
@@ -1109,10 +1095,10 @@ This separation may arise as a general Nepomuk issue and may therefore be handle
                   "http://www.semanticdesktop.org/ontologies/2008/05/20/tmo#" ;
           nao:hasDefaultNamespaceAbbreviation
                   "tmo" ;
-          nao:lastModified "2008-11-06T14:54:25.546Z" ;
+          nao:lastModified "2009-08-14T10:04:25.546Z" ;
           nao:status "Unstable" ;
           nao:updatable "0 " ;
-          nao:version "0.9" .
+          nao:version "0.9.1" .
 
     <http://www.semanticdesktop.org/ontologies/2008/05/20/tmo_metadata#>
           a       nrl:GraphMetadata ;
