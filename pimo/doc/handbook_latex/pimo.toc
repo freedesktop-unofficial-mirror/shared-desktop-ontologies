@@ -1,0 +1,158 @@
+\contentsline {section}{\numberline {1}Abstract}{1}{section.1}
+\contentsline {section}{\numberline {2}Status of this document}{1}{section.2}
+\contentsline {section}{\numberline {3}Introduction}{1}{section.3}
+\contentsline {subsection}{\numberline {3.1}Downloading PIMO}{2}{subsection.3.1}
+\contentsline {section}{\numberline {4}PIMO integrates with key ontologies}{3}{section.4}
+\contentsline {section}{\numberline {5}Examples}{4}{section.5}
+\contentsline {subsection}{\numberline {5.1}PIMO ontology and namespaces}{4}{subsection.5.1}
+\contentsline {section}{\numberline {6}Creating Personal Information Models}{5}{section.6}
+\contentsline {subsection}{\numberline {6.1}The User and their Individual PIMO}{5}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Things}{6}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Connecting Things to the User's PIMO}{6}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}Identification of Things}{7}{subsection.6.4}
+\contentsline {paragraph}{NAO-Identifiers}{8}{section*.6}
+\contentsline {paragraph}{Grounding Occurrence}{8}{section*.7}
+\contentsline {paragraph}{Occurrence}{9}{section*.8}
+\contentsline {paragraph}{Referencing Occurrence}{9}{section*.9}
+\contentsline {paragraph}{Other Representation}{10}{section*.10}
+\contentsline {paragraph}{Other Conceptualization}{10}{section*.11}
+\contentsline {subsection}{\numberline {6.5}A Complete Example}{10}{subsection.6.5}
+\contentsline {subsection}{\numberline {6.6}Labels and Names of Things}{11}{subsection.6.6}
+\contentsline {paragraph}{\texttt {nao:prefLabel}}{11}{section*.12}
+\contentsline {paragraph}{\texttt {pimo:tagLabel}}{12}{section*.13}
+\contentsline {paragraph}{\texttt {nao:altLabel}}{12}{section*.14}
+\contentsline {subsection}{\numberline {6.7}Textual description of Things}{12}{subsection.6.7}
+\contentsline {subsection}{\numberline {6.8}Rating and Ranking Things}{13}{subsection.6.8}
+\contentsline {subsection}{\numberline {6.9}Modelling Time}{13}{subsection.6.9}
+\contentsline {subsection}{\numberline {6.10}Representing Modification and Change Dates}{13}{subsection.6.10}
+\contentsline {subsection}{\numberline {6.11}Setting the Class of a Thing}{14}{subsection.6.11}
+\contentsline {subsection}{\numberline {6.12}The PIMO-upper ontology}{15}{subsection.6.12}
+\contentsline {subsection}{\numberline {6.13}Classes in PIMO-Upper}{15}{subsection.6.13}
+\contentsline {subsection}{\numberline {6.14}Describing Things with Attributes and Relations}{17}{subsection.6.14}
+\contentsline {subsection}{\numberline {6.15}Generic Properties in PIMO-Upper}{17}{subsection.6.15}
+\contentsline {subsection}{\numberline {6.16}Refined properties in PIMO-Upper}{18}{subsection.6.16}
+\contentsline {subsection}{\numberline {6.17}Tagging Things with Tags}{18}{subsection.6.17}
+\contentsline {subsection}{\numberline {6.18}Topic Hierarchies}{19}{subsection.6.18}
+\contentsline {subsection}{\numberline {6.19}Creating Personalized Classes and Properties}{20}{subsection.6.19}
+\contentsline {subsection}{\numberline {6.20}Collections of Things}{21}{subsection.6.20}
+\contentsline {subsection}{\numberline {6.21}Modeling Associations and Roles in PIMO}{21}{subsection.6.21}
+\contentsline {section}{\numberline {7}Connecting PIMO to Information Elements}{22}{section.7}
+\contentsline {subsection}{\numberline {7.1}Connecting Things and Classes to Folders}{22}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Integrating Facts about Things}{23}{subsection.7.2}
+\contentsline {section}{\numberline {8}PIMO-group level: Group and Domain ontologies}{23}{section.8}
+\contentsline {section}{\numberline {9}Extending PIMO}{24}{section.9}
+\contentsline {subsection}{\numberline {9.1}Refining Elements of PIMO-upper}{24}{subsection.9.1}
+\contentsline {paragraph}{Classes}{24}{section*.15}
+\contentsline {paragraph}{Instances}{24}{section*.16}
+\contentsline {paragraph}{Properties}{25}{section*.17}
+\contentsline {paragraph}{Inheritance}{25}{section*.18}
+\contentsline {subsection}{\numberline {9.2}Markup for the new ontology}{26}{subsection.9.2}
+\contentsline {subsection}{\numberline {9.3}Information Elements}{26}{subsection.9.3}
+\contentsline {subsection}{\numberline {9.4}Extension by Sub-classing from External Classes}{28}{subsection.9.4}
+\contentsline {subsection}{\numberline {9.5}Summary}{29}{subsection.9.5}
+\contentsline {section}{\numberline {10}Importing Domain Ontologies into a User's PIMO}{29}{section.10}
+\contentsline {section}{\numberline {11}Practical Directions on Using PIMO}{30}{section.11}
+\contentsline {subsection}{\numberline {11.1}Creating Things}{30}{subsection.11.1}
+\contentsline {paragraph}{Start}{30}{section*.19}
+\contentsline {paragraph}{Check GroundingOccurrence}{30}{section*.20}
+\contentsline {paragraph}{Check occurrences}{30}{section*.21}
+\contentsline {paragraph}{Check identifiers}{30}{section*.22}
+\contentsline {paragraph}{Create a new Thing}{31}{section*.23}
+\contentsline {subsection}{\numberline {11.2}Changing the Type of a Thing}{31}{subsection.11.2}
+\contentsline {subsection}{\numberline {11.3}Deleting a Thing}{32}{subsection.11.3}
+\contentsline {subsection}{\numberline {11.4}Deleting User-generated Classes and Properties}{32}{subsection.11.4}
+\contentsline {subsection}{\numberline {11.5}Merging Duplicates}{32}{subsection.11.5}
+\contentsline {subsection}{\numberline {11.6}Unification of multiple Information Elements into one Thing}{33}{subsection.11.6}
+\contentsline {subsection}{\numberline {11.7}Tagging and Annotating Files}{34}{subsection.11.7}
+\contentsline {subsection}{\numberline {11.8}Geo-locating Things}{35}{subsection.11.8}
+\contentsline {subsection}{\numberline {11.9}Defining what is in the PIMO and what is not: NRL Graphs and \texttt {definedBy}}{36}{subsection.11.9}
+\contentsline {subsection}{\numberline {11.10}Using NAO and NIE Elements for Annotation}{37}{subsection.11.10}
+\contentsline {subsection}{\numberline {11.11}How to Infer Knowledge Using Rules?}{37}{subsection.11.11}
+\contentsline {section}{\numberline {12}Rules Defined by PIMO}{39}{section.12}
+\contentsline {subsection}{\numberline {12.1}Construction Rules}{39}{subsection.12.1}
+\contentsline {subsection}{\numberline {12.2}Validation Rules}{40}{subsection.12.2}
+\contentsline {subsection}{\numberline {12.3}Rules Valid when Integrating with NIE}{40}{subsection.12.3}
+\contentsline {section}{\numberline {13}Sources considered for designing PIMO}{41}{section.13}
+\contentsline {section}{\numberline {A}Changes}{42}{appendix.A}
+\contentsline {subsection}{\numberline {A.1}From v1.0 to 1.1}{42}{subsection.A.1}
+\contentsline {section}{\numberline {B}PIMO Specification}{45}{appendix.B}
+\contentsline {subsection}{\numberline {B.1}Ontology Classes Description}{45}{subsection.B.1}
+\contentsline {subsubsection}{\numberline {B.1.1}Agent}{45}{subsubsection.B.1.1}
+\contentsline {subsubsection}{\numberline {B.1.2}Association}{45}{subsubsection.B.1.2}
+\contentsline {subsubsection}{\numberline {B.1.3}Attendee}{45}{subsubsection.B.1.3}
+\contentsline {subsubsection}{\numberline {B.1.4}BlogPost}{46}{subsubsection.B.1.4}
+\contentsline {subsubsection}{\numberline {B.1.5}Building}{46}{subsubsection.B.1.5}
+\contentsline {subsubsection}{\numberline {B.1.6}City}{46}{subsubsection.B.1.6}
+\contentsline {subsubsection}{\numberline {B.1.7}ClassOrThing}{47}{subsubsection.B.1.7}
+\contentsline {subsubsection}{\numberline {B.1.8}ClassOrThingOrPropertyOrAssociation}{47}{subsubsection.B.1.8}
+\contentsline {subsubsection}{\numberline {B.1.9}ClassRole}{48}{subsubsection.B.1.9}
+\contentsline {subsubsection}{\numberline {B.1.10}Collection}{48}{subsubsection.B.1.10}
+\contentsline {subsubsection}{\numberline {B.1.11}Contract}{49}{subsubsection.B.1.11}
+\contentsline {subsubsection}{\numberline {B.1.12}Country}{49}{subsubsection.B.1.12}
+\contentsline {subsubsection}{\numberline {B.1.13}Document}{50}{subsubsection.B.1.13}
+\contentsline {subsubsection}{\numberline {B.1.14}Event}{50}{subsubsection.B.1.14}
+\contentsline {subsubsection}{\numberline {B.1.15}Locatable}{50}{subsubsection.B.1.15}
+\contentsline {subsubsection}{\numberline {B.1.16}Location}{51}{subsubsection.B.1.16}
+\contentsline {subsubsection}{\numberline {B.1.17}LogicalMediaType}{51}{subsubsection.B.1.17}
+\contentsline {subsubsection}{\numberline {B.1.18}Meeting}{52}{subsubsection.B.1.18}
+\contentsline {subsubsection}{\numberline {B.1.19}Note}{52}{subsubsection.B.1.19}
+\contentsline {subsubsection}{\numberline {B.1.20}Organization}{52}{subsubsection.B.1.20}
+\contentsline {subsubsection}{\numberline {B.1.21}OrganizationMember}{53}{subsubsection.B.1.21}
+\contentsline {subsubsection}{\numberline {B.1.22}Person}{53}{subsubsection.B.1.22}
+\contentsline {subsubsection}{\numberline {B.1.23}PersonGroup}{53}{subsubsection.B.1.23}
+\contentsline {subsubsection}{\numberline {B.1.24}PersonRole}{54}{subsubsection.B.1.24}
+\contentsline {subsubsection}{\numberline {B.1.25}PersonalInformationModel}{54}{subsubsection.B.1.25}
+\contentsline {subsubsection}{\numberline {B.1.26}ProcessConcept}{55}{subsubsection.B.1.26}
+\contentsline {subsubsection}{\numberline {B.1.27}Project}{55}{subsubsection.B.1.27}
+\contentsline {subsubsection}{\numberline {B.1.28}Room}{55}{subsubsection.B.1.28}
+\contentsline {subsubsection}{\numberline {B.1.29}SocialEvent}{56}{subsubsection.B.1.29}
+\contentsline {subsubsection}{\numberline {B.1.30}State}{56}{subsubsection.B.1.30}
+\contentsline {subsubsection}{\numberline {B.1.31}Task}{56}{subsubsection.B.1.31}
+\contentsline {subsubsection}{\numberline {B.1.32}Thing}{57}{subsubsection.B.1.32}
+\contentsline {subsubsection}{\numberline {B.1.33}Topic}{58}{subsubsection.B.1.33}
+\contentsline {subsection}{\numberline {B.2}Ontology Properties Description}{58}{subsection.B.2}
+\contentsline {subsubsection}{\numberline {B.2.1}associationEffectual}{58}{subsubsection.B.2.1}
+\contentsline {subsubsection}{\numberline {B.2.2}associationMember}{58}{subsubsection.B.2.2}
+\contentsline {subsubsection}{\numberline {B.2.3}attendee}{59}{subsubsection.B.2.3}
+\contentsline {subsubsection}{\numberline {B.2.4}attendingMeeting}{59}{subsubsection.B.2.4}
+\contentsline {subsubsection}{\numberline {B.2.5}attends}{59}{subsubsection.B.2.5}
+\contentsline {subsubsection}{\numberline {B.2.6}broader}{59}{subsubsection.B.2.6}
+\contentsline {subsubsection}{\numberline {B.2.7}classRole}{60}{subsubsection.B.2.7}
+\contentsline {subsubsection}{\numberline {B.2.8}containsLocation}{60}{subsubsection.B.2.8}
+\contentsline {subsubsection}{\numberline {B.2.9}createdPimo}{60}{subsubsection.B.2.9}
+\contentsline {subsubsection}{\numberline {B.2.10}creator}{60}{subsubsection.B.2.10}
+\contentsline {subsubsection}{\numberline {B.2.11}datatypeProperty}{61}{subsubsection.B.2.11}
+\contentsline {subsubsection}{\numberline {B.2.12}dtend}{61}{subsubsection.B.2.12}
+\contentsline {subsubsection}{\numberline {B.2.13}dtstart}{61}{subsubsection.B.2.13}
+\contentsline {subsubsection}{\numberline {B.2.14}duration}{61}{subsubsection.B.2.14}
+\contentsline {subsubsection}{\numberline {B.2.15}groundingForDeletedThing}{62}{subsubsection.B.2.15}
+\contentsline {subsubsection}{\numberline {B.2.16}groundingOccurrence}{62}{subsubsection.B.2.16}
+\contentsline {subsubsection}{\numberline {B.2.17}hasDeprecatedRepresentation}{62}{subsubsection.B.2.17}
+\contentsline {subsubsection}{\numberline {B.2.18}hasFolder}{63}{subsubsection.B.2.18}
+\contentsline {subsubsection}{\numberline {B.2.19}hasLocation}{63}{subsubsection.B.2.19}
+\contentsline {subsubsection}{\numberline {B.2.20}hasOrganizationMember}{63}{subsubsection.B.2.20}
+\contentsline {subsubsection}{\numberline {B.2.21}hasOtherConceptualization}{63}{subsubsection.B.2.21}
+\contentsline {subsubsection}{\numberline {B.2.22}hasOtherRepresentation}{64}{subsubsection.B.2.22}
+\contentsline {subsubsection}{\numberline {B.2.23}hasOtherSlot}{64}{subsubsection.B.2.23}
+\contentsline {subsubsection}{\numberline {B.2.24}hasPart}{64}{subsubsection.B.2.24}
+\contentsline {subsubsection}{\numberline {B.2.25}hasTopic}{65}{subsubsection.B.2.25}
+\contentsline {subsubsection}{\numberline {B.2.26}isDefinedBy}{65}{subsubsection.B.2.26}
+\contentsline {subsubsection}{\numberline {B.2.27}isLocationOf}{65}{subsubsection.B.2.27}
+\contentsline {subsubsection}{\numberline {B.2.28}isOrganizationMemberOf}{66}{subsubsection.B.2.28}
+\contentsline {subsubsection}{\numberline {B.2.29}isRelated}{66}{subsubsection.B.2.29}
+\contentsline {subsubsection}{\numberline {B.2.30}isTopicOf}{66}{subsubsection.B.2.30}
+\contentsline {subsubsection}{\numberline {B.2.31}isWriteable}{66}{subsubsection.B.2.31}
+\contentsline {subsubsection}{\numberline {B.2.32}jabberId}{67}{subsubsection.B.2.32}
+\contentsline {subsubsection}{\numberline {B.2.33}locatedWithin}{67}{subsubsection.B.2.33}
+\contentsline {subsubsection}{\numberline {B.2.34}narrower}{67}{subsubsection.B.2.34}
+\contentsline {subsubsection}{\numberline {B.2.35}objectProperty}{67}{subsubsection.B.2.35}
+\contentsline {subsubsection}{\numberline {B.2.36}occurrence}{68}{subsubsection.B.2.36}
+\contentsline {subsubsection}{\numberline {B.2.37}organization}{68}{subsubsection.B.2.37}
+\contentsline {subsubsection}{\numberline {B.2.38}partOf}{68}{subsubsection.B.2.38}
+\contentsline {subsubsection}{\numberline {B.2.39}referencingOccurrence}{69}{subsubsection.B.2.39}
+\contentsline {subsubsection}{\numberline {B.2.40}roleContext}{69}{subsubsection.B.2.40}
+\contentsline {subsubsection}{\numberline {B.2.41}roleHolder}{69}{subsubsection.B.2.41}
+\contentsline {subsubsection}{\numberline {B.2.42}subTopic}{69}{subsubsection.B.2.42}
+\contentsline {subsubsection}{\numberline {B.2.43}superTopic}{70}{subsubsection.B.2.43}
+\contentsline {subsubsection}{\numberline {B.2.44}taskDueTime}{70}{subsubsection.B.2.44}
+\contentsline {subsubsection}{\numberline {B.2.45}wikiText}{70}{subsubsection.B.2.45}

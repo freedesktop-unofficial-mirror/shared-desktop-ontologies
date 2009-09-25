@@ -1,0 +1,309 @@
+% STATUS
+% Knud: we should do two documents, one short and precise one describing the standard and a longer one for
+% explaining the decision made and the design rationale.
+% Renauld and Knud work on it from DERI side.
+
+
+
+\documentclass[11pt]{nepomuk}
+\usepackage{hyperref}		% turn on when latex is used (not miktec)
+\usepackage{url} % LEO: urls \url{}
+\usepackage{verbatim} % code and comment
+\usepackage{longtable}
+\parindent0pt
+
+\begin{document}
+% explicit hyphenations
+\hyphenation{RDF-Re-po-si-to-ry}
+\hyphenation{name-space}
+\hyphenation{So-cket-A-dap-ter}
+
+\fontfamily{tahoma}\selectfont
+\def\note#1{\marginpar{\footnotesize#1}} % use this to show the notes in the document
+%\def\note#1{} % use this to hide the notes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TITLE PAGES 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\thispagestyle{empty}
+
+\pagenumbering{roman}
+
+\hspace*{-4.5cm}
+\begin{minipage}[p]{7cm}
+\begin{large}
+\textcolor{nepomuk@lightblue}{
+\begin{tabular}{l}
+Integrated Project \\
+Priority 2.4.7 \\ 
+Semantic based knowledge systems\\ 
+\end{tabular}
+}
+\end{large}
+\end{minipage}
+
+\vspace{-2.8cm}
+
+
+\begin{flushright}
+	\includegraphics*[width=3.89cm]{images/InformationSocietyTechnologies}
+\end{flushright}
+
+\vspace{0.5cm}
+
+\begin{flushright}
+	\includegraphics[width=12cm]{images/Nepomuk}
+\end{flushright}
+
+
+\vspace{1cm}
+
+
+\textcolor{nepomuk@lightblue}{\rightline{\Huge{\bfseries \sffamily Personal Information Element}}} 
+\textcolor{nepomuk@lightblue}{\rightline{\Huge{\bfseries \sffamily Ontology}}} 
+
+\vspace{0.3cm}
+
+\textcolor{nepomuk@green}{\rightline{\huge specification draft}}
+
+\vspace{0cm}
+
+%\begin{figure}[h!]
+\begin{flushright}
+	\includegraphics[width=9cm]{images/Bubbles}
+\end{flushright}
+%\end{figure}
+
+
+\vspace*{-5.5cm}
+
+\renewcommand{\arraystretch}{1.2}
+\hspace*{-4.5cm}
+\begin{minipage}[p]{11cm}
+\begin{large}
+\textcolor{nepomuk@red}{
+\begin{tabular*}{8cm}{l@{\extracolsep{\fill}}l}
+\multicolumn{2}{l}{\Large Version 0.1} \\
+\multicolumn{2}{l}{\Large  01.06.2007} \\ 
+\multicolumn{2}{l}{\Large  Dissemination level: PU} \\
+\\ 
+Nature & Prototype \\
+Due date & 31.05.2006  \\
+Lead contractor	& DFKI\\ 
+Start date of project	\qquad & 01.01.2006  \\ 
+Duration & 36 months \\
+\end{tabular*}
+}
+\end{large}
+\end{minipage}
+
+\clearpage
+%%%%%%%%%%%%%%
+% NEXT PAGES %
+%%%%%%%%%%%%%%
+\pagestyle{scrheadings}
+
+\cohead{\small\textcolor{nepomuk@lightblue}{NEPOMUK}}
+\rohead{\small\textcolor{nepomuk@lightblue}{20.03.2007}}
+\lofoot{\small\textcolor{nepomuk@lightblue}{Task Force Ontologies}}
+\cofoot{\small\textcolor{nepomuk@lightblue}{Version 0.1}}
+\rofoot{\small\textcolor{nepomuk@lightblue}{\thepage}}
+
+\newpage
+
+\section*{Authors}
+\hspace*{-2,5cm}\begin{minipage}[p]{14cm}
+Leo Sauermann, DFKI \\
+\end{minipage}
+
+
+\vfill
+\section*{Project Co-ordinator}
+\hspace*{-2,5cm}\begin{minipage}[p]{14cm}
+Dr. Ansgar Bernardi \\
+German Research Center for Artificial Intelligence (DFKI) GmbH \\
+Trippstadter Strasse 122 \\
+D 67663 Kaiserslautern \\
+Germany \\
+Email: bernardi@dfki.uni-kl.de, phone: +49 631 205 3582, fax: +49 631 205 4910 \\
+\end{minipage}
+
+
+\section*{Partners}
+\hspace*{-2,5cm}\begin{minipage}[p]{14cm}
+DEUTSCHES FORSCHUNGSZENTRUM F. KUENSTLICHE INTELLIGENZ GMBH  \\
+IBM IRELAND PRODUCT DISTRIBUTION LIMITED \\
+SAP AG \\
+HEWLETT PACKARD GALWAY LTD \\
+THALES S.A. \\
+PRC GROUP - THE MANAGEMENT HOUSE S.A. \\
+EDGE-IT S.A.R.L \\
+COGNIUM SYSTEMS S.A. \\
+NATIONAL UNIVERSITY OF IRELAND, GALWAY \\
+ECOLE POLYTECHNIQUE FEDERALE DE LAUSANNE \\
+FORSCHUNGSZENTRUM INFORMATIK AN DER UNIVERSITAET KARLSRUHE \\
+UNIVERSITAET HANNOVER \\
+INSTITUTE OF COMMUNICATION AND COMPUTER SYSTEMS \\
+KUNGLIGA TEKNISKA HOEGSKOLAN \\
+UNIVERSITA DELLA SVIZZERA ITALIANA \\
+IRION MANAGEMENT CONSULTING GMBH
+
+\vspace{0.3cm}
+\begin{footnotesize}
+Copyright: NEPOMUK Consortium 2006\\
+Copyright on template: Irion Management Consulting GmbH 2006
+\end{footnotesize}
+\end{minipage}
+
+\clearpage
+
+
+\section*{Versions}
+
+\begin{footnotesize}
+\begin{tabular}{|c|c|p{8cm}|}
+\hline
+\rowcolor{nepomuk@lightblue}\textcolor{white}{Version} &
+                            \textcolor{white}{Date} &
+                            \textcolor{white}{Reason} \\ \hline
+0.1 & 01.06.2007 & a template of the document prepared by Antoni Mylka \\ \hline
+\end{tabular}
+\end{footnotesize}
+
+\color{black}
+
+\vfill
+{\bf Explanations of abbreviations on front page}\\
+\\
+Nature \\
+R: Report \\
+P: Prototype \\
+R/P: Report and Prototype \\
+O: Other \\
+ \\
+Dissemination level \\
+PU: Public \\
+PP: Restricted to other FP6 participants \\
+RE: Restricted to specified group \\
+CO: Confidential, only for NEPOMUK partners \\
+
+\newpage
+\section*{Status of this document}
+
+{\footnotesize
+\begin{verbatim}
+
+Copyright (c) 2007 DFKI
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+\end{verbatim}
+}
+
+This draft is a work in progress, open for review and comments. Please contact
+leo.sauermann@dfki.de if you'd like to use it.
+
+This document describes the Personal Information Model Ontology (PIMO)
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%
+% TABLE OF CONTENTS %
+%%%%%%%%%%%%%%%%%%%%%
+\setcounter{tocdepth}{2}
+\tableofcontents
+\cleardoublepage
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% BEGINNING OF SECTIONS %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\section{Introduction}
+
+This is going to be an introduction about pimo.
+
+\subsection{Scope of the PIMO}
+% SOURCE1 copied from Leos Dissertation & PIMO Paper / Ludger
+The motivation for creating the PIMO is to find a language to name the terms
+that are relevant to a knowledge worker and to have ways to express facts about
+these terms. Once this language is defined and formalized in the ontological
+description of the PIMO, it can be used to translate existing resources, and to
+express information about them. The PIMO is a user-centric view on existing
+documents, domain ontologies, and web data sources.
+
+While the organization asks for universally applicable and standardized
+persistent structures, processes, and work organizations to achieve and
+maintain universally accessible information archives, the individual knowledge
+worker requests individualized structures and flexibility in processes and work
+organization in order to reach optimal support for the individual activities.
+
+The \emph{Personal Information Model (PIMO)} as created in the EPOS project was
+driven by four requirements:
+\begin{itemize}
+  \item Sound formal basis: The PIMO must support various knowledge
+  services, among them logics-based services (e.g., ontology-based information
+  retrieval). Therefore, the PIMO must employ an expressive representation language and
+  has to wipe out the contradictions and redundancies of the native structures.
+  \item Bridge between individual and organizational Knowledge Management:
+  The PIMO has to incorporate global ontologies, but also has
+  to reflect the changes and updates of native structures. The PIMO itself should
+  be a source of input for OM-wide ontologies.
+  \item Maintenance: Adequate means have to be provided that assist the user with
+  stepwise formalization of native structures and inspection of the PIMO.
+\end{itemize}
+% END OF SOURCE1
+
+Features that the PIMO has to realize are based on requirements from the user side.
+\begin{itemize}
+	\item Representing Things: Represent things of interest. 
+	\item Uniqueness and merging: two information elements that represent the same thing have to be mapped to one entity.
+	\item Relations: Links between things have to be browseable, properties should have inverse relations defined (see \cite{rohmer2005})
+	\item Extensibility: Users are free to add new relation types and new classes (see \cite{rohmer2005})
+\end{itemize}
+
+\subsection{Open Questions to be addressed}
+A few questions are solved by the PIMO approach, these can be asked by programmers, knowledge engineers, 
+or end-users of Semantic Desktops.
+
+\begin{description}
+	\item[What classes and instances appear in a user interface?] 
+	Assumed that many classes and instances are stored in an available RDF data store, 
+	what classes and instances should be shown to the user? Are all of them of interest? 
+	When applying filter rules, should the filter rules be excluding 
+	(not wanted classes are filtered out) or including (wanted classes are filtered in).
+	\item[]
+\end{description}
+
+\section{Description}
+
+This is going to be a description of PIMO with some informal overview of the classes and properties. Maybe some diagrams.
+
+\clearpage
+\bibliographystyle{plain}
+\bibliography{pimo}
+
+\clearpage
+
+\appendix
+
+\section{PIMO Specification}
+
+\input{sections/pimo}
+
+\end{document}

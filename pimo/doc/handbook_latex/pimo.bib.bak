@@ -1,0 +1,228 @@
+@misc{SPARQLW3C,
+  TITLE        = {SPARQL Query Language for RDF},
+  AUTHOR       = {Eric Prud'hommeaux and Andy Seaborne},
+  HOWPUBLISHED = {\url{http://www.w3.org/TR/rdf-sparql-protocol/}},
+  URL          = {\url{http://www.w3.org/TR/rdf-sparql-protocol/}}
+}
+
+@misc{RDFSemantics,
+  TITLE        = {RDF Semantics},
+  AUTHOR       = {Patrick Hayes},
+  HOWPUBLISHED = {\url{http://www.w3.org/TR/rdf-mt/}},
+  URL          = {\url{http://www.w3.org/TR/rdf-mt/}}
+}
+
+@misc{DCSpec,
+  TITLE        = {Dublin Core Metadata Element Set, Version 1.1},
+  PUBLISHER    = {Dublin Core Metadata Initiative},
+  KEY          = {Dublin Core Metadata Initiative},
+  HOWPUBLISHED = {\url{http://www.dublincore.org/documents/dces/}},
+  URL          = {\url{http://www.dublincore.org/documents/dces/}}
+}
+
+@misc{EXIFRDF,
+  TITLE        = {Exif data description vocabulary},
+  AUTHOR       = {Masahide Kanzaki},
+  HOWPUBLISHED = {\url{http://www.kanzaki.com/ns/exif}},
+  URL          = {\url{http://www.kanzaki.com/ns/exif}}
+}
+
+@misc{RFC2426,
+  TITLE        = {vCard MIME Directory Profile},
+  AUTHOR       = {Frank Dawson and Tim Howes},
+  URL					 = {\url{http://www.ietf.org/rfc/rfc2426.txt}},
+  HOWPUBLISHED = {\url{http://www.ietf.org/rfc/rfc2426.txt}}
+}
+
+@misc{NRLSpec,
+  TITLE	       = {NEPOMUK Representational Language (NRL) Vocabulary Specification [Draft]}, 
+  AUTHOR       = {Nepomuk Task Force Ontologies},
+  HOWPUBLISHED = {\url{http://svn.nepomuk.semanticdesktop.org/repos/trunk/taskforce/TF-Ont/draft/NRL.html}},
+  URL          = {\url{http://svn.nepomuk.semanticdesktop.org/repos/trunk/taskforce/TF-Ont/draft/NRL.html}}
+}
+
+@misc{VCARDRDF,
+  TITLE        = {Representing vCard Objects in RDF/XML},
+  AUTHOR       = {Renato Ianella},
+  HOWPUBLISHED = {\url{http://www.w3.org/TR/vcard-rdf}},
+  URL					 = {\url{http://www.w3.org/TR/vcard-rdf}}
+}
+
+@misc{RFC2445,
+  TITLE        = {Internet Calendaring and Scheduling Core Objects Specification},
+  AUTHOR       = {Frank Dawson and Derik Stenerson},
+  YEAR				 = {1998},
+  HOWPUBLISHED = {\url{http://www.ietf.org/rfc/rfc2445.txt}},
+  URL          = {\url{http://www.ietf.org/rfc/rfc2445.txt}}
+}
+
+@misc{SWADDeliverable3.7,
+	TITLE        = {SWAD-Europe Deliverable 3.7: Developer Workshop Report 2 - Semantic Web calendaring},
+	AUTHOR       = {Libby Miller},
+	YEAR         = {2002},
+	HOWPUBLISHED = {\url{http://www.w3.org/2001/sw/Europe/reports/dev_workshop_report_2/}},
+  URL          = {\url{http://www.w3.org/2001/sw/Europe/reports/dev_workshop_report_2/}}
+}
+
+@misc{TimBLICal,
+  TITLE        = {A quick look at iCalendar},
+  AUTHOR       = {Tim Berners-Lee},
+  YEAR         = {2001},
+  HOWPUBLISHED = {\url{http://www.w3.org/2000/01/foo}},
+  URL          = {\url{http://www.w3.org/2000/01/foo}}
+}
+
+@misc{HybridIcal,
+  TITLE        = {Hybrid ICal RDF Schema},
+  AUTHOR       = {Michael Arick and Libby Miller},
+  YEAR         = {2001},
+  HOWPUBLISHED = {\url{http://www.ilrt.bris.ac.uk/discovery/2001/06/schemas/ical-full/hybrid.rdf}},
+  URL          = {\url{http://www.ilrt.bris.ac.uk/discovery/2001/06/schemas/ical-full/hybrid.rdf}}
+}
+
+@misc{AnotherIcal,
+  TITLE        = {Another iCalendar model},
+  AUTHOR       = {Dan Connoly},
+  YEAR         = {2000},
+  HOWPUBLISHED = {\url{http://www.w3.org/2000/10/swap/pim/ical.rdf}},
+  URL          = {\url{http://www.w3.org/2000/10/swap/pim/ical.rdf}}
+}
+
+@misc{PalmIcal,
+  TITLE        = {Palm Datebook},
+  AUTHOR       = {Dan Connoly},
+  YEAR         = {2000},
+  HOWPUBLISHED = {\url{http://www.w3.org/2000/08/palm56/datebook}},
+  URL          = {\url{http://www.w3.org/2000/08/palm56/datebook}}
+}
+
+@misc{ICALRDF,
+  TITLE        = {RDF Calendar - an application of the Resource Description Framework to iCalendar Data},
+  AUTHOR       = {Dan Connolly and Libby Miller},
+  HOWPUBLISHED = {\url{http://www.w3.org/TR/rdfcal/}},
+  URL					 = {\url{http://www.w3.org/TR/rdfcal/}}
+}
+
+@misc{ID3Standard,
+  TITLE        = {ID3 Tag version 2.3.0 - Informal Standard},
+  AUTHOR       = {Martin Nilsson},
+  HOWPUBLISHED = {\url{http://www.id3.org/id3v2.3.0}},
+  URL          = {\url{http://www.id3.org/id3v2.3.0}}
+}
+
+@InCollection{PereiraWalle2005,
+  AUTHOR 	     = {Fernando Pereira and Rik van de Walle},
+  TITLE        = {Multimedia Content description in MPEG-7 and MPEG-21},
+  BOOKTITLE    = {Multimedia Content and the Semantic Web},
+  EDITOR       = {Giorgios Stamou and Stefanos Kolias},
+  PAGES        = {3--43},
+  PUBLISHER    = {Wiley},
+  YEAR         = {2005}
+}
+
+@InCollection{Hunter2005,
+  AUTHOR 	     = {Jane Hunter},
+  TITLE        = {Adding Multimedia to the Semantic Web. Building an applying an MPEG-7 Ontology},
+  BOOKTITLE    = {Multimedia Content and the Semantic Web},
+  EDITOR       = {Giorgios Stamou and Stefanos Kolias},
+  PAGES        = {75--106},
+  PUBLISHER    = {Wiley},
+  YEAR         = {2005},
+  URL          = {\url{http://www.itee.uq.edu.au/~jane/jane-hunter/swws.pdf}}
+}
+
+@InProceedings{TsinarakiCAiSE2004,
+  AUTHOR       = {Chrisa Tsinaraki AND Panagiotis Polydoros AND Stavros Christodoulakis},
+  TITLE        = {Integration of OWL ontologies in MPEG-7 and TVAnytime compliant Semantic Indexing},
+  BOOKTITLE    = {Proc. of the 16th International Conference on Advanced Information Systems Engineering (CAiSE 2004)},
+  MONTH        = {June},
+  YEAR         = {2004},
+  ADDRESS      = {Riga, Latvia},
+  URL          = {\url{http://www.music.tuc.gr/Staff/Director/Publications/publ_files/C_TSPC_CAISE_2004.pdf}}
+}
+
+@InProceedings{TsinarakiRIAO2004,
+  AUTHOR       = {Chrisa Tsinaraki AND Panagiotis Polydoros AND Nektarios Moumoutzis AND Stavros Christodoulakis},
+  TITLE        = {Coupling OWL with MPEG-7 and TV-Anytime for Domain-specific
+                  Multimedia Information Integration and Retrieval},
+  BOOKTITLE    = {Proc. of RIAO 2004},
+  MONTH        = {April},
+  YEAR         = {2004},
+  ADDRESS      = {Avignon, France},
+  URL          = {\url{http://www.ced.tuc.gr/Staff/Director/Publications/publ_files/C_TPMC_RIAO_2004.pdf}}
+}
+
+@InProceedings{TsinarakiCIVR2004,
+  AUTHOR       = {Chrisa Tsinaraki AND Panagiotis Polydoros AND Stavros Christodoulakis},
+  TITLE        = {Interoperability support for Ontology-based Video Retrieval Applications},
+  BOOKTITLE    = {Proc. of 3rd International Conference on Image and Video Retrieval (CIVR 2004)},
+  MONTH        = {April},
+  YEAR         = {2004},
+  ADDRESS      = {Dublin, Ireland},
+  URL          = {\url{http://www.music.tuc.gr/Staff/Director/Publications/publ_files/C_TSPC_CIVR_2004.pdf}}
+}
+
+@InProceedings{GarciaCelma2005,
+  AUTHOR       = {Roberto Garcia AND Oscar Celma},
+  TITLE        = {Semantic Integration and Retrieval of Multimedia Metadata},
+  BOOKTITLE    = {Proceedings of the 5th International Workshop on Knowledge Markup 
+                  and Semantic Annotation (SemAnnot 2005)},
+  MONTH        = {November},
+  YEAR         = {2005},
+  ADDRESS      = {Galway, Ireland},
+  PUBLISHER    = {\url{http://ceur-ws.org}}
+}
+
+@Misc{Vembu2005,
+  AUTHOR       = {Shankar Vembu and Malte Kiesel and Michael Sintek and Stephan Baumann},
+  TITLE        = {Towards Bridging the Semantic Gap in Multimedia Annotation and Retrieval},
+  BOOKTITLE    = {Proceedings of the 5th International Workshop on Knowledge Markup 
+                  and Semantic Annotation (SemAnnot 2005)},
+  MONTH        = {May},
+  YEAR         = {2006},
+  ADDRESS      = {Edinburgh, UK},
+  HOWPUBLISHED = {\url{http://image.ntua.gr/swamm2006/resources/paper18.pdf}}}
+}
+
+@Book{ISO:15938:P2,
+  author =       {International Organization for Standardization},
+  title =        {Information technology -- Multimedia content description interface -- 
+                 Part 2: Description definition language},
+  publisher =    {International Organization for Standardization},
+  address =      {Geneva, Switzerland},
+  pages =        {37},
+  year =         {2007},
+  series =       {International standard; ISO 15938}
+}
+
+@Book{ISO:15938:P3,
+  author =       {International Organization for Standardization},
+  title =        {Information technology -- Multimedia content description interface -- 
+                 Part 3: Visual},
+  publisher =    {International Organization for Standardization},
+  address =      {Geneva, Switzerland},
+  pages =        {175},
+  year =         {2007},
+  series =       {International standard; ISO 15938}
+}
+
+@Book{ISO:15938:P5,
+  author =       {International Organization for Standardization},
+  title =        {Information technology -- Multimedia content description interface -- 
+                 Part 5: Multimedia Description Schemes},
+  publisher =    {International Organization for Standardization},
+  address =      {Geneva, Switzerland},
+  pages =        {730},
+  year =         {2003},
+  series =       {International standard; ISO 15938}
+}
+
+@Book{ExifSpec,
+  AUTHOR       = {JEITA Technical Standardization Committee on AV \& IT Storage Systems and Equipment},
+  TITLE        = {Exchangeable Image Format for digital still cameras: Exif Version 2.2},
+  PUBLISHER    = {Japan Electronics and Information Technology Industries Association},
+  ADDRESS      = {Japan},
+  YEAR         = {2002},
+  MONTH        = {April},
+  SERIES       = {Standard of Japan Electronics and Information Technology Industries Association: JEITA CP-3451}
+}

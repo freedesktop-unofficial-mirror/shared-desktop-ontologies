@@ -1,0 +1,62 @@
+\BOOKMARK [1][-]{section.1}{Abstract}{}
+\BOOKMARK [1][-]{section.2}{Status of this document}{}
+\BOOKMARK [1][-]{section.3}{Introduction}{}
+\BOOKMARK [2][-]{subsection.3.1}{Downloading PIMO}{section.3}
+\BOOKMARK [1][-]{section.4}{PIMO integrates with key ontologies}{}
+\BOOKMARK [1][-]{section.5}{Examples}{}
+\BOOKMARK [2][-]{subsection.5.1}{PIMO ontology and namespaces}{section.5}
+\BOOKMARK [1][-]{section.6}{Creating Personal Information Models}{}
+\BOOKMARK [2][-]{subsection.6.1}{The User and their Individual PIMO}{section.6}
+\BOOKMARK [2][-]{subsection.6.2}{Things}{section.6}
+\BOOKMARK [2][-]{subsection.6.3}{Connecting Things to the User's PIMO}{section.6}
+\BOOKMARK [2][-]{subsection.6.4}{Identification of Things}{section.6}
+\BOOKMARK [2][-]{subsection.6.5}{A Complete Example}{section.6}
+\BOOKMARK [2][-]{subsection.6.6}{Labels and Names of Things}{section.6}
+\BOOKMARK [2][-]{subsection.6.7}{Textual description of Things}{section.6}
+\BOOKMARK [2][-]{subsection.6.8}{Rating and Ranking Things}{section.6}
+\BOOKMARK [2][-]{subsection.6.9}{Modelling Time}{section.6}
+\BOOKMARK [2][-]{subsection.6.10}{Representing Modification and Change Dates}{section.6}
+\BOOKMARK [2][-]{subsection.6.11}{Setting the Class of a Thing}{section.6}
+\BOOKMARK [2][-]{subsection.6.12}{The PIMO-upper ontology}{section.6}
+\BOOKMARK [2][-]{subsection.6.13}{Classes in PIMO-Upper}{section.6}
+\BOOKMARK [2][-]{subsection.6.14}{Describing Things with Attributes and Relations}{section.6}
+\BOOKMARK [2][-]{subsection.6.15}{Generic Properties in PIMO-Upper}{section.6}
+\BOOKMARK [2][-]{subsection.6.16}{Refined properties in PIMO-Upper}{section.6}
+\BOOKMARK [2][-]{subsection.6.17}{Tagging Things with Tags}{section.6}
+\BOOKMARK [2][-]{subsection.6.18}{Topic Hierarchies}{section.6}
+\BOOKMARK [2][-]{subsection.6.19}{Creating Personalized Classes and Properties}{section.6}
+\BOOKMARK [2][-]{subsection.6.20}{Collections of Things}{section.6}
+\BOOKMARK [2][-]{subsection.6.21}{Modeling Associations and Roles in PIMO}{section.6}
+\BOOKMARK [1][-]{section.7}{Connecting PIMO to Information Elements}{}
+\BOOKMARK [2][-]{subsection.7.1}{Connecting Things and Classes to Folders}{section.7}
+\BOOKMARK [2][-]{subsection.7.2}{Integrating Facts about Things}{section.7}
+\BOOKMARK [1][-]{section.8}{PIMO-group level: Group and Domain ontologies}{}
+\BOOKMARK [1][-]{section.9}{Extending PIMO}{}
+\BOOKMARK [2][-]{subsection.9.1}{Refining Elements of PIMO-upper}{section.9}
+\BOOKMARK [2][-]{subsection.9.2}{Markup for the new ontology}{section.9}
+\BOOKMARK [2][-]{subsection.9.3}{Information Elements}{section.9}
+\BOOKMARK [2][-]{subsection.9.4}{Extension by Sub-classing from External Classes}{section.9}
+\BOOKMARK [2][-]{subsection.9.5}{Summary}{section.9}
+\BOOKMARK [1][-]{section.10}{Importing Domain Ontologies into a User's PIMO}{}
+\BOOKMARK [1][-]{section.11}{Practical Directions on Using PIMO}{}
+\BOOKMARK [2][-]{subsection.11.1}{Creating Things}{section.11}
+\BOOKMARK [2][-]{subsection.11.2}{Changing the Type of a Thing}{section.11}
+\BOOKMARK [2][-]{subsection.11.3}{Deleting a Thing}{section.11}
+\BOOKMARK [2][-]{subsection.11.4}{Deleting User-generated Classes and Properties}{section.11}
+\BOOKMARK [2][-]{subsection.11.5}{Merging Duplicates}{section.11}
+\BOOKMARK [2][-]{subsection.11.6}{Unification of multiple Information Elements into one Thing}{section.11}
+\BOOKMARK [2][-]{subsection.11.7}{Tagging and Annotating Files}{section.11}
+\BOOKMARK [2][-]{subsection.11.8}{Geo-locating Things}{section.11}
+\BOOKMARK [2][-]{subsection.11.9}{Defining what is in the PIMO and what is not: NRL Graphs and definedBy}{section.11}
+\BOOKMARK [2][-]{subsection.11.10}{Using NAO and NIE Elements for Annotation}{section.11}
+\BOOKMARK [2][-]{subsection.11.11}{How to Infer Knowledge Using Rules?}{section.11}
+\BOOKMARK [1][-]{section.12}{Rules Defined by PIMO}{}
+\BOOKMARK [2][-]{subsection.12.1}{Construction Rules}{section.12}
+\BOOKMARK [2][-]{subsection.12.2}{Validation Rules}{section.12}
+\BOOKMARK [2][-]{subsection.12.3}{Rules Valid when Integrating with NIE}{section.12}
+\BOOKMARK [1][-]{section.13}{Sources considered for designing PIMO}{}
+\BOOKMARK [1][-]{appendix.A}{Changes}{}
+\BOOKMARK [2][-]{subsection.A.1}{From v1.0 to 1.1}{appendix.A}
+\BOOKMARK [1][-]{appendix.B}{PIMO Specification}{}
+\BOOKMARK [2][-]{subsection.B.1}{Ontology Classes Description}{appendix.B}
+\BOOKMARK [2][-]{subsection.B.2}{Ontology Properties Description}{appendix.B}

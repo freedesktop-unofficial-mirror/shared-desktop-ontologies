@@ -1,0 +1,117 @@
+\begin{thebibliography}{10}
+
+\bibitem{iso13250second}
+{ISO/IEC 13250, Topic Maps}, second edition.
+\newblock
+  \url{http://www.y12.doe.gov/sgml/sc34/document/0322_files/iso13250-2nd-ed-v2%
+.pdf}, 19 May 2002.
+
+\bibitem{rdfaprimer}
+Ben Adida and Mark Birbeck.
+\newblock Rdfa prime. bridging the human and data webs.
+\newblock W3C Working Group Note http://www.w3.org/TR/xhtml-rdfa-primer/, W3C,
+  http://www.w3.org/TR/xhtml-rdfa-primer/, 14 October 2008.
+
+\bibitem{rdfs}
+D.~Brickley and R.V. Guha.
+\newblock {RDF} vocabulary description language 1.0: {RDF} schema. {W3C}
+  recommendation.
+\newblock \url{http://www.w3.org/TR/rdf-schema/}, 10 February 2004.
+
+\bibitem{likothanasis+2005}
+K.~Votis C.~Alexakos, B.~Vassiliadis and S.~Likothanassis.
+\newblock {\em A Multilayer Ontology Scheme for Integrated Searching in
+  Distributed Hypermedia}, volume Adaptive and Personalized Semantic Web of
+  {\em Studies in Computational Intelligence}.
+\newblock Springer, 2006.
+
+\bibitem{DELOSTIM2007}
+T.~Catarci, A.~Dix, A.~Katifori, G.~Lepouras, and A.~Poggi.
+\newblock Task-centered information management.
+\newblock In C.~Thanos and F.~Borri, editors, {\em DELOS Conference 2007 on
+  Working Notes}, pages 253--263, Tirrenia, Pisa, 13-14 February 2007.
+
+\bibitem{Dengel2006}
+Andreas~R. Dengel.
+\newblock Six thousand words about multi-perspective personal document
+  management.
+\newblock In {\em Proc. EDM IEEE Workshop}. IEEE, Oct 2006.
+
+\bibitem{DongH2005}
+Xin Dong and Alon~Y. Halevy.
+\newblock A platform for personal information management and integration.
+\newblock In {\em Proc. of the CIDR Conference}, pages 119--130, 2005.
+
+\bibitem{SkosStandard}
+Alistair~Miles (edt).
+\newblock Simple knowledge organisation system (skos).
+\newblock \url{http://www.w3.org/2004/02/skos/}, Feb 2004.
+
+\bibitem{UserProfileOntologyVersion1}
+M.~Golemati, A.~Katifori, C.~Vassilakis, G.~Lepouras, and C.~Halatsis.
+\newblock User profile ontology version 1.
+\newblock \url{http://oceanis.mm.di.uoa.gr/pened/?category=publications}, 2006.
+
+\bibitem{HolzMausBernardiRostanin2005b}
+Harald Holz, Heiko Maus, Ansgar Bernardi, and Oleg Rostanin.
+\newblock From {L}ightweight, {P}roactive {I}nformation {D}elivery to
+  {B}usiness {P}rocess-{O}riented {K}nowledge {M}anagement.
+\newblock volume~0, pages 101--127, 2005.
+
+\bibitem{pim2007}
+William Jones and Jamie Teevan, editors.
+\newblock {\em Personal Information Management}.
+\newblock {University of Washington Press}, October 2007.
+
+\bibitem{Latif+2006}
+Khalid Latif and A~Min Tjoa.
+\newblock Combining context ontology and landmarks for personal information
+  management.
+\newblock In {\em Proceedings of International Conference on Computing and
+  Informatics (ICOCI)}, Kuala Lumpur, Malaysia, June 2006.
+
+\bibitem{SWBPVocabularyRecipes}
+Alistair Miles, Thomas Baker, and Ralph Swick.
+\newblock Best practice recipes for publishing {RDF} vocabularies.
+\newblock {W3C} working draft, W3C, Mar 2006.
+\newblock \url{http://www.w3.org/TR/swbp-vocab-pub/}.
+
+\bibitem{Park+2005}
+Jack Park and Adam Cheyer.
+\newblock Just for me: Topic maps and ontologies.
+\newblock In Lutz Maicher and Jack Park, editors, {\em {TMRA} Charting the
+  Topic Maps Research and Applications Landscape, First International Workshop
+  on Topic Maps Research and Applications}, volume 3873 of {\em Lecture Notes
+  in Computer Science}, pages 145--159. Springer, 2005.
+
+\bibitem{Pepper+2003}
+Steve Pepper and Sylvia Schwab.
+\newblock Curing the web's identity crisis. subject indicators for rdf.
+\newblock Technical report, Ontopia, 2003.
+
+\bibitem{Rath2003}
+Holger Rath.
+\newblock The topic maps handbook --- detailed description of the standard and
+  practical guidelines for using it in knowledge management.
+\newblock empolis white paper, empolis GmbH, 2003.
+
+\bibitem{rohmer2005}
+Jean Rohmer.
+\newblock Lessons for the future of semantic desktops learnt from 10 years of
+  experience with the ideliance semantic networks manager.
+\newblock In Stefan Decker, Jack Park, Dennis Quan, and Leo Sauermann, editors,
+  {\em Proc. of Semantic Desktop Workshop at the ISWC, Galway, Ireland,
+  November 6}, volume 175, November 2005.
+
+\bibitem{sauermann+2007b}
+Leo Sauermann, Ludger van Elst, and Andreas Dengel.
+\newblock Pimo - a framework for representing personal information models.
+\newblock In Tassilo Pellegrini and Sebastian Schaffert, editors, {\em
+  Proceedings of I-Semantics' 07}, pages pp. 270--277. JUCS, 2007.
+
+\bibitem{XTM}
+Graham Moore~(eds). Steve~Pepper.
+\newblock {XML Topic Maps (XTM)} 1.0.
+\newblock Specification, TopicMaps.Org, 2001.
+
+\end{thebibliography}

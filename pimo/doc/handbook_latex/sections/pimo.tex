@@ -1,0 +1,988 @@
+\subsection{Ontology Classes Description}
+\subsubsection{Agent} 
+\label{pimo:Agent}
+
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Superclasses & {\it pimo:}ClassOrThing \ref{pimo:ClassOrThing} p. \pageref{pimo:ClassOrThing}\newline {\it pimo:}ClassOrThingOrPropertyOrAssociation \ref{pimo:ClassOrThingOrPropertyOrAssociation} p. \pageref{pimo:ClassOrThingOrPropertyOrAssociation}\newline {\it rdfs:}Resource\newline {\it pimo:}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Subclasses & {\it pimo:}Organization \ref{pimo:Organization} p. \pageref{pimo:Organization}\newline {\it pimo:}Person \ref{pimo:Person} p. \pageref{pimo:Person}\newline {\it pimo:}PersonGroup \ref{pimo:PersonGroup} p. \pageref{pimo:PersonGroup}\\ \hline 
+In domain of: & {\it pimo:}createdPimo \ref{pimo:createdPimo} p. \pageref{pimo:createdPimo}\newline {\it pimo:}isOrganizationMemberOf \ref{pimo:isOrganizationMemberOf} p. \pageref{pimo:isOrganizationMemberOf}\\ \hline 
+In range of: & {\it pimo:}creator \ref{pimo:creator} p. \pageref{pimo:creator}\newline {\it pimo:}hasOrganizationMember \ref{pimo:hasOrganizationMember} p. \pageref{pimo:hasOrganizationMember}\\ \hline 
+Description & An agent (eg. person, group, software or physical artifact). The Agent class is the class of agents; things that do stuff. A well known sub-class is Person, representing people. Other kinds of agents include Organization and Group.
+(inspired by FOAF).
+Agent is not a subclass of NAO:Party.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{Association} 
+\label{pimo:Association}
+
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Superclasses & {\it pimo:}ClassOrThingOrPropertyOrAssociation \ref{pimo:ClassOrThingOrPropertyOrAssociation} p. \pageref{pimo:ClassOrThingOrPropertyOrAssociation}\newline {\it rdfs:}Resource\\ \hline 
+Subclasses & {\it pimo:}Attendee \ref{pimo:Attendee} p. \pageref{pimo:Attendee}\newline {\it pimo:}OrganizationMember \ref{pimo:OrganizationMember} p. \pageref{pimo:OrganizationMember}\newline {\it pimo:}PersonRole \ref{pimo:PersonRole} p. \pageref{pimo:PersonRole}\\ \hline 
+In domain of: & {\it pimo:}associationEffectual \ref{pimo:associationEffectual} p. \pageref{pimo:associationEffectual}\newline {\it pimo:}associationMember \ref{pimo:associationMember} p. \pageref{pimo:associationMember}\\ \hline 
+In range of: & --\\ \hline 
+Description & An association between two or more pimo-things. This is used to model n-ary relations and metadata about relations. For example, the asociation of a person being organizational member is only effectual within a period of time (after the person joined the organization and before the person left the organization). There can be multiple periods of time when associations are valid.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{Attendee} 
+\label{pimo:Attendee}
+
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Superclasses & {\it pimo:}Association \ref{pimo:Association} p. \pageref{pimo:Association}\newline {\it pimo:}ClassOrThingOrPropertyOrAssociation \ref{pimo:ClassOrThingOrPropertyOrAssociation} p. \pageref{pimo:ClassOrThingOrPropertyOrAssociation}\newline {\it pimo:}PersonRole \ref{pimo:PersonRole} p. \pageref{pimo:PersonRole}\newline {\it rdfs:}Resource\\ \hline 
+Subclasses & --\\ \hline 
+In domain of: & {\it pimo:}attendingMeeting \ref{pimo:attendingMeeting} p. \pageref{pimo:attendingMeeting}\\ \hline 
+In range of: & --\\ \hline 
+Description & The role of someone attending a social event.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{BlogPost} 
+\label{pimo:BlogPost}
+
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Superclasses & {\it pimo:}ClassOrThing \ref{pimo:ClassOrThing} p. \pageref{pimo:ClassOrThing}\newline {\it pimo:}ClassOrThingOrPropertyOrAssociation \ref{pimo:ClassOrThingOrPropertyOrAssociation} p. \pageref{pimo:ClassOrThingOrPropertyOrAssociation}\newline {\it pimo:}Document \ref{pimo:Document} p. \pageref{pimo:Document}\newline {\it pimo:}LogicalMediaType \ref{pimo:LogicalMediaType} p. \pageref{pimo:LogicalMediaType}\newline {\it rdfs:}Resource\newline {\it pimo:}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Subclasses & --\\ \hline 
+In domain of: & --\\ \hline 
+In range of: & --\\ \hline 
+Description & A blog note. You just want to write something down right now and need a place to do that. Add a blog-note! This is an example class for a document type, there are more detailled ontologies to model Blog-Posts (like SIOC).\\ \hline 
+\end{longtable}
+
+
+\subsubsection{Building} 
+\label{pimo:Building}
+
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Superclasses & {\it pimo:}ClassOrThing \ref{pimo:ClassOrThing} p. \pageref{pimo:ClassOrThing}\newline {\it pimo:}ClassOrThingOrPropertyOrAssociation \ref{pimo:ClassOrThingOrPropertyOrAssociation} p. \pageref{pimo:ClassOrThingOrPropertyOrAssociation}\newline {\it pimo:}Location \ref{pimo:Location} p. \pageref{pimo:Location}\newline {\it rdfs:}Resource\newline {\it geo:}SpatialThing\newline {\it pimo:}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Subclasses & --\\ \hline 
+In domain of: & --\\ \hline 
+In range of: & --\\ \hline 
+Description & A structure that has a roof and walls and stands more or less permanently in one place; "there was a three-story building on the corner"; "it was an imposing edifice". (Definition from SUMO).\\ \hline 
+\end{longtable}
+
+
+\subsubsection{City} 
+\label{pimo:City}
+
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Superclasses & {\it pimo:}ClassOrThing \ref{pimo:ClassOrThing} p. \pageref{pimo:ClassOrThing}\newline {\it pimo:}ClassOrThingOrPropertyOrAssociation \ref{pimo:ClassOrThingOrPropertyOrAssociation} p. \pageref{pimo:ClassOrThingOrPropertyOrAssociation}\newline {\it pimo:}Location \ref{pimo:Location} p. \pageref{pimo:Location}\newline {\it rdfs:}Resource\newline {\it geo:}SpatialThing\newline {\it pimo:}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Subclasses & --\\ \hline 
+In domain of: & --\\ \hline 
+In range of: & --\\ \hline 
+Description & A large and densely populated urban area; may include several independent administrative districts; "Ancient Troy was a great city". (Definition from SUMO)\\ \hline 
+\end{longtable}
+
+
+\subsubsection{ClassOrThing} 
+\label{pimo:ClassOrThing}
+
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Superclasses & {\it pimo:}ClassOrThingOrPropertyOrAssociation \ref{pimo:ClassOrThingOrPropertyOrAssociation} p. \pageref{pimo:ClassOrThingOrPropertyOrAssociation}\newline {\it rdfs:}Resource\\ \hline 
+Subclasses & {\it pimo:}Agent \ref{pimo:Agent} p. \pageref{pimo:Agent}\newline {\it pimo:}BlogPost \ref{pimo:BlogPost} p. \pageref{pimo:BlogPost}\newline {\it pimo:}Building \ref{pimo:Building} p. \pageref{pimo:Building}\newline {\it pimo:}City \ref{pimo:City} p. \pageref{pimo:City}\newline {\it pimo:}Collection \ref{pimo:Collection} p. \pageref{pimo:Collection}\newline {\it pimo:}Contract \ref{pimo:Contract} p. \pageref{pimo:Contract}\newline {\it pimo:}Country \ref{pimo:Country} p. \pageref{pimo:Country}\newline {\it pimo:}Document \ref{pimo:Document} p. \pageref{pimo:Document}\newline {\it pimo:}Event \ref{pimo:Event} p. \pageref{pimo:Event}\newline {\it pimo:}Locatable \ref{pimo:Locatable} p. \pageref{pimo:Locatable}\newline {\it pimo:}Location \ref{pimo:Location} p. \pageref{pimo:Location}\newline {\it pimo:}LogicalMediaType \ref{pimo:LogicalMediaType} p. \pageref{pimo:LogicalMediaType}\newline {\it pimo:}Meeting \ref{pimo:Meeting} p. \pageref{pimo:Meeting}\newline {\it pimo:}Note \ref{pimo:Note} p. \pageref{pimo:Note}\newline {\it pimo:}Organization \ref{pimo:Organization} p. \pageref{pimo:Organization}\newline {\it pimo:}Person \ref{pimo:Person} p. \pageref{pimo:Person}\newline {\it pimo:}PersonGroup \ref{pimo:PersonGroup} p. \pageref{pimo:PersonGroup}\newline {\it pimo:}ProcessConcept \ref{pimo:ProcessConcept} p. \pageref{pimo:ProcessConcept}\newline {\it pimo:}Project \ref{pimo:Project} p. \pageref{pimo:Project}\newline {\it pimo:}Room \ref{pimo:Room} p. \pageref{pimo:Room}\newline {\it pimo:}SocialEvent \ref{pimo:SocialEvent} p. \pageref{pimo:SocialEvent}\newline {\it pimo:}State \ref{pimo:State} p. \pageref{pimo:State}\newline {\it pimo:}Task \ref{pimo:Task} p. \pageref{pimo:Task}\newline {\it pimo:}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\newline {\it pimo:}Topic \ref{pimo:Topic} p. \pageref{pimo:Topic}\\ \hline 
+In domain of: & {\it pimo:}hasFolder \ref{pimo:hasFolder} p. \pageref{pimo:hasFolder}\newline {\it pimo:}wikiText \ref{pimo:wikiText} p. \pageref{pimo:wikiText}\\ \hline 
+In range of: & --\\ \hline 
+Description & Superclass of class and thing. To add properties to both class and thing.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{ClassOrThingOrPropertyOrAssociation} 
+\label{pimo:ClassOrThingOrPropertyOrAssociation}
+
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Superclasses & {\it rdfs:}Resource\\ \hline 
+Subclasses & {\it pimo:}Agent \ref{pimo:Agent} p. \pageref{pimo:Agent}\newline {\it pimo:}Association \ref{pimo:Association} p. \pageref{pimo:Association}\newline {\it pimo:}Attendee \ref{pimo:Attendee} p. \pageref{pimo:Attendee}\newline {\it pimo:}BlogPost \ref{pimo:BlogPost} p. \pageref{pimo:BlogPost}\newline {\it pimo:}Building \ref{pimo:Building} p. \pageref{pimo:Building}\newline {\it pimo:}City \ref{pimo:City} p. \pageref{pimo:City}\newline {\it pimo:}ClassOrThing \ref{pimo:ClassOrThing} p. \pageref{pimo:ClassOrThing}\newline {\it pimo:}Collection \ref{pimo:Collection} p. \pageref{pimo:Collection}\newline {\it pimo:}Contract \ref{pimo:Contract} p. \pageref{pimo:Contract}\newline {\it pimo:}Country \ref{pimo:Country} p. \pageref{pimo:Country}\newline {\it pimo:}Document \ref{pimo:Document} p. \pageref{pimo:Document}\newline {\it pimo:}Event \ref{pimo:Event} p. \pageref{pimo:Event}\newline {\it pimo:}Locatable \ref{pimo:Locatable} p. \pageref{pimo:Locatable}\newline {\it pimo:}Location \ref{pimo:Location} p. \pageref{pimo:Location}\newline {\it pimo:}LogicalMediaType \ref{pimo:LogicalMediaType} p. \pageref{pimo:LogicalMediaType}\newline {\it pimo:}Meeting \ref{pimo:Meeting} p. \pageref{pimo:Meeting}\newline {\it pimo:}Note \ref{pimo:Note} p. \pageref{pimo:Note}\newline {\it pimo:}Organization \ref{pimo:Organization} p. \pageref{pimo:Organization}\newline {\it pimo:}OrganizationMember \ref{pimo:OrganizationMember} p. \pageref{pimo:OrganizationMember}\newline {\it pimo:}Person \ref{pimo:Person} p. \pageref{pimo:Person}\newline {\it pimo:}PersonGroup \ref{pimo:PersonGroup} p. \pageref{pimo:PersonGroup}\newline {\it pimo:}PersonRole \ref{pimo:PersonRole} p. \pageref{pimo:PersonRole}\newline {\it pimo:}ProcessConcept \ref{pimo:ProcessConcept} p. \pageref{pimo:ProcessConcept}\newline {\it pimo:}Project \ref{pimo:Project} p. \pageref{pimo:Project}\newline {\it pimo:}Room \ref{pimo:Room} p. \pageref{pimo:Room}\newline {\it pimo:}SocialEvent \ref{pimo:SocialEvent} p. \pageref{pimo:SocialEvent}\newline {\it pimo:}State \ref{pimo:State} p. \pageref{pimo:State}\newline {\it pimo:}Task \ref{pimo:Task} p. \pageref{pimo:Task}\newline {\it pimo:}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\newline {\it pimo:}Topic \ref{pimo:Topic} p. \pageref{pimo:Topic}\\ \hline 
+In domain of: & {\it pimo:}isDefinedBy \ref{pimo:isDefinedBy} p. \pageref{pimo:isDefinedBy}\\ \hline 
+In range of: & --\\ \hline 
+Description & Superclass of resources that can be generated by the user.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{ClassRole} 
+\label{pimo:ClassRole}
+
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Superclasses & {\it rdfs:}Resource\\ \hline 
+Subclasses & --\\ \hline 
+In domain of: & --\\ \hline 
+In range of: & {\it pimo:}classRole \ref{pimo:classRole} p. \pageref{pimo:classRole}\\ \hline 
+Description & Roles of classes in PIMO: concrete instances are Abstract and Concrete.\\ \hline 
+Instances & {\it pimo:}AbstractClass\newline {\it pimo:}ConcreteClass\\ \hline 
+\end{longtable}
+
+
+\subsubsection{Collection} 
+\label{pimo:Collection}
+
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Superclasses & {\it pimo:}ClassOrThing \ref{pimo:ClassOrThing} p. \pageref{pimo:ClassOrThing}\newline {\it pimo:}ClassOrThingOrPropertyOrAssociation \ref{pimo:ClassOrThingOrPropertyOrAssociation} p. \pageref{pimo:ClassOrThingOrPropertyOrAssociation}\newline {\it rdfs:}Resource\newline {\it pimo:}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Subclasses & {\it pimo:}PersonGroup \ref{pimo:PersonGroup} p. \pageref{pimo:PersonGroup}\\ \hline 
+In domain of: & --\\ \hline 
+In range of: & --\\ \hline 
+Description & A collection of Things, independent of their class. The items in the collection share a common property. Which property may be modelled explicitly or mentioned in the description of the Collection. The requirement of explicit modelling the semantic meaning of the collection is not mandatory, as collections can be created ad-hoc. Implizit modelling can be applied by the system by learning the properties. For example, a Collection of "Coworkers" could be defined as that all elements must be of class "Person" and have an attribute "work for the same Organization as the user". Further standards can be used to model these attributes.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{Contract} 
+\label{pimo:Contract}
+
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Superclasses & {\it pimo:}ClassOrThing \ref{pimo:ClassOrThing} p. \pageref{pimo:ClassOrThing}\newline {\it pimo:}ClassOrThingOrPropertyOrAssociation \ref{pimo:ClassOrThingOrPropertyOrAssociation} p. \pageref{pimo:ClassOrThingOrPropertyOrAssociation}\newline {\it pimo:}Document \ref{pimo:Document} p. \pageref{pimo:Document}\newline {\it pimo:}LogicalMediaType \ref{pimo:LogicalMediaType} p. \pageref{pimo:LogicalMediaType}\newline {\it rdfs:}Resource\newline {\it pimo:}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Subclasses & --\\ \hline 
+In domain of: & --\\ \hline 
+In range of: & --\\ \hline 
+Description & A binding agreement between two or more persons that is enforceable by law. (Definition from SUMO). This is an example class for a document type, there are more detailled ontologies to model Contracts.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{Country} 
+\label{pimo:Country}
+
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Superclasses & {\it pimo:}ClassOrThing \ref{pimo:ClassOrThing} p. \pageref{pimo:ClassOrThing}\newline {\it pimo:}ClassOrThingOrPropertyOrAssociation \ref{pimo:ClassOrThingOrPropertyOrAssociation} p. \pageref{pimo:ClassOrThingOrPropertyOrAssociation}\newline {\it pimo:}Location \ref{pimo:Location} p. \pageref{pimo:Location}\newline {\it rdfs:}Resource\newline {\it geo:}SpatialThing\newline {\it pimo:}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Subclasses & --\\ \hline 
+In domain of: & --\\ \hline 
+In range of: & --\\ \hline 
+Description & The territory occupied by a nation; "he returned to the land of his birth"; "he visited several European countries". (Definition from SUMO)\\ \hline 
+\end{longtable}
+
+
+\subsubsection{Document} 
+\label{pimo:Document}
+
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Superclasses & {\it pimo:}ClassOrThing \ref{pimo:ClassOrThing} p. \pageref{pimo:ClassOrThing}\newline {\it pimo:}ClassOrThingOrPropertyOrAssociation \ref{pimo:ClassOrThingOrPropertyOrAssociation} p. \pageref{pimo:ClassOrThingOrPropertyOrAssociation}\newline {\it pimo:}LogicalMediaType \ref{pimo:LogicalMediaType} p. \pageref{pimo:LogicalMediaType}\newline {\it rdfs:}Resource\newline {\it pimo:}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Subclasses & {\it pimo:}BlogPost \ref{pimo:BlogPost} p. \pageref{pimo:BlogPost}\newline {\it pimo:}Contract \ref{pimo:Contract} p. \pageref{pimo:Contract}\newline {\it pimo:}Note \ref{pimo:Note} p. \pageref{pimo:Note}\\ \hline 
+In domain of: & --\\ \hline 
+In range of: & --\\ \hline 
+Description & A generic document. This is a placeholder class for document-management domain ontologies to subclass. Create more and specified subclasses of pimo:Document for the document types in your domain. Documents are typically instances of both NFO:Document (modeling the information element used to store the document) and a LogicalMediaType subclass. Two examples are given for what to model here: a contract for a business domain, a BlogPost for an informal domain.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{Event} 
+\label{pimo:Event}
+
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Superclasses & {\it pimo:}ClassOrThing \ref{pimo:ClassOrThing} p. \pageref{pimo:ClassOrThing}\newline {\it pimo:}ClassOrThingOrPropertyOrAssociation \ref{pimo:ClassOrThingOrPropertyOrAssociation} p. \pageref{pimo:ClassOrThingOrPropertyOrAssociation}\newline {\it pimo:}ProcessConcept \ref{pimo:ProcessConcept} p. \pageref{pimo:ProcessConcept}\newline {\it rdfs:}Resource\newline {\it pimo:}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Subclasses & {\it pimo:}Meeting \ref{pimo:Meeting} p. \pageref{pimo:Meeting}\newline {\it pimo:}SocialEvent \ref{pimo:SocialEvent} p. \pageref{pimo:SocialEvent}\\ \hline 
+In domain of: & --\\ \hline 
+In range of: & --\\ \hline 
+Description & Something that happens
+An Event is conceived as compact in time. (Definition from Merriam-Webster)\\ \hline 
+\end{longtable}
+
+
+\subsubsection{Locatable} 
+\label{pimo:Locatable}
+
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Superclasses & {\it pimo:}ClassOrThing \ref{pimo:ClassOrThing} p. \pageref{pimo:ClassOrThing}\newline {\it pimo:}ClassOrThingOrPropertyOrAssociation \ref{pimo:ClassOrThingOrPropertyOrAssociation} p. \pageref{pimo:ClassOrThingOrPropertyOrAssociation}\newline {\it rdfs:}Resource\newline {\it pimo:}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Subclasses & {\it pimo:}Meeting \ref{pimo:Meeting} p. \pageref{pimo:Meeting}\newline {\it pimo:}Organization \ref{pimo:Organization} p. \pageref{pimo:Organization}\newline {\it pimo:}Person \ref{pimo:Person} p. \pageref{pimo:Person}\newline {\it pimo:}SocialEvent \ref{pimo:SocialEvent} p. \pageref{pimo:SocialEvent}\\ \hline 
+In domain of: & {\it pimo:}hasLocation \ref{pimo:hasLocation} p. \pageref{pimo:hasLocation}\\ \hline 
+In range of: & --\\ \hline 
+Description & Things that can be at a location. Abstract class, use it as a superclass of things that can be placed in physical space.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{Location} 
+\label{pimo:Location}
+
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Superclasses & {\it pimo:}ClassOrThing \ref{pimo:ClassOrThing} p. \pageref{pimo:ClassOrThing}\newline {\it pimo:}ClassOrThingOrPropertyOrAssociation \ref{pimo:ClassOrThingOrPropertyOrAssociation} p. \pageref{pimo:ClassOrThingOrPropertyOrAssociation}\newline {\it rdfs:}Resource\newline {\it geo:}SpatialThing\newline {\it pimo:}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Subclasses & {\it pimo:}Building \ref{pimo:Building} p. \pageref{pimo:Building}\newline {\it pimo:}City \ref{pimo:City} p. \pageref{pimo:City}\newline {\it pimo:}Country \ref{pimo:Country} p. \pageref{pimo:Country}\newline {\it pimo:}Room \ref{pimo:Room} p. \pageref{pimo:Room}\newline {\it pimo:}State \ref{pimo:State} p. \pageref{pimo:State}\\ \hline 
+In domain of: & {\it pimo:}containsLocation \ref{pimo:containsLocation} p. \pageref{pimo:containsLocation}\newline {\it pimo:}isLocationOf \ref{pimo:isLocationOf} p. \pageref{pimo:isLocationOf}\newline {\it pimo:}locatedWithin \ref{pimo:locatedWithin} p. \pageref{pimo:locatedWithin}\\ \hline 
+In range of: & {\it pimo:}containsLocation \ref{pimo:containsLocation} p. \pageref{pimo:containsLocation}\newline {\it pimo:}hasLocation \ref{pimo:hasLocation} p. \pageref{pimo:hasLocation}\newline {\it pimo:}locatedWithin \ref{pimo:locatedWithin} p. \pageref{pimo:locatedWithin}\\ \hline 
+Description & A physical location. Subclasses are modeled for the most common locations humans work in: Building, City, Country, Room, State. This selection is intended to be applicable cross-cultural and cross-domain. City is a prototype that can be further refined for villages, etc. Subclass of a WGS84:SpatialThing, can have geo-coordinates.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{LogicalMediaType} 
+\label{pimo:LogicalMediaType}
+
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Superclasses & {\it pimo:}ClassOrThing \ref{pimo:ClassOrThing} p. \pageref{pimo:ClassOrThing}\newline {\it pimo:}ClassOrThingOrPropertyOrAssociation \ref{pimo:ClassOrThingOrPropertyOrAssociation} p. \pageref{pimo:ClassOrThingOrPropertyOrAssociation}\newline {\it rdfs:}Resource\newline {\it pimo:}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Subclasses & {\it pimo:}BlogPost \ref{pimo:BlogPost} p. \pageref{pimo:BlogPost}\newline {\it pimo:}Contract \ref{pimo:Contract} p. \pageref{pimo:Contract}\newline {\it pimo:}Document \ref{pimo:Document} p. \pageref{pimo:Document}\newline {\it pimo:}Note \ref{pimo:Note} p. \pageref{pimo:Note}\\ \hline 
+In domain of: & --\\ \hline 
+In range of: & --\\ \hline 
+Description & Logical media types represent the content aspect of information elements e.g. a flyer, a contract, a promotional video, a todo list.  The user can create new logical media types dependend on their domain: a salesman will need MarketingFlyer, Offer, Invoice while a student might create Report, Thesis and Homework. This is independent from the information element and data object (NIE/NFO) in which the media type will be stored. The same contract can be stored in a PDF file, a text file, or an HTML website.
+The groundingOccurrence of a LogicalMediaType is the Document that stores the content.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{Meeting} 
+\label{pimo:Meeting}
+
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Superclasses & {\it pimo:}ClassOrThing \ref{pimo:ClassOrThing} p. \pageref{pimo:ClassOrThing}\newline {\it pimo:}ClassOrThingOrPropertyOrAssociation \ref{pimo:ClassOrThingOrPropertyOrAssociation} p. \pageref{pimo:ClassOrThingOrPropertyOrAssociation}\newline {\it pimo:}Event \ref{pimo:Event} p. \pageref{pimo:Event}\newline {\it pimo:}Locatable \ref{pimo:Locatable} p. \pageref{pimo:Locatable}\newline {\it pimo:}ProcessConcept \ref{pimo:ProcessConcept} p. \pageref{pimo:ProcessConcept}\newline {\it rdfs:}Resource\newline {\it pimo:}SocialEvent \ref{pimo:SocialEvent} p. \pageref{pimo:SocialEvent}\newline {\it pimo:}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Subclasses & --\\ \hline 
+In domain of: & --\\ \hline 
+In range of: & --\\ \hline 
+Description & The social act of assembling for some common purpose; "his meeting with the salesman was the high point of his day". (Definition from SUMO)\\ \hline 
+\end{longtable}
+
+
+\subsubsection{Note} 
+\label{pimo:Note}
+
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Superclasses & {\it pimo:}ClassOrThing \ref{pimo:ClassOrThing} p. \pageref{pimo:ClassOrThing}\newline {\it pimo:}ClassOrThingOrPropertyOrAssociation \ref{pimo:ClassOrThingOrPropertyOrAssociation} p. \pageref{pimo:ClassOrThingOrPropertyOrAssociation}\newline {\it pimo:}Document \ref{pimo:Document} p. \pageref{pimo:Document}\newline {\it pimo:}LogicalMediaType \ref{pimo:LogicalMediaType} p. \pageref{pimo:LogicalMediaType}\newline {\it rdfs:}Resource\newline {\it pimo:}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Subclasses & --\\ \hline 
+In domain of: & --\\ \hline 
+In range of: & --\\ \hline 
+Description & A note. The textual contents of the note should be expressed in the nao:description value of the note.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{Organization} 
+\label{pimo:Organization}
+
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Superclasses & {\it pimo:}Agent \ref{pimo:Agent} p. \pageref{pimo:Agent}\newline {\it pimo:}ClassOrThing \ref{pimo:ClassOrThing} p. \pageref{pimo:ClassOrThing}\newline {\it pimo:}ClassOrThingOrPropertyOrAssociation \ref{pimo:ClassOrThingOrPropertyOrAssociation} p. \pageref{pimo:ClassOrThingOrPropertyOrAssociation}\newline {\it pimo:}Locatable \ref{pimo:Locatable} p. \pageref{pimo:Locatable}\newline {\it rdfs:}Resource\newline {\it pimo:}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Subclasses & --\\ \hline 
+In domain of: & {\it pimo:}hasOrganizationMember \ref{pimo:hasOrganizationMember} p. \pageref{pimo:hasOrganizationMember}\\ \hline 
+In range of: & {\it pimo:}isOrganizationMemberOf \ref{pimo:isOrganizationMemberOf} p. \pageref{pimo:isOrganizationMemberOf}\newline {\it pimo:}organization \ref{pimo:organization} p. \pageref{pimo:organization}\\ \hline 
+Description & An administrative and functional structure (as a business or a political party). (Definition from Merriam-Webster)\\ \hline 
+\end{longtable}
+
+
+\subsubsection{OrganizationMember} 
+\label{pimo:OrganizationMember}
+
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Superclasses & {\it pimo:}Association \ref{pimo:Association} p. \pageref{pimo:Association}\newline {\it pimo:}ClassOrThingOrPropertyOrAssociation \ref{pimo:ClassOrThingOrPropertyOrAssociation} p. \pageref{pimo:ClassOrThingOrPropertyOrAssociation}\newline {\it pimo:}PersonRole \ref{pimo:PersonRole} p. \pageref{pimo:PersonRole}\newline {\it rdfs:}Resource\\ \hline 
+Subclasses & --\\ \hline 
+In domain of: & {\it pimo:}organization \ref{pimo:organization} p. \pageref{pimo:organization}\\ \hline 
+In range of: & --\\ \hline 
+Description & The role of one or multiple persons being a member in one or multiple organizations. Use pimo:organization and pimo:roleHolder to link to the organizations and persons.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{Person} 
+\label{pimo:Person}
+
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Superclasses & {\it pimo:}Agent \ref{pimo:Agent} p. \pageref{pimo:Agent}\newline {\it pimo:}ClassOrThing \ref{pimo:ClassOrThing} p. \pageref{pimo:ClassOrThing}\newline {\it pimo:}ClassOrThingOrPropertyOrAssociation \ref{pimo:ClassOrThingOrPropertyOrAssociation} p. \pageref{pimo:ClassOrThingOrPropertyOrAssociation}\newline {\it pimo:}Locatable \ref{pimo:Locatable} p. \pageref{pimo:Locatable}\newline {\it rdfs:}Resource\newline {\it pimo:}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Subclasses & --\\ \hline 
+In domain of: & {\it pimo:}attends \ref{pimo:attends} p. \pageref{pimo:attends}\newline {\it pimo:}jabberId \ref{pimo:jabberId} p. \pageref{pimo:jabberId}\\ \hline 
+In range of: & {\it pimo:}attendee \ref{pimo:attendee} p. \pageref{pimo:attendee}\newline {\it pimo:}roleHolder \ref{pimo:roleHolder} p. \pageref{pimo:roleHolder}\\ \hline 
+Description & Represents a person. Either living, dead, real or imaginary. (Definition from foaf:Person)\\ \hline 
+\end{longtable}
+
+
+\subsubsection{PersonGroup} 
+\label{pimo:PersonGroup}
+
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Superclasses & {\it pimo:}Agent \ref{pimo:Agent} p. \pageref{pimo:Agent}\newline {\it pimo:}ClassOrThing \ref{pimo:ClassOrThing} p. \pageref{pimo:ClassOrThing}\newline {\it pimo:}ClassOrThingOrPropertyOrAssociation \ref{pimo:ClassOrThingOrPropertyOrAssociation} p. \pageref{pimo:ClassOrThingOrPropertyOrAssociation}\newline {\it pimo:}Collection \ref{pimo:Collection} p. \pageref{pimo:Collection}\newline {\it rdfs:}Resource\newline {\it pimo:}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Subclasses & --\\ \hline 
+In domain of: & --\\ \hline 
+In range of: & --\\ \hline 
+Description & A group of Persons. They are connected to each other by sharing a common attribute, for example they all belong to the same organization or have a common interest. Refer to pimo:Collection for more information about defining collections.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{PersonRole} 
+\label{pimo:PersonRole}
+
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Superclasses & {\it pimo:}Association \ref{pimo:Association} p. \pageref{pimo:Association}\newline {\it pimo:}ClassOrThingOrPropertyOrAssociation \ref{pimo:ClassOrThingOrPropertyOrAssociation} p. \pageref{pimo:ClassOrThingOrPropertyOrAssociation}\newline {\it rdfs:}Resource\\ \hline 
+Subclasses & {\it pimo:}Attendee \ref{pimo:Attendee} p. \pageref{pimo:Attendee}\newline {\it pimo:}OrganizationMember \ref{pimo:OrganizationMember} p. \pageref{pimo:OrganizationMember}\\ \hline 
+In domain of: & {\it pimo:}roleContext \ref{pimo:roleContext} p. \pageref{pimo:roleContext}\newline {\it pimo:}roleHolder \ref{pimo:roleHolder} p. \pageref{pimo:roleHolder}\\ \hline 
+In range of: & --\\ \hline 
+Description & A person takes a certain role in a given context. The role can be that of "a mentor or another person" or "giving a talk at a meeting", etc.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{PersonalInformationModel} 
+\label{pimo:PersonalInformationModel}
+
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Superclasses & {\it nrl:}Data\newline {\it nrl:}Graph\newline {\it nrl:}InstanceBase\newline {\it nrl:}KnowledgeBase\newline {\it nrl:}Ontology\newline {\it rdfs:}Resource\newline {\it nrl:}Schema\\ \hline 
+Subclasses & --\\ \hline 
+In domain of: & {\it pimo:}creator \ref{pimo:creator} p. \pageref{pimo:creator}\\ \hline 
+In range of: & {\it pimo:}createdPimo \ref{pimo:createdPimo} p. \pageref{pimo:createdPimo}\newline {\it pimo:}isDefinedBy \ref{pimo:isDefinedBy} p. \pageref{pimo:isDefinedBy}\\ \hline 
+Description & A Personal Information Model (PIMO) of a user. Represents the sum of all information from the personal knowledge workspace (in literature also referred to as Personal Space of Information (PSI)) which a user needs for Personal Information Management (PIM).\\ \hline 
+\end{longtable}
+
+
+\subsubsection{ProcessConcept} 
+\label{pimo:ProcessConcept}
+
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Superclasses & {\it pimo:}ClassOrThing \ref{pimo:ClassOrThing} p. \pageref{pimo:ClassOrThing}\newline {\it pimo:}ClassOrThingOrPropertyOrAssociation \ref{pimo:ClassOrThingOrPropertyOrAssociation} p. \pageref{pimo:ClassOrThingOrPropertyOrAssociation}\newline {\it rdfs:}Resource\newline {\it pimo:}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Subclasses & {\it pimo:}Event \ref{pimo:Event} p. \pageref{pimo:Event}\newline {\it pimo:}Meeting \ref{pimo:Meeting} p. \pageref{pimo:Meeting}\newline {\it pimo:}Project \ref{pimo:Project} p. \pageref{pimo:Project}\newline {\it pimo:}SocialEvent \ref{pimo:SocialEvent} p. \pageref{pimo:SocialEvent}\newline {\it pimo:}Task \ref{pimo:Task} p. \pageref{pimo:Task}\\ \hline 
+In domain of: & {\it pimo:}dtend \ref{pimo:dtend} p. \pageref{pimo:dtend}\newline {\it pimo:}dtstart \ref{pimo:dtstart} p. \pageref{pimo:dtstart}\\ \hline 
+In range of: & --\\ \hline 
+Description & Concepts that relate to a series of actions or operations conducing to an end. Abstract class. Defines optional start and endtime properties, names taken from NCAL.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{Project} 
+\label{pimo:Project}
+
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Superclasses & {\it pimo:}ClassOrThing \ref{pimo:ClassOrThing} p. \pageref{pimo:ClassOrThing}\newline {\it pimo:}ClassOrThingOrPropertyOrAssociation \ref{pimo:ClassOrThingOrPropertyOrAssociation} p. \pageref{pimo:ClassOrThingOrPropertyOrAssociation}\newline {\it pimo:}ProcessConcept \ref{pimo:ProcessConcept} p. \pageref{pimo:ProcessConcept}\newline {\it rdfs:}Resource\newline {\it pimo:}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Subclasses & --\\ \hline 
+In domain of: & --\\ \hline 
+In range of: & --\\ \hline 
+Description & Any piece of work that is undertaken or attempted (Wordnet). An enterprise carefully planned to achieve a particular aim (Oxford Dictionary).\\ \hline 
+\end{longtable}
+
+
+\subsubsection{Room} 
+\label{pimo:Room}
+
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Superclasses & {\it pimo:}ClassOrThing \ref{pimo:ClassOrThing} p. \pageref{pimo:ClassOrThing}\newline {\it pimo:}ClassOrThingOrPropertyOrAssociation \ref{pimo:ClassOrThingOrPropertyOrAssociation} p. \pageref{pimo:ClassOrThingOrPropertyOrAssociation}\newline {\it pimo:}Location \ref{pimo:Location} p. \pageref{pimo:Location}\newline {\it rdfs:}Resource\newline {\it geo:}SpatialThing\newline {\it pimo:}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Subclasses & --\\ \hline 
+In domain of: & --\\ \hline 
+In range of: & --\\ \hline 
+Description & A properPart of a Building which is separated from the exterior of the Building and/or other Rooms of the Building by walls. Some Rooms may have a specific purpose, e.g. sleeping, bathing, cooking, entertainment, etc. (Definition from SUMO).\\ \hline 
+\end{longtable}
+
+
+\subsubsection{SocialEvent} 
+\label{pimo:SocialEvent}
+
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Superclasses & {\it pimo:}ClassOrThing \ref{pimo:ClassOrThing} p. \pageref{pimo:ClassOrThing}\newline {\it pimo:}ClassOrThingOrPropertyOrAssociation \ref{pimo:ClassOrThingOrPropertyOrAssociation} p. \pageref{pimo:ClassOrThingOrPropertyOrAssociation}\newline {\it pimo:}Event \ref{pimo:Event} p. \pageref{pimo:Event}\newline {\it pimo:}Locatable \ref{pimo:Locatable} p. \pageref{pimo:Locatable}\newline {\it pimo:}ProcessConcept \ref{pimo:ProcessConcept} p. \pageref{pimo:ProcessConcept}\newline {\it rdfs:}Resource\newline {\it pimo:}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Subclasses & {\it pimo:}Meeting \ref{pimo:Meeting} p. \pageref{pimo:Meeting}\\ \hline 
+In domain of: & {\it pimo:}attendee \ref{pimo:attendee} p. \pageref{pimo:attendee}\newline {\it pimo:}duration \ref{pimo:duration} p. \pageref{pimo:duration}\\ \hline 
+In range of: & {\it pimo:}attendingMeeting \ref{pimo:attendingMeeting} p. \pageref{pimo:attendingMeeting}\newline {\it pimo:}attends \ref{pimo:attends} p. \pageref{pimo:attends}\\ \hline 
+Description & A social occasion or activity. (Definition from Merriam-Webster)\\ \hline 
+\end{longtable}
+
+
+\subsubsection{State} 
+\label{pimo:State}
+
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Superclasses & {\it pimo:}ClassOrThing \ref{pimo:ClassOrThing} p. \pageref{pimo:ClassOrThing}\newline {\it pimo:}ClassOrThingOrPropertyOrAssociation \ref{pimo:ClassOrThingOrPropertyOrAssociation} p. \pageref{pimo:ClassOrThingOrPropertyOrAssociation}\newline {\it pimo:}Location \ref{pimo:Location} p. \pageref{pimo:Location}\newline {\it rdfs:}Resource\newline {\it geo:}SpatialThing\newline {\it pimo:}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Subclasses & --\\ \hline 
+In domain of: & --\\ \hline 
+In range of: & --\\ \hline 
+Description & Administrative subdivisions of a Nation that are broader than any other political subdivisions that may exist. This Class includes the states of the United States, as well as the provinces of Canada and European countries. (Definition from SUMO).\\ \hline 
+\end{longtable}
+
+
+\subsubsection{Task} 
+\label{pimo:Task}
+
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Superclasses & {\it pimo:}ClassOrThing \ref{pimo:ClassOrThing} p. \pageref{pimo:ClassOrThing}\newline {\it pimo:}ClassOrThingOrPropertyOrAssociation \ref{pimo:ClassOrThingOrPropertyOrAssociation} p. \pageref{pimo:ClassOrThingOrPropertyOrAssociation}\newline {\it pimo:}ProcessConcept \ref{pimo:ProcessConcept} p. \pageref{pimo:ProcessConcept}\newline {\it rdfs:}Resource\newline {\it pimo:}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Subclasses & --\\ \hline 
+In domain of: & {\it pimo:}taskDueTime \ref{pimo:taskDueTime} p. \pageref{pimo:taskDueTime}\\ \hline 
+In range of: & --\\ \hline 
+Description & A (usually assigned) piece of work (often to be finished within a certain time). (Definition from Merriam-Webster)\\ \hline 
+\end{longtable}
+
+
+\subsubsection{Thing} 
+\label{pimo:Thing}
+
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Superclasses & {\it pimo:}ClassOrThing \ref{pimo:ClassOrThing} p. \pageref{pimo:ClassOrThing}\newline {\it pimo:}ClassOrThingOrPropertyOrAssociation \ref{pimo:ClassOrThingOrPropertyOrAssociation} p. \pageref{pimo:ClassOrThingOrPropertyOrAssociation}\newline {\it rdfs:}Resource\\ \hline 
+Subclasses & {\it pimo:}Agent \ref{pimo:Agent} p. \pageref{pimo:Agent}\newline {\it pimo:}BlogPost \ref{pimo:BlogPost} p. \pageref{pimo:BlogPost}\newline {\it pimo:}Building \ref{pimo:Building} p. \pageref{pimo:Building}\newline {\it pimo:}City \ref{pimo:City} p. \pageref{pimo:City}\newline {\it pimo:}Collection \ref{pimo:Collection} p. \pageref{pimo:Collection}\newline {\it pimo:}Contract \ref{pimo:Contract} p. \pageref{pimo:Contract}\newline {\it pimo:}Country \ref{pimo:Country} p. \pageref{pimo:Country}\newline {\it pimo:}Document \ref{pimo:Document} p. \pageref{pimo:Document}\newline {\it pimo:}Event \ref{pimo:Event} p. \pageref{pimo:Event}\newline {\it pimo:}Locatable \ref{pimo:Locatable} p. \pageref{pimo:Locatable}\newline {\it pimo:}Location \ref{pimo:Location} p. \pageref{pimo:Location}\newline {\it pimo:}LogicalMediaType \ref{pimo:LogicalMediaType} p. \pageref{pimo:LogicalMediaType}\newline {\it pimo:}Meeting \ref{pimo:Meeting} p. \pageref{pimo:Meeting}\newline {\it pimo:}Note \ref{pimo:Note} p. \pageref{pimo:Note}\newline {\it pimo:}Organization \ref{pimo:Organization} p. \pageref{pimo:Organization}\newline {\it pimo:}Person \ref{pimo:Person} p. \pageref{pimo:Person}\newline {\it pimo:}PersonGroup \ref{pimo:PersonGroup} p. \pageref{pimo:PersonGroup}\newline {\it pimo:}ProcessConcept \ref{pimo:ProcessConcept} p. \pageref{pimo:ProcessConcept}\newline {\it pimo:}Project \ref{pimo:Project} p. \pageref{pimo:Project}\newline {\it pimo:}Room \ref{pimo:Room} p. \pageref{pimo:Room}\newline {\it pimo:}SocialEvent \ref{pimo:SocialEvent} p. \pageref{pimo:SocialEvent}\newline {\it pimo:}State \ref{pimo:State} p. \pageref{pimo:State}\newline {\it pimo:}Task \ref{pimo:Task} p. \pageref{pimo:Task}\newline {\it pimo:}Topic \ref{pimo:Topic} p. \pageref{pimo:Topic}\\ \hline 
+In domain of: & {\it pimo:}datatypeProperty \ref{pimo:datatypeProperty} p. \pageref{pimo:datatypeProperty}\newline {\it pimo:}groundingOccurrence \ref{pimo:groundingOccurrence} p. \pageref{pimo:groundingOccurrence}\newline {\it pimo:}hasDeprecatedRepresentation \ref{pimo:hasDeprecatedRepresentation} p. \pageref{pimo:hasDeprecatedRepresentation}\newline {\it pimo:}hasOtherRepresentation \ref{pimo:hasOtherRepresentation} p. \pageref{pimo:hasOtherRepresentation}\newline {\it pimo:}hasPart \ref{pimo:hasPart} p. \pageref{pimo:hasPart}\newline {\it pimo:}hasTopic \ref{pimo:hasTopic} p. \pageref{pimo:hasTopic}\newline {\it pimo:}isRelated \ref{pimo:isRelated} p. \pageref{pimo:isRelated}\newline {\it pimo:}isTopicOf \ref{pimo:isTopicOf} p. \pageref{pimo:isTopicOf}\newline {\it pimo:}objectProperty \ref{pimo:objectProperty} p. \pageref{pimo:objectProperty}\newline {\it pimo:}occurrence \ref{pimo:occurrence} p. \pageref{pimo:occurrence}\newline {\it pimo:}partOf \ref{pimo:partOf} p. \pageref{pimo:partOf}\newline {\it pimo:}referencingOccurrence \ref{pimo:referencingOccurrence} p. \pageref{pimo:referencingOccurrence}\\ \hline 
+In range of: & {\it pimo:}associationMember \ref{pimo:associationMember} p. \pageref{pimo:associationMember}\newline {\it pimo:}hasPart \ref{pimo:hasPart} p. \pageref{pimo:hasPart}\newline {\it pimo:}hasTopic \ref{pimo:hasTopic} p. \pageref{pimo:hasTopic}\newline {\it pimo:}isLocationOf \ref{pimo:isLocationOf} p. \pageref{pimo:isLocationOf}\newline {\it pimo:}isRelated \ref{pimo:isRelated} p. \pageref{pimo:isRelated}\newline {\it pimo:}isTopicOf \ref{pimo:isTopicOf} p. \pageref{pimo:isTopicOf}\newline {\it pimo:}objectProperty \ref{pimo:objectProperty} p. \pageref{pimo:objectProperty}\newline {\it pimo:}partOf \ref{pimo:partOf} p. \pageref{pimo:partOf}\newline {\it pimo:}roleContext \ref{pimo:roleContext} p. \pageref{pimo:roleContext}\\ \hline 
+Description & Entities that are in the direct attention of the user when doing knowledge work.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{Topic} 
+\label{pimo:Topic}
+
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Superclasses & {\it pimo:}ClassOrThing \ref{pimo:ClassOrThing} p. \pageref{pimo:ClassOrThing}\newline {\it pimo:}ClassOrThingOrPropertyOrAssociation \ref{pimo:ClassOrThingOrPropertyOrAssociation} p. \pageref{pimo:ClassOrThingOrPropertyOrAssociation}\newline {\it rdfs:}Resource\newline {\it pimo:}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Subclasses & --\\ \hline 
+In domain of: & {\it pimo:}subTopic \ref{pimo:subTopic} p. \pageref{pimo:subTopic}\newline {\it pimo:}superTopic \ref{pimo:superTopic} p. \pageref{pimo:superTopic}\\ \hline 
+In range of: & {\it pimo:}subTopic \ref{pimo:subTopic} p. \pageref{pimo:subTopic}\newline {\it pimo:}superTopic \ref{pimo:superTopic} p. \pageref{pimo:superTopic}\\ \hline 
+Description & A topic is the subject of a discussion or document. Topics are distinguished from Things in their taxonomic nature, examples are scientific areas such as "Information Science", "Biology", or categories used in content syndication such as "Sports", "Politics". They are specific to the user's domain.\\ \hline 
+\end{longtable}
+
+
+\subsection{Ontology Properties Description}
+
+\subsubsection{associationEffectual} 
+\label{pimo:associationEffectual}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}Association \ref{pimo:Association} p. \pageref{pimo:Association}\\ \hline 
+Range & {\it rdfs}\hspace{1pt}Resource\\ \hline 
+Superproperties & --\\ \hline 
+Subproperties & --\\ \hline 
+Description & During which time is this association effective? If omitted, the association is always effective. Start time and end-time may be left open, an open start time indicates that the fact is unknown, an open end-time indicates that the end-date is either unknown or the association has not ended.
+There can be multiple effectual periods.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{associationMember} 
+\label{pimo:associationMember}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}Association \ref{pimo:Association} p. \pageref{pimo:Association}\\ \hline 
+Range & {\it pimo}\hspace{1pt}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Superproperties & --\\ \hline 
+Subproperties & {\it pimo:}attendingMeeting \ref{pimo:attendingMeeting} p. \pageref{pimo:attendingMeeting}\newline {\it pimo:}organization \ref{pimo:organization} p. \pageref{pimo:organization}\newline {\it pimo:}roleContext \ref{pimo:roleContext} p. \pageref{pimo:roleContext}\newline {\it pimo:}roleHolder \ref{pimo:roleHolder} p. \pageref{pimo:roleHolder}\\ \hline 
+Description & An super-property of all roles that an entity can have in an association. Member is the generic role of a thing in an association. Association subclasses should define sub-properties of this property. Associations can have Things as\\ \hline 
+\end{longtable}
+
+
+\subsubsection{attendee} 
+\label{pimo:attendee}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}SocialEvent \ref{pimo:SocialEvent} p. \pageref{pimo:SocialEvent}\\ \hline 
+Range & {\it pimo}\hspace{1pt}Person \ref{pimo:Person} p. \pageref{pimo:Person}\\ \hline 
+Superproperties & {\it nao:}annotation\newline {\it nao:}isRelated\newline {\it pimo:}isRelated \ref{pimo:isRelated} p. \pageref{pimo:isRelated}\newline {\it pimo:}objectProperty \ref{pimo:objectProperty} p. \pageref{pimo:objectProperty}\\ \hline 
+Subproperties & --\\ \hline 
+Description & A social event is attended by a person.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{attendingMeeting} 
+\label{pimo:attendingMeeting}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}Attendee \ref{pimo:Attendee} p. \pageref{pimo:Attendee}\\ \hline 
+Range & {\it pimo}\hspace{1pt}SocialEvent \ref{pimo:SocialEvent} p. \pageref{pimo:SocialEvent}\\ \hline 
+Superproperties & {\it pimo:}associationMember \ref{pimo:associationMember} p. \pageref{pimo:associationMember}\newline {\it pimo:}roleContext \ref{pimo:roleContext} p. \pageref{pimo:roleContext}\\ \hline 
+Subproperties & --\\ \hline 
+Description & the attended meeting\\ \hline 
+\end{longtable}
+
+
+\subsubsection{attends} 
+\label{pimo:attends}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}Person \ref{pimo:Person} p. \pageref{pimo:Person}\\ \hline 
+Range & {\it pimo}\hspace{1pt}SocialEvent \ref{pimo:SocialEvent} p. \pageref{pimo:SocialEvent}\\ \hline 
+Superproperties & {\it nao:}annotation\newline {\it nao:}isRelated\newline {\it pimo:}isRelated \ref{pimo:isRelated} p. \pageref{pimo:isRelated}\newline {\it pimo:}objectProperty \ref{pimo:objectProperty} p. \pageref{pimo:objectProperty}\\ \hline 
+Subproperties & --\\ \hline 
+Description & A person attends a social event.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{broader} 
+\label{pimo:broader}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & \\ \hline 
+Range & \\ \hline 
+Superproperties & --\\ \hline 
+Subproperties & --\\ \hline 
+Description & \\ \hline 
+\end{longtable}
+
+
+\subsubsection{classRole} 
+\label{pimo:classRole}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & \\ \hline 
+Range & {\it pimo}\hspace{1pt}ClassRole \ref{pimo:ClassRole} p. \pageref{pimo:ClassRole}\\ \hline 
+Superproperties & --\\ \hline 
+Subproperties & --\\ \hline 
+Description & Annotating abstract and concrete classes. Implementations may offer the feature to hide abstract classes. By default, classes are concrete. Classes can be declared abstract by setting their classRole to abstract. Instances should not have an abstract class as type (if not inferred).\\ \hline 
+\end{longtable}
+
+
+\subsubsection{containsLocation} 
+\label{pimo:containsLocation}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}Location \ref{pimo:Location} p. \pageref{pimo:Location}\\ \hline 
+Range & {\it pimo}\hspace{1pt}Location \ref{pimo:Location} p. \pageref{pimo:Location}\\ \hline 
+Superproperties & {\it pimo:}hasPart \ref{pimo:hasPart} p. \pageref{pimo:hasPart}\newline {\it pimo:}objectProperty \ref{pimo:objectProperty} p. \pageref{pimo:objectProperty}\\ \hline 
+Subproperties & --\\ \hline 
+Description & The subject location contains the object location. For example, a building contains a room or a country contains a city.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{createdPimo} 
+\label{pimo:createdPimo}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}Agent \ref{pimo:Agent} p. \pageref{pimo:Agent}\\ \hline 
+Range & {\it pimo}\hspace{1pt}PersonalInformationModel \ref{pimo:PersonalInformationModel} p. \pageref{pimo:PersonalInformationModel}\\ \hline 
+Superproperties & --\\ \hline 
+Subproperties & --\\ \hline 
+Description & The creator of the Personal Information Model. The human being whose mental models are represented in the PIMO.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{creator} 
+\label{pimo:creator}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}PersonalInformationModel \ref{pimo:PersonalInformationModel} p. \pageref{pimo:PersonalInformationModel}\\ \hline 
+Range & {\it pimo}\hspace{1pt}Agent \ref{pimo:Agent} p. \pageref{pimo:Agent}\\ \hline 
+Superproperties & {\it nao:}annotation\newline {\it x:}creator\newline {\it nao:}creator\\ \hline 
+Subproperties & --\\ \hline 
+Description & The creator of the Personal Information Model. A subproperty of NAO:creator. The human being whose mental models are represented in the PIMO. Range is an Agent.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{datatypeProperty} 
+\label{pimo:datatypeProperty}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Range & \\ \hline 
+Superproperties & --\\ \hline 
+Subproperties & {\it geo:}alt\newline {\it pimo:}dtend \ref{pimo:dtend} p. \pageref{pimo:dtend}\newline {\it pimo:}dtstart \ref{pimo:dtstart} p. \pageref{pimo:dtstart}\newline {\it pimo:}duration \ref{pimo:duration} p. \pageref{pimo:duration}\newline {\it geo:}lat\newline {\it geo:}long\newline {\it pimo:}taskDueTime \ref{pimo:taskDueTime} p. \pageref{pimo:taskDueTime}\\ \hline 
+Description & The object of statements is a literal, resource, or datatype value describing the subject thing. Users should be able to edit statements defined with this property. Abstract super-property.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{dtend} 
+\label{pimo:dtend}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}ProcessConcept \ref{pimo:ProcessConcept} p. \pageref{pimo:ProcessConcept}\\ \hline 
+Range & {\it xsd}\hspace{1pt}dateTime\\ \hline 
+Superproperties & {\it pimo:}datatypeProperty \ref{pimo:datatypeProperty} p. \pageref{pimo:datatypeProperty}\\ \hline 
+Subproperties & --\\ \hline 
+Description & This property specifies the date and time when a process ends. Inspired by NCAL:dtend.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{dtstart} 
+\label{pimo:dtstart}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}ProcessConcept \ref{pimo:ProcessConcept} p. \pageref{pimo:ProcessConcept}\\ \hline 
+Range & {\it xsd}\hspace{1pt}dateTime\\ \hline 
+Superproperties & {\it pimo:}datatypeProperty \ref{pimo:datatypeProperty} p. \pageref{pimo:datatypeProperty}\\ \hline 
+Subproperties & --\\ \hline 
+Description & This property specifies when the process begins. Inspired by NCAL:dtstart.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{duration} 
+\label{pimo:duration}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}SocialEvent \ref{pimo:SocialEvent} p. \pageref{pimo:SocialEvent}\\ \hline 
+Range & {\it rdfs}\hspace{1pt}Resource\\ \hline 
+Superproperties & {\it pimo:}datatypeProperty \ref{pimo:datatypeProperty} p. \pageref{pimo:datatypeProperty}\\ \hline 
+Subproperties & --\\ \hline 
+Description & The duration of the meeting. Begin and end time.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{groundingForDeletedThing} 
+\label{pimo:groundingForDeletedThing}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & \\ \hline 
+Range & {\it rdfs}\hspace{1pt}Resource\\ \hline 
+Superproperties & --\\ \hline 
+Subproperties & --\\ \hline 
+Description & This NIE Information Element was used as a grounding occurrence for the object Thing. The Thing was then deleted by the user manually, indicating that this Information Element should not cause an automatic creation of another Thing in the future. The object resource has no range to indicate that it was completely removed from the user's PIMO, including the rdf:type statement. Relevant for data alignment and enrichment algorithms.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{groundingOccurrence} 
+\label{pimo:groundingOccurrence}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Range & {\it nie}\hspace{1pt}InformationElement \ref{nie:InformationElement} p. \pageref{nie:InformationElement}\\ \hline 
+Superproperties & {\it pimo:}occurrence \ref{pimo:occurrence} p. \pageref{pimo:occurrence}\\ \hline 
+Subproperties & --\\ \hline 
+Description & The subject Thing represents the entity that is described in the object InformationElement. The subject Thing is the canonical, unique representation in the personal information model for the entity described in the object. Multiple InformationElements can be the grounding occurrence of the same Thing,  one InformationElement can be the groundingOccurrence of only one Thing.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{hasDeprecatedRepresentation} 
+\label{pimo:hasDeprecatedRepresentation}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Range & {\it rdfs}\hspace{1pt}Resource\\ \hline 
+Superproperties & --\\ \hline 
+Subproperties & --\\ \hline 
+Description & The subject Thing was represented previously using the object resource. This indicates that the object resource was a duplicate representation of the subject and merged with the subject. Implementations can use this property to resolve dangling links in distributed system. When encountering resources that are deprecated representations of a Thing, they should be replaced with the Thing. The range is not declared as we assume all knowledge about the object is gone, including its rdf:type.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{hasFolder} 
+\label{pimo:hasFolder}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}ClassOrThing \ref{pimo:ClassOrThing} p. \pageref{pimo:ClassOrThing}\\ \hline 
+Range & {\it nfo}\hspace{1pt}Folder \ref{nfo:Folder} p. \pageref{nfo:Folder}\\ \hline 
+Superproperties & --\\ \hline 
+Subproperties & --\\ \hline 
+Description & Folders can be used to store information elements related to a Thing or Class. This property can be used to connect a Class or Thing to existing Folders. Implementations can suggest annotations for documents stored inside these folders or  suggest the folder for new documents related to the Thing or Class.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{hasLocation} 
+\label{pimo:hasLocation}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}Locatable \ref{pimo:Locatable} p. \pageref{pimo:Locatable}\\ \hline 
+Range & {\it pimo}\hspace{1pt}Location \ref{pimo:Location} p. \pageref{pimo:Location}\\ \hline 
+Superproperties & {\it nao:}annotation\newline {\it nao:}isRelated\newline {\it pimo:}isRelated \ref{pimo:isRelated} p. \pageref{pimo:isRelated}\newline {\it pimo:}objectProperty \ref{pimo:objectProperty} p. \pageref{pimo:objectProperty}\\ \hline 
+Subproperties & --\\ \hline 
+Description & The subject thing is currently located at the object location.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{hasOrganizationMember} 
+\label{pimo:hasOrganizationMember}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}Organization \ref{pimo:Organization} p. \pageref{pimo:Organization}\\ \hline 
+Range & {\it pimo}\hspace{1pt}Agent \ref{pimo:Agent} p. \pageref{pimo:Agent}\\ \hline 
+Superproperties & {\it pimo:}hasPart \ref{pimo:hasPart} p. \pageref{pimo:hasPart}\newline {\it pimo:}objectProperty \ref{pimo:objectProperty} p. \pageref{pimo:objectProperty}\\ \hline 
+Subproperties & --\\ \hline 
+Description & The subject organization has the object person or organization (Agent) as a member.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{hasOtherConceptualization} 
+\label{pimo:hasOtherConceptualization}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it rdfs}\hspace{1pt}Class\\ \hline 
+Range & {\it rdfs}\hspace{1pt}Class\\ \hline 
+Superproperties & {\it pimo:}occurrence \ref{pimo:occurrence} p. \pageref{pimo:occurrence}\newline {\it rdfs:}subClassOf\\ \hline 
+Subproperties & --\\ \hline 
+Description & Short: hasOtherRepresentation points from a Class in your PIMO to a class in a domain ontology that represents the same class. Longer: hasOtherConceptualization means that a class of real world objects O represented by a concept C1 in the ontology has additional conceptualizations (as classes C2-Cn in different domain ontologies).
+This means: IF (O\_i is conceptialized by C\_j in Ontology\_k) AND (O\_l is conceptialized by C\_m in Ontology\_n) THEN (O\_i and O\_l is the same set of objects).
+hasOtherConceptualization is an transitive relation, but not equivalent (not symmetric nor reflexive).\\ \hline 
+\end{longtable}
+
+
+\subsubsection{hasOtherRepresentation} 
+\label{pimo:hasOtherRepresentation}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Range & {\it rdfs}\hspace{1pt}Resource\\ \hline 
+Superproperties & {\it pimo:}occurrence \ref{pimo:occurrence} p. \pageref{pimo:occurrence}\\ \hline 
+Subproperties & --\\ \hline 
+Description & hasOtherRepresentation points from a Thing in your PIMO to a thing in an ontology that represents the same real world thing. 
+This means that the real world object O represented by an instance I1 has additional representations (as instances I2-In of different conceptualizations).
+This means: IF (I\_i represents O\_j in Ontology\_k) AND (I\_m represents O\_n in Ontology\_o) THEN (O\_n and O\_j are the same object).
+hasOtherRepresentation is a transitive relation, but not equivalent (not symmetric nor reflexive).
+
+For example, the URI of a  foaf:Person representation published on the web is a hasOtherRepresentation for the person. This property is inverse functional, two Things from two information models having the same hasOtherRepresentation are considered to be representations of the same entity from the real world.
+
+TODO: rename this to subjectIndicatorRef to resemble topic maps ideas?\\ \hline 
+\end{longtable}
+
+
+\subsubsection{hasOtherSlot} 
+\label{pimo:hasOtherSlot}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it rdf}\hspace{1pt}Property\\ \hline 
+Range & {\it rdf}\hspace{1pt}Property\\ \hline 
+Superproperties & {\it rdfs:}subPropertyOf\\ \hline 
+Subproperties & --\\ \hline 
+Description & hasOtherSlot points from a clot  in your PIMO to a slot in a domain ontology that represents the same connection idea.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{hasPart} 
+\label{pimo:hasPart}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Range & {\it pimo}\hspace{1pt}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Superproperties & {\it pimo:}objectProperty \ref{pimo:objectProperty} p. \pageref{pimo:objectProperty}\\ \hline 
+Subproperties & {\it pimo:}containsLocation \ref{pimo:containsLocation} p. \pageref{pimo:containsLocation}\newline {\it pimo:}hasOrganizationMember \ref{pimo:hasOrganizationMember} p. \pageref{pimo:hasOrganizationMember}\newline {\it pimo:}subTopic \ref{pimo:subTopic} p. \pageref{pimo:subTopic}\\ \hline 
+Description & The object is part of the subject. Like a page is part of a book or an engine is part of a car. You can make sub-properties of this to reflect more detailed relations.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{hasTopic} 
+\label{pimo:hasTopic}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Range & {\it pimo}\hspace{1pt}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Superproperties & {\it nao:}annotation\newline {\it nao:}hasTopic\newline {\it nao:}isRelated\newline {\it pimo:}objectProperty \ref{pimo:objectProperty} p. \pageref{pimo:objectProperty}\\ \hline 
+Subproperties & --\\ \hline 
+Description & The subject's contents describes the object. Or the subject can be seen as belonging to the topic described by the object.  Similar semantics as skos:subject.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{isDefinedBy} 
+\label{pimo:isDefinedBy}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}ClassOrThingOrPropertyOrAssociation \ref{pimo:ClassOrThingOrPropertyOrAssociation} p. \pageref{pimo:ClassOrThingOrPropertyOrAssociation}\\ \hline 
+Range & {\it pimo}\hspace{1pt}PersonalInformationModel \ref{pimo:PersonalInformationModel} p. \pageref{pimo:PersonalInformationModel}\\ \hline 
+Superproperties & --\\ \hline 
+Subproperties & --\\ \hline 
+Description & Each element in a PIMO must be connected to the PIMO, to be able to track multiple PIMOs in a distributed scenario. Also, this is the way to find the user that this Thing belongs to.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{isLocationOf} 
+\label{pimo:isLocationOf}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}Location \ref{pimo:Location} p. \pageref{pimo:Location}\\ \hline 
+Range & {\it pimo}\hspace{1pt}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Superproperties & {\it nao:}annotation\newline {\it nao:}isRelated\newline {\it pimo:}isRelated \ref{pimo:isRelated} p. \pageref{pimo:isRelated}\newline {\it pimo:}objectProperty \ref{pimo:objectProperty} p. \pageref{pimo:objectProperty}\\ \hline 
+Subproperties & --\\ \hline 
+Description & The subject location is the current location of the object.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{isOrganizationMemberOf} 
+\label{pimo:isOrganizationMemberOf}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}Agent \ref{pimo:Agent} p. \pageref{pimo:Agent}\\ \hline 
+Range & {\it pimo}\hspace{1pt}Organization \ref{pimo:Organization} p. \pageref{pimo:Organization}\\ \hline 
+Superproperties & {\it pimo:}objectProperty \ref{pimo:objectProperty} p. \pageref{pimo:objectProperty}\newline {\it pimo:}partOf \ref{pimo:partOf} p. \pageref{pimo:partOf}\\ \hline 
+Subproperties & --\\ \hline 
+Description & The subject person or organozation (Agent) is member of the object organization.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{isRelated} 
+\label{pimo:isRelated}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Range & {\it pimo}\hspace{1pt}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Superproperties & {\it nao:}annotation\newline {\it nao:}isRelated\newline {\it pimo:}objectProperty \ref{pimo:objectProperty} p. \pageref{pimo:objectProperty}\\ \hline 
+Subproperties & {\it pimo:}attendee \ref{pimo:attendee} p. \pageref{pimo:attendee}\newline {\it pimo:}attends \ref{pimo:attends} p. \pageref{pimo:attends}\newline {\it pimo:}hasLocation \ref{pimo:hasLocation} p. \pageref{pimo:hasLocation}\newline {\it pimo:}isLocationOf \ref{pimo:isLocationOf} p. \pageref{pimo:isLocationOf}\\ \hline 
+Description & The thing is related to the other thing. Similar in meaning to skos:related. Symmetric but not transitive.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{isTopicOf} 
+\label{pimo:isTopicOf}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Range & {\it pimo}\hspace{1pt}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Superproperties & {\it nao:}annotation\newline {\it nao:}isRelated\newline {\it nao:}isTopicOf\newline {\it pimo:}objectProperty \ref{pimo:objectProperty} p. \pageref{pimo:objectProperty}\\ \hline 
+Subproperties & --\\ \hline 
+Description & This thing is described further in the object thing. Similar  semantics as skos:isSubjectOf.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{isWriteable} 
+\label{pimo:isWriteable}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & \\ \hline 
+Range & {\it rdfs}\hspace{1pt}Literal\\ \hline 
+Superproperties & --\\ \hline 
+Subproperties & --\\ \hline 
+Description & Defines if this information model can be modified by the user of the system. This is usually false for imported ontologies and true for the user's own PersonalInformationModel.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{jabberId} 
+\label{pimo:jabberId}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}Person \ref{pimo:Person} p. \pageref{pimo:Person}\\ \hline 
+Range & {\it rdfs}\hspace{1pt}Literal\\ \hline 
+Superproperties & --\\ \hline 
+Subproperties & --\\ \hline 
+Description & Jabber-ID of the user. Used to communicate amongst peers in the social scenario of the semantic desktop. Use the xmpp node identifier as specified by RFC3920, see http://www.xmpp.org/specs/rfc3920.html\#addressing-node. The format is the same as e-mail addresses: username@hostname.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{locatedWithin} 
+\label{pimo:locatedWithin}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}Location \ref{pimo:Location} p. \pageref{pimo:Location}\\ \hline 
+Range & {\it pimo}\hspace{1pt}Location \ref{pimo:Location} p. \pageref{pimo:Location}\\ \hline 
+Superproperties & {\it pimo:}objectProperty \ref{pimo:objectProperty} p. \pageref{pimo:objectProperty}\newline {\it pimo:}partOf \ref{pimo:partOf} p. \pageref{pimo:partOf}\\ \hline 
+Subproperties & --\\ \hline 
+Description & The subject location is contained within the object location. For example, a room is located within a building or a city is located within a country.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{narrower} 
+\label{pimo:narrower}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & \\ \hline 
+Range & \\ \hline 
+Superproperties & --\\ \hline 
+Subproperties & --\\ \hline 
+Description & \\ \hline 
+\end{longtable}
+
+
+\subsubsection{objectProperty} 
+\label{pimo:objectProperty}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Range & {\it pimo}\hspace{1pt}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Superproperties & --\\ \hline 
+Subproperties & {\it pimo:}attendee \ref{pimo:attendee} p. \pageref{pimo:attendee}\newline {\it pimo:}attends \ref{pimo:attends} p. \pageref{pimo:attends}\newline {\it pimo:}containsLocation \ref{pimo:containsLocation} p. \pageref{pimo:containsLocation}\newline {\it pimo:}hasLocation \ref{pimo:hasLocation} p. \pageref{pimo:hasLocation}\newline {\it pimo:}hasOrganizationMember \ref{pimo:hasOrganizationMember} p. \pageref{pimo:hasOrganizationMember}\newline {\it pimo:}hasPart \ref{pimo:hasPart} p. \pageref{pimo:hasPart}\newline {\it pimo:}hasTopic \ref{pimo:hasTopic} p. \pageref{pimo:hasTopic}\newline {\it pimo:}isLocationOf \ref{pimo:isLocationOf} p. \pageref{pimo:isLocationOf}\newline {\it pimo:}isOrganizationMemberOf \ref{pimo:isOrganizationMemberOf} p. \pageref{pimo:isOrganizationMemberOf}\newline {\it pimo:}isRelated \ref{pimo:isRelated} p. \pageref{pimo:isRelated}\newline {\it pimo:}isTopicOf \ref{pimo:isTopicOf} p. \pageref{pimo:isTopicOf}\newline {\it pimo:}locatedWithin \ref{pimo:locatedWithin} p. \pageref{pimo:locatedWithin}\newline {\it pimo:}partOf \ref{pimo:partOf} p. \pageref{pimo:partOf}\newline {\it pimo:}subTopic \ref{pimo:subTopic} p. \pageref{pimo:subTopic}\newline {\it pimo:}superTopic \ref{pimo:superTopic} p. \pageref{pimo:superTopic}\\ \hline 
+Description & The object of statements is another Thing. Users should be able to edit statements defined with this property. Abstract super-property.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{occurrence} 
+\label{pimo:occurrence}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Range & {\it rdfs}\hspace{1pt}Resource\\ \hline 
+Superproperties & --\\ \hline 
+Subproperties & {\it pimo:}groundingOccurrence \ref{pimo:groundingOccurrence} p. \pageref{pimo:groundingOccurrence}\newline {\it pimo:}hasOtherConceptualization \ref{pimo:hasOtherConceptualization} p. \pageref{pimo:hasOtherConceptualization}\newline {\it pimo:}hasOtherRepresentation \ref{pimo:hasOtherRepresentation} p. \pageref{pimo:hasOtherRepresentation}\\ \hline 
+Description & The subject Thing is represented also in the object resource. All facts added to the object resource are valid for the subject thing. The subject is the canonical represtation of the object. In particual, this implies when (?object ?p ?v) -> (?subject ?p ?v) and (?s ?p ?object) -> (?s ?p ?subject). The class of the object is not defined, but should be compatible with the class of the subject. Occurrence relations can be inferred through same identifiers or referencingOccurrence relations.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{organization} 
+\label{pimo:organization}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}OrganizationMember \ref{pimo:OrganizationMember} p. \pageref{pimo:OrganizationMember}\\ \hline 
+Range & {\it pimo}\hspace{1pt}Organization \ref{pimo:Organization} p. \pageref{pimo:Organization}\\ \hline 
+Superproperties & {\it pimo:}associationMember \ref{pimo:associationMember} p. \pageref{pimo:associationMember}\\ \hline 
+Subproperties & --\\ \hline 
+Description & relation to the organization in an OrganizationMember association.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{partOf} 
+\label{pimo:partOf}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Range & {\it pimo}\hspace{1pt}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Superproperties & {\it pimo:}objectProperty \ref{pimo:objectProperty} p. \pageref{pimo:objectProperty}\\ \hline 
+Subproperties & {\it pimo:}isOrganizationMemberOf \ref{pimo:isOrganizationMemberOf} p. \pageref{pimo:isOrganizationMemberOf}\newline {\it pimo:}locatedWithin \ref{pimo:locatedWithin} p. \pageref{pimo:locatedWithin}\newline {\it pimo:}superTopic \ref{pimo:superTopic} p. \pageref{pimo:superTopic}\\ \hline 
+Description & This is part of the object. Like a page is part of a book or an engine is part of a car. You can make sub-properties of this to reflect more detailed relations.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{referencingOccurrence} 
+\label{pimo:referencingOccurrence}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Range & {\it nie}\hspace{1pt}InformationElement \ref{nie:InformationElement} p. \pageref{nie:InformationElement}\\ \hline 
+Superproperties & --\\ \hline 
+Subproperties & --\\ \hline 
+Description & The subject thing is described in the object document. Ideally, the document is public and its primary topic is the thing. Although this property is not inverse-functional (because the Occurrences are not canonical elements of a formal ontology) this property allows to use public documents, such as wikipedia pages, as indicators identity.  The more formal hasOtherRepresentation property can be used when an ontology about the subject exists.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{roleContext} 
+\label{pimo:roleContext}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}PersonRole \ref{pimo:PersonRole} p. \pageref{pimo:PersonRole}\\ \hline 
+Range & {\it pimo}\hspace{1pt}Thing \ref{pimo:Thing} p. \pageref{pimo:Thing}\\ \hline 
+Superproperties & {\it pimo:}associationMember \ref{pimo:associationMember} p. \pageref{pimo:associationMember}\\ \hline 
+Subproperties & {\it pimo:}attendingMeeting \ref{pimo:attendingMeeting} p. \pageref{pimo:attendingMeeting}\\ \hline 
+Description & The context where the role-holder impersonates this role. For example, the company where a person is employed.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{roleHolder} 
+\label{pimo:roleHolder}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}PersonRole \ref{pimo:PersonRole} p. \pageref{pimo:PersonRole}\\ \hline 
+Range & {\it pimo}\hspace{1pt}Person \ref{pimo:Person} p. \pageref{pimo:Person}\\ \hline 
+Superproperties & {\it pimo:}associationMember \ref{pimo:associationMember} p. \pageref{pimo:associationMember}\\ \hline 
+Subproperties & --\\ \hline 
+Description & the person taking the role\\ \hline 
+\end{longtable}
+
+
+\subsubsection{subTopic} 
+\label{pimo:subTopic}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}Topic \ref{pimo:Topic} p. \pageref{pimo:Topic}\\ \hline 
+Range & {\it pimo}\hspace{1pt}Topic \ref{pimo:Topic} p. \pageref{pimo:Topic}\\ \hline 
+Superproperties & {\it pimo:}hasPart \ref{pimo:hasPart} p. \pageref{pimo:hasPart}\newline {\it pimo:}objectProperty \ref{pimo:objectProperty} p. \pageref{pimo:objectProperty}\\ \hline 
+Subproperties & --\\ \hline 
+Description & The object topic is more specific in meaning than the subject topic. Transitive. Similar in meaning to skos:narrower\\ \hline 
+\end{longtable}
+
+
+\subsubsection{superTopic} 
+\label{pimo:superTopic}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}Topic \ref{pimo:Topic} p. \pageref{pimo:Topic}\\ \hline 
+Range & {\it pimo}\hspace{1pt}Topic \ref{pimo:Topic} p. \pageref{pimo:Topic}\\ \hline 
+Superproperties & {\it pimo:}objectProperty \ref{pimo:objectProperty} p. \pageref{pimo:objectProperty}\newline {\it pimo:}partOf \ref{pimo:partOf} p. \pageref{pimo:partOf}\\ \hline 
+Subproperties & --\\ \hline 
+Description & The object topic is more general in meaning than the subject topic. Transitive. Similar to skos:broader.\\ \hline 
+\end{longtable}
+
+
+\subsubsection{taskDueTime} 
+\label{pimo:taskDueTime}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}Task \ref{pimo:Task} p. \pageref{pimo:Task}\\ \hline 
+Range & {\it xsd}\hspace{1pt}dateTime\\ \hline 
+Superproperties & {\it pimo:}datatypeProperty \ref{pimo:datatypeProperty} p. \pageref{pimo:datatypeProperty}\\ \hline 
+Subproperties & --\\ \hline 
+Description & when is this task due? Represented in ISO 8601, example: 2003-11-22T17:00:00\\ \hline 
+\end{longtable}
+
+
+\subsubsection{wikiText} 
+\label{pimo:wikiText}
+\begin{longtable}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+ \hline 
+Domain & {\it pimo}\hspace{1pt}ClassOrThing \ref{pimo:ClassOrThing} p. \pageref{pimo:ClassOrThing}\\ \hline 
+Range & {\it rdfs}\hspace{1pt}Literal\\ \hline 
+Superproperties & --\\ \hline 
+Subproperties & --\\ \hline 
+Description & A wiki-like free-text description of a Thing or a Class. The text can be formatted using a limited set of HTML elements and can contain links to other Things. The format is described in detail in the WIF specification (http://semanticweb.org/wiki/Wiki\_Interchange\_Format).\\ \hline 
+\end{longtable}
+
+
+
