@@ -78,4 +78,23 @@ The ontologies are made available under the terms of NEPOMUK <a href="LICENSE.tx
 	This recommendation is <a href="#ontology">accompanied by a RDFS/NRL ontology</a>, which is the authorative formal 
 	description of the ontology.</b>
 </p>
+<h2 id="example">Example</h2>
+<p>
+	If a local file should be shared with a contact, it can be done like the following
+</p>
+<pre>
+# N3 example
+@prefix rdfs:    &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix nso:     &lt;http://www.semanticdesktop.org/ontologies/2009/11/08/nso#&gt; .
+@prefix nfo:     &lt;http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#&gt; .
+@prefix nco:     &lt;http://www.semanticdesktop.org/ontologies/2007/03/22/nco#&gt; .
 
+&lt;file:///home/blah.odp&gt; a nfo:Presentation.
+&lt;nepomuk://res/23234&gt; a nco:Contact.
+&lt;nepomuk://res/46252&gt; a nco:Contact.
+&lt;nepomuk://res/55555&gt; a nco:ContactGroup.
+&lt;file:///home/blah.odp&gt; nso:sharedWithContact &lt;nepomuk://res/23234&gt;.
+&lt;file:///home/blah.odp&gt; nso:sharedWithContact &lt;nepomuk://res/46252&gt;.
+&lt;file:///home/blah.odp&gt; nso:sharedWithGroup &lt;nepomuk://res/55555&gt;.
+</pre>
