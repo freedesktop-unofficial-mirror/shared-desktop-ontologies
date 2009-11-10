@@ -75,7 +75,7 @@ rdfs: {
     rdfs:ContainerMembershipProperty rdf:type rdfs:Class ;
         rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
         rdfs:label "ContainerMembershipProperty" ;
-        rdfs:comment "The class of container membership properties, rdf:_1, rdf:_2, ...,\r\n                    all of which are sub-properties of 'member'." ;
+        rdfs:comment "The class of container membership properties, rdf:_1, rdf:_2, ..., all of which are sub-properties of 'member'." ;
         rdfs:subClassOf rdf:Property .
     rdfs:member rdf:type rdf:Property ;
         rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
