@@ -1,3 +1,9 @@
+#
+# Copyright 1995-2009 DCMI All Rights Reserved. 
+# DCMI liability, trademark/service mark, document use and  software licensing rules apply.
+# For details see http://dublincore.org/
+#
+
 @prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dc:       <http://purl.org/dc/elements/1.1/> .
 @prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .

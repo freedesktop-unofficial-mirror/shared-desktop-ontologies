@@ -1,3 +1,10 @@
+#
+# Copyright 2004 W3C (MIT, ERCIM, Keio), 
+# All Rights Reserved. 
+# W3C liability, trademark, document use and software licensing rules apply.
+# For more information see http://www.w3.org/TR/rdf-syntax-grammar/
+#
+
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
