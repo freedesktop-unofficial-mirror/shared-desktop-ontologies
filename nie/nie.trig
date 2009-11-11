@@ -317,7 +317,7 @@ nie: {nie:characterSet
 
     nie:byteSize
           a       rdf:Property ;
-          rdfs:comment "The overall size of the data object in bytes. That means the WHOLE data object and ONLY the data object, not of the content that is of interest to the user. For cases where the content size is different (e.g. in compressed files the content is larger, in messages the content excludes headings and is smaller) use more specific properties, not necessarily subproperties of this one." ;
+          rdfs:comment "The overall size of the data object in bytes. That means the space taken by the DataObject in its container, and not the size of the content that is of interest to the user. For cases where the content size is different (e.g. in compressed files the content is larger, in messages the content excludes headings and is smaller) use more specific properties, not necessarily subproperties of this one." ;
           rdfs:domain nie:DataObject ;
           rdfs:label "byteSize" ;
           rdfs:range xsd:integer ;
