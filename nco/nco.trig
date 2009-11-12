@@ -129,7 +129,7 @@ nco: {nco:region
           rdfs:domain nie:InformationElement ;
           rdfs:label "creator" ;
           rdfs:range nco:Contact ;
-          rdfs:subPropertyOf dc:creator , nco:contributor .
+          rdfs:subPropertyOf dc:creator , nco:contributor , nao:creator .
 
     nco:hasLocation
           a       rdf:Property ;
@@ -281,7 +281,7 @@ nco: {nco:region
           a       rdfs:Class ;
           rdfs:comment "A Contact. A piece of data that can provide means to identify or communicate with an entity." ;
           rdfs:label "Contact" ;
-          rdfs:subClassOf nco:Role , nie:InformationElement .
+          rdfs:subClassOf nco:Role , nie:InformationElement , nao:Party .
 
     nco:ModemNumber
           a       rdfs:Class ;
@@ -323,7 +323,7 @@ nco: {nco:region
           rdfs:domain nie:InformationElement ;
           rdfs:label "contributor" ;
           rdfs:range nco:Contact ;
-          rdfs:subPropertyOf dc:contributor .
+          rdfs:subPropertyOf dc:contributor , nao:contributor .
 
     nco:logo
           a       rdf:Property ;
@@ -624,7 +624,7 @@ nco: {nco:region
                   "http://www.semanticdesktop.org/ontologies/2007/03/22/nco#" ;
           nao:hasDefaultNamespaceAbbreviation
                   "nco" ;
-          nao:lastModified "2008-10-05T19:45:49.890Z" ;
+          nao:lastModified "2009-11-12T07:45:58Z" ;
           nao:status "Unstable" ;
           nao:updatable "0 " ;
           nao:version "Revision-8" .
