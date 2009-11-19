@@ -182,7 +182,7 @@ nie: {nie:characterSet
           rdfs:domain nie:InformationElement ;
           rdfs:label "title" ;
           rdfs:range xsd:string ;
-          rdfs:subPropertyOf dc:title .
+          rdfs:subPropertyOf dc:title, nao:prefLabel .
 
     nie:lastRefreshed
           a       rdf:Property ;
