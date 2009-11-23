@@ -1,0 +1,147 @@
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix nrl:     <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#> .
+@prefix nao:     <http://www.semanticdesktop.org/ontologies/2007/08/15/nao#> .
+@prefix nco:     <http://www.semanticdesktop.org/ontologies/2007/03/22/nco#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix nie:     <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#> .
+@prefix nfo:     <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo> .
+@prefix nmm:     <http://www.semanticdesktop.org/ontologies/2009/02/19/nmm> .
+
+<http://www.semanticdesktop.org/ontologies/2009/02/19/nmm> {
+
+    nmm:MusicPiece
+	a rdfs:Class ;
+	rdfs:subClassOf nfo:Media ;
+	rdfs:label "music" ;
+	rdfs:comment "Used to assign music-specific properties such a BPM to video and audio" .
+
+    nmm:musicAlbum
+	a rdf:Property ;
+	rdfs:subPropertyOf nie:isLogicalPartOf ;
+	rdfs:label "album" ;
+	rdfs:comment "Album the music belongs to" ;
+	rdfs:domain nmm:MusicPiece ;
+	rdfs:range nmm:MusicAlbum ;
+	nrl:maxCardinality 1^^xsd:nonNegativeInteger .
+
+    nmm:beatsPerMinute
+	a rdf:Property ;
+	rdfs:label "Beats per minute" ;
+	rdfs:comment "beats per minute" ;
+	rdfs:domain nmm:MusicPiece ;
+	rdfs:range xsd:integer .
+
+    nmm:performer
+	a rdf:Property ;
+	rdfs:subPropertyOf nco:contributor ;
+	rdfs:label "performer" ;
+	rdfs:comment "Performer" ;
+	rdfs:domain nmm:MusicPiece ;
+	rdfs:range nco:Contact .
+
+    nmm:composer
+	a rdf:Property ;
+	rdfs:subPropertyOf nco:contributor ;
+	rdfs:label "composer" ;
+	rdfs:comment "Composer" ;
+	rdfs:domain nmm:MusicPiece ;
+	rdfs:range nco:Contact .
+
+    nmm:lyricist
+	a rdf:Property ;
+	rdfs:subPropertyOf nco:contributor ;
+	rdfs:label "lyricist";
+	rdfs:comment "Lyricist";
+	rdfs:domain nmm:MusicPiece ;
+	rdfs:range nco:Contact .
+
+    nmm:trackNumber
+	a rdf:Property ;
+	rdfs:label "track number" ;
+	rdfs:comment "Track number of the music in its album" ;
+	rdfs:domain nmm:MusicPiece ;
+	rdfs:range xsd:integer .
+
+    nmm:musicBrainzTrackID
+	a rdf:Property ;
+	rdfs:subPropertyOf nie:identifier ;
+	rdfs:label "musicbrainz track ID" ;
+	rdfs:comment "MusicBrainz track ID" ;
+	rdfs:domain nmm:MusicPiece ;
+	rdfs:range xsd:integer .
+
+    nmm:trackGain
+	a rdf:Property ;
+	rdfs:label "track gain" ;
+	rdfs:comment "ReplayGain track gain" ;
+	rdfs:domain nmm:MusicPiece .
+
+    nmm:trackPeakGain
+	a rdf:Property ;
+	rdfs:label "track peak gain" ;
+	rdfs:comment "ReplayGain track peak gain" ;
+	rdfs:domain nmm:MusicPiece .
+
+
+    nmm:MusicAlbum
+	a rdfs:Class ;
+	rdfs:subClassOf nfo:MediaList ;
+	rdfs:label "music album" ;
+	rdfs:comment "The music album as provided by the publisher. Not to be confused with media lists or collections." .
+
+    nmm:musicCDIdentifier
+	a rdf:Property ;
+	rdfs:subPropertyOf nie:identifier ;
+	rdfs:label "music CD identifier" ;
+	rdfs:comment "Music CD identifier to for databases like FreeDB.org. This property is intended for music that comes from a CD, so that the CD can be identified in external databases." ;
+	rdfs:domain nmm:MusicAlbum ;
+	rdfs:range xsd:string .
+
+    nmm:internationalStandardRecordingCode
+	a rdf:Property ;
+	rdfs:subPropertyOf nie:identifier ;
+	rdfs:label "international standard recording code" ;
+	rdfs:comment "ISRC ID. Format: 'CC-XXX-YY-NNNNN'" ;
+	rdfs:domain nmm:MusicAlbum ;
+	rdfs:range xsd:string .
+
+    nmm:musicBrainzAlbumID
+	a rdf:Property ;
+	rdfs:subPropertyOf nie:identifier ;
+	rdfs:label "musicbrainz album ID" ;
+	rdfs:comment "MusicBrainz album ID" ;
+	rdfs:domain nmm:MusicAlbum ;
+	rdfs:range xsd:string .
+
+    nmm:albumGain
+	a rdf:Property ;
+	rdfs:label "album gain" ;
+	rdfs:comment "ReplayGain album(audiophile) gain" ;
+	rdfs:domain nmm:MusicAlbum .
+
+    nmm:albumPeakGain
+	a rdf:Property ;
+	rdfs:label "album peak gain" ;
+	rdfs:comment "ReplayGain album(audiophile) peak gain" ;
+	rdfs:domain nmm:MusicAlbum .
+
+}
+
+<http://www.semanticdesktop.org/ontologies/2009/02/19/nmm/metadata>
+{
+    <http://www.semanticdesktop.org/ontologies/2009/02/19/nmm>
+          a       nrl:DocumentGraph , nrl:KnowledgeBase ;
+          nao:hasDefaultNamespace "http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#" ;
+          nao:hasDefaultNamespaceAbbreviation "nmm" ;
+          nao:lastModified "2009-11-11T22:37:29" ;
+          nao:serializationLanguage "TriG" ;
+          nao:status "Testing" ;
+          nrl:updatable "0" ;
+          nao:version "1" .
+
+    <http://www.semanticdesktop.org/ontologies/2009/02/19/nmm/metadata>
+          a       nrl:GraphMetadata , nrl:DocumentGraph ;
+          nao:serializationLanguage "TriG" ;
+          nrl:coreGraphMetadataFor <http://www.semanticdesktop.org/ontologies/2009/02/19/nmm> .
+}
