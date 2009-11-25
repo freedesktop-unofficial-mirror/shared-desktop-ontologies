@@ -2,6 +2,16 @@ project(shared-desktop-ontologies)
 
 cmake_minimum_required(VERSION 2.6)
 
+set(CMAKE_ONTOLOGIES_VERSION_MAJOR 0)
+set(CMAKE_ONTOLOGIES_VERSION_MINOR 1)
+set(CMAKE_ONTOLOGIES_VERSION_STRING "${CMAKE_ONTOLOGIES_VERSION_MAJOR}.${CMAKE_ONTOLOGIES_VERSION_MINOR}")
+
+if(NOT WIN32)
+  set(PKGCONFIG_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}/share/pkgconfig/" CACHE STRING "Base directory for pkgconfig files")
+  configure_file(${CMAKE_CURRENT_SOURCE_DIR}/shared-desktop-ontologies.pc.cmake ${CMAKE_CURRENT_BINARY_DIR}/shared-desktop-ontologies.pc @ONLY)
+  install(FILES ${CMAKE_CURRENT_BINARY_DIR}/shared-desktop-ontologies.pc DESTINATION ${PKGCONFIG_INSTALL_PREFIX})
+endif(NOT WIN32)
+
 macro(INSTALL_ONTOLOGY _name _group)
   install(FILES ${_name} DESTINATION ${CMAKE_INSTALL_PREFIX}/share/ontology/${_group})
 endmacro(INSTALL_ONTOLOGY)
