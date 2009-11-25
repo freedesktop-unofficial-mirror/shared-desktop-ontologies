@@ -1,3 +1,38 @@
+#
+# Copyright (c) 2007 NEPOMUK Consortium
+# All rights reserved, licensed under either CC-BY or BSD.
+#
+# You are free:
+#  * to Share - to copy, distribute and transmit the work
+#  * to Remix - to adapt the work
+# Under the following conditions:
+#  * Attribution - You must attribute the work in the manner specified by the author
+#    or licensor (but not in any way that suggests that they endorse you or your use 
+#    of the work).
+#
+# Redistribution and use in source and binary forms, with or without modification, 
+# are permitted provided that the following conditions are met:
+#  * Redistributions of source code must retain the above copyright notice, this 
+#    list of conditions and the following disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this 
+#    list of conditions and the following disclaimer in the documentation and/or 
+#    other materials provided with the distribution.
+#  * Neither the names of the authors nor the names of contributors may
+#    be used to endorse or promote products derived from this ontology without 
+#    specific prior written permission.
+#
+# THIS ONTOLOGY IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+# IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+# OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+# IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+# INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+# NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+# THIS ONTOLOGY, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+
 @prefix dc:      <http://purl.org/dc/elements/1.1/> .
 @prefix exif:    <http://www.kanzaki.com/ns/exif#> .
 @prefix geo:     <http://www.w3.org/2003/01/geo/wgs84_pos#> .
@@ -338,7 +373,7 @@ information is transferred in the \"task space\" of the participating persons.""
     tmo:taskDescription
           a       rdf:Property ;
           rdfs:comment """The task description helps users to understand the goal and the proceeding of a task. It can also describe the context of a task. The task description is composed at minimum of a summary of what is done to reach the goal. The task description is the main source for identifying related information, e.g., suitable patterns.
-A Task Description can be either an informal, described textual content (TextualDescription) or it can be a more formally structured representation (àFormalDescription).
+A Task Description can be either an informal, described textual content (?TextualDescription) or it can be a more formally structured representation (àFormalDescription).
 Technology considerations: Informal descriptions allow for text similarity processing, a formal description allows for applying case based similarity measures.""" ;
           rdfs:domain tmo:Task ;
           rdfs:label "taskDescription" ;

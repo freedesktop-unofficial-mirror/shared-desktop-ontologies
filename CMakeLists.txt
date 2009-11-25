@@ -7,11 +7,11 @@ macro(INSTALL_ONTOLOGY _name _group)
 endmacro(INSTALL_ONTOLOGY)
 
 # base ontologies
-install_ontology(base/rdf.trig base)
-install_ontology(base/rdfs.trig base)
-install_ontology(base/dcterms.trig base)
-install_ontology(base/dctype.trig base)
-install_ontology(base/dces.trig base)
+install_ontology(base/rdf.trig core)
+install_ontology(base/rdfs.trig core)
+install_ontology(base/dcterms.trig dc)
+install_ontology(base/dctype.trig dc)
+install_ontology(base/dces.trig dc)
 
 # Nepomuk base ontologies
 install_ontology(nrl/nrl.trig nepomuk)
