@@ -40,10 +40,10 @@
 @prefix nco:     <http://www.semanticdesktop.org/ontologies/2007/03/22/nco#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 @prefix nie:     <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#> .
-@prefix nfo:     <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo> .
-@prefix nmm:     <http://www.semanticdesktop.org/ontologies/2009/02/19/nmm> .
+@prefix nfo:     <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#> .
+@prefix nmm:     <http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#> .
 
-<http://www.semanticdesktop.org/ontologies/2009/02/19/nmm> {
+nmm: {
 
     nmm:MusicPiece
 	a rdfs:Class ;
@@ -165,7 +165,7 @@
 
 <http://www.semanticdesktop.org/ontologies/2009/02/19/nmm/metadata>
 {
-    <http://www.semanticdesktop.org/ontologies/2009/02/19/nmm>
+    nmm:
           a       nrl:DocumentGraph , nrl:KnowledgeBase ;
           nao:hasDefaultNamespace "http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#" ;
           nao:hasDefaultNamespaceAbbreviation "nmm" ;
@@ -178,5 +178,5 @@
     <http://www.semanticdesktop.org/ontologies/2009/02/19/nmm/metadata>
           a       nrl:GraphMetadata , nrl:DocumentGraph ;
           nao:serializationLanguage "TriG" ;
-          nrl:coreGraphMetadataFor <http://www.semanticdesktop.org/ontologies/2009/02/19/nmm> .
+          nrl:coreGraphMetadataFor nmm: .
 }
