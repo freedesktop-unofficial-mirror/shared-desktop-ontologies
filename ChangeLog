@@ -11,6 +11,7 @@
                             nco:gender
                             nmo:messageSubject
                             nmo:receivedDate
+        11/27/2009 - trueg: Added SharedDesktopOntologiesConfig.cmake 
 
 0.1
         First release of the shared ontologies.

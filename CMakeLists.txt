@@ -1,20 +1,45 @@
-project(shared-desktop-ontologies)
-
+# required by cmake
 cmake_minimum_required(VERSION 2.6)
 
-set(CMAKE_ONTOLOGIES_VERSION_MAJOR 0)
-set(CMAKE_ONTOLOGIES_VERSION_MINOR 1)
-set(CMAKE_ONTOLOGIES_VERSION_STRING "${CMAKE_ONTOLOGIES_VERSION_MAJOR}.${CMAKE_ONTOLOGIES_VERSION_MINOR}")
+project(shared-desktop-ontologies)
 
+
+# set the version to be used by SharedDesktopOntologiesConfig.cmake
+# ===============================================================================================
+set(SHAREDDESKTOPONTOLOGIES_VERSION_MAJOR 0)
+set(SHAREDDESKTOPONTOLOGIES_VERSION_MINOR 2)
+set(SHAREDDESKTOPONTOLOGIES_VERSION "${SHAREDDESKTOPONTOLOGIES_VERSION_MAJOR}.${SHAREDDESKTOPONTOLOGIES_VERSION_MINOR}")
+
+
+# set the root dir to be used by SharedDesktopOntologiesConfig.cmake
+# ===============================================================================================
+set(SHAREDDESKTOPONTOLOGIES_ROOT_DIR "${CMAKE_INSTALL_PREFIX}/share/ontology")
+
+
+# generate SharedDesktopOntologiesConfig.cmake for easy utilisation of the package by other cmake build systems
+# ===============================================================================================
+configure_file(SharedDesktopOntologiesConfig.cmake.in ${CMAKE_CURRENT_BINARY_DIR}/SharedDesktopOntologiesConfig.cmake @ONLY)
+configure_file(SharedDesktopOntologiesVersion.cmake.in ${CMAKE_CURRENT_BINARY_DIR}/SharedDesktopOntologiesVersion.cmake @ONLY)
+install(FILES
+  ${CMAKE_CURRENT_BINARY_DIR}/SharedDesktopOntologiesConfig.cmake
+  ${CMAKE_CURRENT_BINARY_DIR}/SharedDesktopOntologiesVersion.cmake
+  DESTINATION ${CMAKE_INSTALL_PREFIX}/share/cmake/SharedDesktopOntologies)
+
+
+# optionally install the pkgconfig stuff
+# ===============================================================================================
 if(NOT WIN32)
   set(PKGCONFIG_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}/share/pkgconfig/" CACHE STRING "Base directory for pkgconfig files")
   configure_file(${CMAKE_CURRENT_SOURCE_DIR}/shared-desktop-ontologies.pc.cmake ${CMAKE_CURRENT_BINARY_DIR}/shared-desktop-ontologies.pc @ONLY)
   install(FILES ${CMAKE_CURRENT_BINARY_DIR}/shared-desktop-ontologies.pc DESTINATION ${PKGCONFIG_INSTALL_PREFIX})
 endif(NOT WIN32)
 
+
+# finally install all the ontologies
+# ===============================================================================================
 macro(INSTALL_ONTOLOGY _name _group)
   set(ONTO_INSTALL_DIR ${CMAKE_INSTALL_PREFIX}/share/ontology/${_group})
-  configure_file("${_name}.ontology.cmake" "${CMAKE_CURRENT_BINARY_DIR}/${_name}.ontology")
+  configure_file("${_name}.ontology.in" "${CMAKE_CURRENT_BINARY_DIR}/${_name}.ontology")
   install(FILES "${CMAKE_CURRENT_BINARY_DIR}/${_name}.ontology" DESTINATION ${ONTO_INSTALL_DIR})
   install(FILES "${_name}.trig" DESTINATION ${ONTO_INSTALL_DIR})
 endmacro(INSTALL_ONTOLOGY)
