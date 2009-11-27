@@ -1,2 +1,16 @@
+0.2
+        11/27/2009 - trueg: Added "nrl:maxCardinality 1" to:
+                            nco:region
+                            nco:country
+                            nco:imStatus
+                            nco:birthDate
+                            nco:postalcode
+                            nco:contactGroupName
+                            nco:emailAddress
+                            nco:locality
+                            nco:gender
+                            nmo:messageSubject
+                            nmo:receivedDate
+
 0.1
-	First release of the shared ontologies.
+        First release of the shared ontologies.

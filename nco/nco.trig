@@ -1,5 +1,6 @@
 #
 # Copyright (c) 2007 NEPOMUK Consortium
+# Copyright (c) 2009 Sebastian Trueg <trueg@kde.org>
 # All rights reserved, licensed under either CC-BY or BSD.
 #
 # You are free:
@@ -58,7 +59,8 @@ nco: {nco:region
           rdfs:comment "Region. Inspired by the fifth part of the value of the 'ADR' property as defined in RFC 2426, sec. 3.2.1" ;
           rdfs:domain nco:PostalAddress ;
           rdfs:label "region" ;
-          rdfs:range xsd:string .
+          rdfs:range xsd:string ;
+          nrl:maxCardinality 1 .
 
     nco:key
           a       rdf:Property ;
@@ -122,7 +124,8 @@ nco: {nco:region
           rdfs:comment "A part of an address specyfing the country. Inspired by the seventh part of the value of the 'ADR' property as defined in RFC 2426, sec. 3.2.1" ;
           rdfs:domain nco:PostalAddress ;
           rdfs:label "country" ;
-          rdfs:range xsd:string .
+          rdfs:range xsd:string ;
+          nrl:maxCardinality 1 .
 
     nco:nameHonorificPrefix
           a       rdf:Property ;
@@ -191,7 +194,8 @@ nco: {nco:region
           rdfs:comment "Current status of the given IM account. Values for this property may include 'Online', 'Offline', 'Do not disturb' etc. The exact choice of them is unspecified." ;
           rdfs:domain nco:IMAccount ;
           rdfs:label "imStatus" ;
-          rdfs:range xsd:string .
+          rdfs:range xsd:string ;
+          nrl:maxCardinality 1 .
 
     nco:containsContact
           a       rdf:Property ;
@@ -399,7 +403,8 @@ nco: {nco:region
           rdfs:domain nco:Contact ;
           rdfs:label "birthDate" ;
           rdfs:range xsd:date ;
-          rdfs:subPropertyOf dc:date .
+          rdfs:subPropertyOf dc:date ;
+          nrl:maxCardinality 1 .
 
     nco:hasEmailAddress
           a       rdf:Property ;
@@ -414,7 +419,8 @@ nco: {nco:region
           rdfs:comment "Postal Code. Inspired by the sixth part of the value of the 'ADR' property as defined in RFC 2426, sec. 3.2.1" ;
           rdfs:domain nco:PostalAddress ;
           rdfs:label "postalcode" ;
-          rdfs:range xsd:string .
+          rdfs:range xsd:string ;
+          nrl:maxCardinality 1 .
 
     nco:MessagingNumber
           a       rdfs:Class ;
@@ -489,7 +495,8 @@ nco: {nco:region
           rdfs:domain nco:ContactGroup ;
           rdfs:label "contactGroupName" ;
           rdfs:range xsd:string ;
-          rdfs:subPropertyOf dc:title .
+          rdfs:subPropertyOf dc:title ;
+          nrl:maxCardinality 1 .
 
     nco:FaxNumber
           a       rdfs:Class ;
@@ -528,7 +535,8 @@ nco: {nco:region
           a       rdf:Property ;
           rdfs:domain nco:EmailAddress ;
           rdfs:label "emailAddress" ;
-          rdfs:range xsd:string .
+          rdfs:range xsd:string ;
+          nrl:maxCardinality 1 .
 
     nco:InternationalDeliveryAddress
           a       rdfs:Class ;
@@ -541,7 +549,8 @@ nco: {nco:region
           rdfs:comment "Locality or City. Inspired by the fourth part of the value of the 'ADR' property as defined in RFC 2426, sec. 3.2.1" ;
           rdfs:domain nco:PostalAddress ;
           rdfs:label "locality" ;
-          rdfs:range xsd:string .
+          rdfs:range xsd:string ;
+          nrl:maxCardinality 1 .
 
     nco:VideoIMAccount
           a       rdfs:Class ;
@@ -643,7 +652,8 @@ nco: {nco:region
           rdfs:comment "Gender of the given contact." ;
           rdfs:domain nco:PersonContact ;
           rdfs:label "gender" ;
-          rdfs:range nco:Gender .
+          rdfs:range nco:Gender ;
+          nrl:maxCardinality 1 .
 
     nco:imStatusMessage
           a       rdf:Property ;
@@ -659,10 +669,10 @@ nco: {nco:region
                   "http://www.semanticdesktop.org/ontologies/2007/03/22/nco#" ;
           nao:hasDefaultNamespaceAbbreviation
                   "nco" ;
-          nao:lastModified "2009-11-12T07:45:58Z" ;
+          nao:lastModified "2009-11-27T11:45:58Z" ;
           nao:status "Unstable" ;
           nao:updatable "0 " ;
-          nao:version "Revision-8" .
+          nao:version "Revision-9" .
 
     <http://www.semanticdesktop.org/ontologies/2007/03/22/nco_metadata#>
           a       nrl:GraphMetadata ;

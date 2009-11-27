@@ -1,5 +1,6 @@
 #
 # Copyright (c) 2007 NEPOMUK Consortium
+# Copyright (c) 2009 Sebastian Trueg <trueg@kde.org>
 # All rights reserved, licensed under either CC-BY or BSD.
 #
 # You are free:
@@ -71,7 +72,8 @@ nmo: {nmo:IMMessage
           rdfs:domain nmo:Message ;
           rdfs:label "messageSubject" ;
           rdfs:range xsd:string ;
-          rdfs:subPropertyOf nie:subject .
+          rdfs:subPropertyOf nie:subject ;
+          nrl:maxCardinality 1 .
 
     nmo:MessageHeader
           a       rdfs:Class ;
@@ -166,7 +168,8 @@ nmo: {nmo:IMMessage
           rdfs:domain nmo:Message ;
           rdfs:label "receivedDate" ;
           rdfs:range xsd:dateTime ;
-          rdfs:subPropertyOf dc:date .
+          rdfs:subPropertyOf dc:date ;
+          nrl:maxCardinality 1 .
 
     nmo:MimeEntity
           a       rdfs:Class ;
@@ -287,9 +290,9 @@ content defaults to the value specified by the 'mimeType' property.""" ;
                   "http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#" ;
           nao:hasDefaultNamespaceAbbreviation
                   "nmo" ;
-          nao:lastModified "2008-10-05T19:45:56.656Z" ;
+          nao:lastModified "2008-11-27T11:45:56.656Z" ;
           nao:status "Unstable" ;
           nao:updatable "0 " ;
-          nao:version "Revision-8" .
+          nao:version "Revision-9" .
 }
 
