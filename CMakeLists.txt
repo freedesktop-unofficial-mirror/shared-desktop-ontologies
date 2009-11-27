@@ -19,10 +19,10 @@ set(SHAREDDESKTOPONTOLOGIES_ROOT_DIR "${CMAKE_INSTALL_PREFIX}/share/ontology")
 # generate SharedDesktopOntologiesConfig.cmake for easy utilisation of the package by other cmake build systems
 # ===============================================================================================
 configure_file(SharedDesktopOntologiesConfig.cmake.in ${CMAKE_CURRENT_BINARY_DIR}/SharedDesktopOntologiesConfig.cmake @ONLY)
-configure_file(SharedDesktopOntologiesVersion.cmake.in ${CMAKE_CURRENT_BINARY_DIR}/SharedDesktopOntologiesVersion.cmake @ONLY)
+configure_file(SharedDesktopOntologiesConfigVersion.cmake.in ${CMAKE_CURRENT_BINARY_DIR}/SharedDesktopOntologiesConfigVersion.cmake @ONLY)
 install(FILES
   ${CMAKE_CURRENT_BINARY_DIR}/SharedDesktopOntologiesConfig.cmake
-  ${CMAKE_CURRENT_BINARY_DIR}/SharedDesktopOntologiesVersion.cmake
+  ${CMAKE_CURRENT_BINARY_DIR}/SharedDesktopOntologiesConfigVersion.cmake
   DESTINATION ${CMAKE_INSTALL_PREFIX}/share/cmake/SharedDesktopOntologies)
 
 
