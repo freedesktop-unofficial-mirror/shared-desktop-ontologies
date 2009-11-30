@@ -10,9 +10,9 @@
 @prefix nao:      <http://www.semanticdesktop.org/ontologies/2007/08/15/nao#> .
 @prefix nrl:      <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#> .
 @prefix dcterms:  <http://purl.org/dc/terms/> .
-@prefix dctype:   <http://purl.org/dc/dcmitype/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
 
-dctype: {
+dcmitype: {
     dcterms:DCMIType rdf:type dcterms:TypeScheme ,
             rdfs:Class ;
         dc:description "The DCMI Type Vocabulary provides a general, cross-domain list of approved terms that may be used as values for the Resource Type element to identify the genre of a resource." ;
@@ -120,9 +120,9 @@ dctype: {
 <http://purl.org/dc/dcmitype/metadata> {
     <http://purl.org/dc/dcmitype/metadata>
           a       nrl:GraphMetadata ;
-          nrl:coreGraphMetadataFor dctype: .
+          nrl:coreGraphMetadataFor dcmitype: .
 
-    dctype:
+    dcmitype:
           a nrl:Ontology, nrl:DocumentGraph ;
           dc:title "The DCMI Types namespace providing access to its content by means of an RDF Schema" ;
           dc:publisher "The Dublin Core Metadata Initiative" ;
@@ -135,6 +135,7 @@ dctype: {
           dcterms:isReferencedBy <http://purl.org/dc/terms/> ;
           dcterms:issued "2000-07-11" ;
           dcterms:modified "2002-05-22" ;
+          nao:lastModified "2009-11-30T18:00:00Z" ;
           nao:hasDefaultNamespace "http://purl.org/dc/dcmitype/" ;
           nao:hasDefaultNamespaceAbbreviation "dctype" ;
           nao:serializationLanguage "TriG" ;

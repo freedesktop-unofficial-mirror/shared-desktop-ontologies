@@ -9,6 +9,8 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix nrl:     <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#> .
+@prefix nao:     <http://www.semanticdesktop.org/ontologies/2007/08/15/nao#> .
 
 rdf: {
     rdf:type rdf:type rdf:Property ;

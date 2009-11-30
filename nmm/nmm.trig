@@ -58,7 +58,7 @@ nmm: {
 	rdfs:comment "Album the music belongs to" ;
 	rdfs:domain nmm:MusicPiece ;
 	rdfs:range nmm:MusicAlbum ;
-	nrl:maxCardinality 1^^xsd:nonNegativeInteger .
+	nrl:maxCardinality 1 .
 
     nmm:beatsPerMinute
 	a rdf:Property ;
@@ -169,7 +169,7 @@ nmm: {
           a       nrl:DocumentGraph , nrl:KnowledgeBase ;
           nao:hasDefaultNamespace "http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#" ;
           nao:hasDefaultNamespaceAbbreviation "nmm" ;
-          nao:lastModified "2009-11-11T22:37:29" ;
+          nao:lastModified "2009-11-30T22:37:29" ;
           nao:serializationLanguage "TriG" ;
           nao:status "Testing" ;
           nrl:updatable "0" ;

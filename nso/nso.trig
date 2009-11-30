@@ -43,7 +43,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix nso:     <http://www.semanticdesktop.org/ontologies/2009/11/08/nso#> .
 
-<http://www.semanticdesktop.org/ontologies/2009/11/08/nso> {
+nso: {
     nso:sharedWithContact
           a       rdf:Property ;
           rdfs:comment """The subject resource is shared with the object contact. 
@@ -76,14 +76,14 @@ One resource can be shared to multiple contact groups, the cardinality is 0..n. 
 <http://www.semanticdesktop.org/ontologies/2009/11/08/nso/metadata> {
     <http://www.semanticdesktop.org/ontologies/2009/11/08/nso/metadata>
           a       nrl:GraphMetadata ;
-          nrl:coreGraphMetadataFor <http://www.semanticdesktop.org/ontologies/2009/11/08/nso> .
+          nrl:coreGraphMetadataFor nso: .
 
 
-    <http://www.semanticdesktop.org/ontologies/2009/11/08/nso>
+    nso:
           a       nrl:Ontology , nrl:DocumentGraph ;
-          nao:hasDefaultNamespace "http://www.semanticdesktop.org/ontologies/2009/11/08/nso" ;
+          nao:hasDefaultNamespace "http://www.semanticdesktop.org/ontologies/2009/11/08/nso#" ;
           nao:hasDefaultNamespaceAbbreviation "nso" ;
-          nao:lastModified "2009-11-08T18:00:00Z" ;
+          nao:lastModified "2009-11-30T18:00:00Z" ;
           nao:serializationLanguage "TriG" ;
           nao:status "Unstable" ;
           nrl:updatable "0" ;
