@@ -7,7 +7,7 @@ project(shared-desktop-ontologies)
 # set the version to be used by SharedDesktopOntologiesConfig.cmake
 # ===============================================================================================
 set(SHAREDDESKTOPONTOLOGIES_VERSION_MAJOR 0)
-set(SHAREDDESKTOPONTOLOGIES_VERSION_MINOR 2)
+set(SHAREDDESKTOPONTOLOGIES_VERSION_MINOR 3)
 set(SHAREDDESKTOPONTOLOGIES_VERSION "${SHAREDDESKTOPONTOLOGIES_VERSION_MAJOR}.${SHAREDDESKTOPONTOLOGIES_VERSION_MINOR}")
 
 
