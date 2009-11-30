@@ -29,9 +29,9 @@ install(FILES
 # optionally install the pkgconfig stuff
 # ===============================================================================================
 if(NOT WIN32)
-  set(PKGCONFIG_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}/share/pkgconfig/" CACHE STRING "Base directory for pkgconfig files")
+  set(PKGCONFIG_INSTALL_DIR "share/pkgconfig/" CACHE STRING "Base directory for pkgconfig files")
   configure_file(${CMAKE_CURRENT_SOURCE_DIR}/shared-desktop-ontologies.pc.cmake ${CMAKE_CURRENT_BINARY_DIR}/shared-desktop-ontologies.pc @ONLY)
-  install(FILES ${CMAKE_CURRENT_BINARY_DIR}/shared-desktop-ontologies.pc DESTINATION ${PKGCONFIG_INSTALL_PREFIX})
+  install(FILES ${CMAKE_CURRENT_BINARY_DIR}/shared-desktop-ontologies.pc DESTINATION ${PKGCONFIG_INSTALL_DIR})
 endif(NOT WIN32)
 
 
