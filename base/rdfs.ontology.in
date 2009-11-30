@@ -62,6 +62,6 @@ Comment[x-test]=xxRDF Vocabulary Description Language 1.0: RDF Schemaxx
 Comment[zh_CN]=RDF 词汇描述语言 1.0：RDF Schema
 Comment[zh_TW]=RDF 字彙描述語言 1.0：RDF 概要
 Namespace=http://www.w3.org/2000/01/rdf-schema#
-Path=${ONTO_INSTALL_DIR}/rdfs.rdfs
+Path=${ONTO_INSTALL_DIR}/rdfs.trig
 MimeType=application/x-trig
 Type=Data

@@ -33,6 +33,6 @@ Comment[x-test]=xxRDF Vocabulary Description Language 1.0xx
 Comment[zh_CN]=RDF 词汇描述语言 1.0
 Comment[zh_TW]=RDF 字彙描述語言 1.0
 Namespace=http://www.w3.org/1999/02/22-rdf-syntax-ns#
-Path=${ONTO_INSTALL_DIR}/rdf.rdfs
+Path=${ONTO_INSTALL_DIR}/rdf.trig
 MimeType=application/x-trig
 Type=Data
