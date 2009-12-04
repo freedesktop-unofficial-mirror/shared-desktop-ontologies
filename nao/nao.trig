@@ -330,6 +330,13 @@
           rdfs:comment "Represents a single or a group of individuals" ;
           rdfs:label "party" ;
           rdfs:subClassOf rdfs:Resource .
+
+    nao:deprecated
+	  a	  	rdf:Property ;
+	  rdfs:comment	"If this property is assigned, the subject class, property, or resource, is deprecated and should not be used in production systems any longer. It may be removed without further notice." ;
+	  rdfs:label	"deprecated" ;
+	  rdfs:domain	rdfs:Resource ;
+	  rdfs:range	rdfs:Resource .
 }
 
 <http://www.semanticdesktop.org/ontologies/2007/08/15/nao/metadata> {
