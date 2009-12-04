@@ -593,6 +593,15 @@ nfo: {nfo:horizontalResolution
           rdfs:label "verticalResolution" ;
           rdfs:range xsd:integer .
 
+    nfo:fileUrl
+          a       rdf:Property ;
+	  nao:deprecated true ;
+          rdfs:comment "URL of the file. It points at the location of the file. In cases where creating a simple file:// or http:// URL for a file is difficult (e.g. for files inside compressed archives) the applications are encouraged to use conventions defined by Apache Commons VFS Project at http://jakarta.apache.org/  commons/ vfs/ filesystems.html." ;
+          rdfs:domain nfo:FileDataObject ;
+          rdfs:label "fileUrl" ;
+          rdfs:range rdfs:Resource ;
+	  rdfs:subPropertyOf nie:url .
+
     nfo:count
           a       rdf:Property ;
           rdfs:comment "A common superproperty for all properties signifying the amount of atomic media data units. Examples of subproperties may include sampleCount and frameCount." ;
@@ -665,6 +674,7 @@ nfo: {nfo:horizontalResolution
 
     nfo:fileLastModified
           a       rdf:Property ;
+	  nao:deprecated true;
           rdfs:comment "last modification date" ;
           rdfs:domain nfo:FileDataObject ;
           rdfs:label "fileLastModified" ;
