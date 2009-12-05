@@ -1,3 +1,7 @@
+        12/04/2009 - phreedom:
+		Added nao:deprecated property and added deprecation flags to:
+			nfo:fileLastModified
+			nfo:fileUrl
 0.2
         11/27/2009 - trueg: Added "nrl:maxCardinality 1" to:
                             nco:region
