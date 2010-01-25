@@ -106,6 +106,7 @@ The 'Internet radio station name' frame contains the name of the internet radio 
 
     nid3:comments
           a       rdf:Property ;
+	  nao:deprecated true ;
           rdfs:comment "COMM - This frame is indended for any kind of full text information that does not fit in any other frame. It consists of a frame header followed by encoding, language and content descriptors and is ended with the actual comment as a text string. Newline characters are allowed in the comment text string. There may be more than one comment frame in each tag, but only one with the same language and content descriptor." ;
           rdfs:domain nid3:ID3Audio ;
           rdfs:label "comments" ;
@@ -397,6 +398,7 @@ The 'Band/Orchestra/Accompaniment' frame is used for additional information abou
 
     nid3:language
           a       rdf:Property ;
+	  nao:deprecated true ;
           rdfs:comment """TLAN
 The 'Language(s)' frame should contain the languages of the text or lyrics spoken or sung in the audio. The language is represented with three characters according to ISO-639-2. If more than one language is used in the text their language codes should follow according to their usage.""" ;
           rdfs:domain nid3:ID3Audio ;
@@ -454,7 +456,8 @@ The 'Content group description' frame is used if the sound belongs to a larger c
 
     nid3:ID3Audio
           a       rdfs:Class ;
-          rdfs:comment "A File annotated with ID3 tags" ;
+          rdfs:comment "A File annotated with ID3 tags. Implementation notes: use nie:title for the actual name of the piece (TIT2, the 'Title/Songname/Content description' frame); use nie:language for the languages of the text or lyrics spoken or sung in the audio (TLAN,
+the 'Language(s)' frame); use nie:comment for any kind of full text information that does not fit in any other frame (COMM frame)." ;
           rdfs:label "ID3Audio" ;
           rdfs:subClassOf nfo:Audio .
 
@@ -598,6 +601,7 @@ The 'Size' frame contains the size of the audiofile in bytes, excluding the ID3v
 
     nid3:title
           a       rdf:Property ;
+	  nao:deprecated true ;
           rdfs:comment """TIT2
 The 'Title/Songname/Content description' frame is the actual name of the piece (e.g. \"Adagio\", \"Hurricane Donna\").""" ;
           rdfs:domain nid3:ID3Audio ;

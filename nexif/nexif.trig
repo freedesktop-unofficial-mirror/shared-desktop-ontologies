@@ -55,7 +55,7 @@
 
 nexif: {nexif:Photo
           a       rdfs:Class ;
-          rdfs:comment "An Image File Directory" ;
+          rdfs:comment "A photo, an image captured using a camera, an EXIF Image File Directory. Implementation notes: use nie:copyright to store copyright notices." ;
           rdfs:label "Photo" ;
           rdfs:subClassOf exif:IFD , nfo:RasterImage .
 
@@ -887,6 +887,7 @@ tagNumber: 41993""" ;
 
     nexif:copyright
           a       rdf:Property ;
+	  nao:deprecated true ;
           rdfs:comment """tagNumber: 33432
 Copyright information. In this standard the tag is used to indicate both the photographer and editor copyrights. It is the copyright notice of the person or organization claiming rights to the image.""" ;
           rdfs:domain nexif:Photo ;
