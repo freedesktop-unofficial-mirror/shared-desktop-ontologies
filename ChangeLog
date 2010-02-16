@@ -1,3 +1,24 @@
+0.3
+	02/15/2010 - trueg:
+		Added new classes and properties to NMM:
+			nmm:Movie
+			nmm:TVShow
+			nmm:TVSeries
+			nmm:Season
+			nmm:genre
+			nmm:series
+			nmm:hasEpisode
+			nmm:episodeNumber
+			nmm:season
+			nmm:seasonNumber
+			nmm:audienceRating
+			nmm:writer
+			nmm:director
+			nmm:producer
+			nmm:actor
+			nmm:cinematographer
+			nmm:releaseDate
+
         12/04/2009 - phreedom:
 		Added nao:deprecated property and added deprecation flags to:
 			nfo:fileLastModified
