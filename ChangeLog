@@ -1,4 +1,7 @@
 0.3
+	03/08/2010 - phreedom:
+		Added nrl:DiscardableInstanceBase
+
 	02/15/2010 - trueg:
 		Added new classes and properties to NMM:
 			nmm:Movie
