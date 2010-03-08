@@ -252,6 +252,12 @@
           rdfs:label "InstanceBase" ;
           rdfs:subClassOf nrl:Data .
 
+    nrl:DiscardableInstanceBase
+          a       rdfs:Class ;
+          rdfs:comment "A named graph containing instance data that can be recreated by analyzing the original resources. Intended to be used by metadata extractors." ;
+          rdfs:label "DiscardableInstanceBase" ;
+          rdfs:subClassOf nrl:InstanceBase .
+
     nrl:RuleViewSpecification
           a       rdfs:Class ;
           rdfs:comment "Represents a view specification that is composed of a set of rules which generate the required view from the input graph upon firing" ;
