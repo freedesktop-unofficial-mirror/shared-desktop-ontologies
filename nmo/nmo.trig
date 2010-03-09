@@ -93,7 +93,7 @@ nmo: {nmo:IMMessage
           rdfs:comment "The primary intended recipient of an email." ;
           rdfs:domain nmo:Email ;
           rdfs:label "to" ;
-          rdfs:range nco:Contact ;
+          rdfs:range nco:ContactMedium ;
           rdfs:subPropertyOf nmo:primaryRecipient .
 
     nmo:cc
@@ -101,7 +101,7 @@ nmo: {nmo:IMMessage
           rdfs:comment "A Contact that is to receive a cc of the email. A cc (carbon copy) is a copy of an email message whose recipient appears on the recipient list, so that all other recipients are aware of it." ;
           rdfs:domain nmo:Email ;
           rdfs:label "cc" ;
-          rdfs:range nco:Contact ;
+          rdfs:range nco:ContactMedium ;
           rdfs:subPropertyOf nmo:secondaryRecipient .
 
     nmo:from
@@ -109,7 +109,7 @@ nmo: {nmo:IMMessage
           rdfs:comment "The sender of the message" ;
           rdfs:domain nmo:Message ;
           rdfs:label "from" ;
-          rdfs:range nco:Contact .
+          rdfs:range nco:ContactMedium .
 
     nmo:isRead
           a       rdf:Property ;
@@ -143,7 +143,7 @@ nmo: {nmo:IMMessage
           rdfs:comment "The primary intended recipient of a message." ;
           rdfs:domain nmo:Message ;
           rdfs:label "primaryRecipient" ;
-          rdfs:range nco:Contact ;
+          rdfs:range nco:ContactMedium ;
           rdfs:subPropertyOf nmo:recipient .
 
     nmo:inReplyTo
@@ -182,21 +182,21 @@ nmo: {nmo:IMMessage
           rdfs:comment "An address where the reply should be sent." ;
           rdfs:domain nmo:Message ;
           rdfs:label "replyTo" ;
-          rdfs:range nco:Contact .
+          rdfs:range nco:ContactMedium .
 
     nmo:recipient
           a       rdf:Property ;
           rdfs:comment "A common superproperty for all properties that link a message with its recipients. Please don't use this property directly." ;
           rdfs:domain nmo:Message ;
           rdfs:label "recipient" ;
-          rdfs:range nco:Contact .
+          rdfs:range nco:ContactMedium .
 
     nmo:bcc
           a       rdf:Property ;
           rdfs:comment "A Contact that is to receive a bcc of the email. A Bcc (blind carbon copy) is a copy of an email message sent to a recipient whose email address does not appear in the message." ;
           rdfs:domain nmo:Email ;
           rdfs:label "bcc" ;
-          rdfs:range nco:Contact ;
+          rdfs:range nco:ContactMedium ;
           rdfs:subPropertyOf nmo:secondaryRecipient .
 
     nmo:secondaryRecipient
@@ -204,7 +204,7 @@ nmo: {nmo:IMMessage
           rdfs:comment "A superproperty for all \"additional\" recipients of a message." ;
           rdfs:domain nmo:Message ;
           rdfs:label "secondaryRecipient" ;
-          rdfs:range nco:Contact ;
+          rdfs:range nco:ContactMedium ;
           rdfs:subPropertyOf nmo:recipient .
 
     nmo:contentMimeType
@@ -251,7 +251,7 @@ content defaults to the value specified by the 'mimeType' property.""" ;
           rdfs:comment "The person or agent submitting the message to the network, if other from the one given with the nmo:from property. Defined in RFC 822 sec. 4.4.2" ;
           rdfs:domain nmo:Message ;
           rdfs:label "sender" ;
-          rdfs:range nco:Contact ;
+          rdfs:range nco:ContactMedium ;
           rdfs:subPropertyOf nmo:recipient .
 
     nmo:headerName
@@ -290,9 +290,9 @@ content defaults to the value specified by the 'mimeType' property.""" ;
                   "http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#" ;
           nao:hasDefaultNamespaceAbbreviation
                   "nmo" ;
-          nao:lastModified "2008-11-27T11:45:56.656Z" ;
+          nao:lastModified "2010-03-09T17:06:30.656Z" ;
           nao:status "Unstable" ;
           nao:updatable "0 " ;
-          nao:version "Revision-9" .
+          nao:version "Revision-10" .
 }
 
