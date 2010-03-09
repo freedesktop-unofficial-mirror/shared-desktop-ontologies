@@ -114,7 +114,7 @@ nmo: {nmo:IMMessage
     nmo:isRead
           a       rdf:Property ;
           rdfs:comment "A flag that states the fact that a MailboxDataObject has been read." ;
-          rdfs:domain nmo:MailboxDataObject ;
+          rdfs:domain nmo:Message ;
           rdfs:label "isRead" ;
           rdfs:range xsd:boolean .
 
@@ -290,9 +290,9 @@ content defaults to the value specified by the 'mimeType' property.""" ;
                   "http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#" ;
           nao:hasDefaultNamespaceAbbreviation
                   "nmo" ;
-          nao:lastModified "2010-03-09T17:06:30.656Z" ;
+          nao:lastModified "2010-03-09T17:43:10.656Z" ;
           nao:status "Unstable" ;
           nao:updatable "0 " ;
-          nao:version "Revision-10" .
+          nao:version "Revision-11" .
 }
 
