@@ -83,7 +83,7 @@ tagNumber: 41728""" ;
 The smallest F number of the lens. The unit is the APEX value. Ordinarily it is given in the range of 00.00 to 99.99, but it is not limited to this range.""" ;
           rdfs:domain nexif:Photo ;
           rdfs:label "maxApertureValue" ;
-          rdfs:range xsd:string ;
+          rdfs:range xsd:float ;
           rdfs:subPropertyOf nexif:pictTaking , exif:maxApertureValue .
 
     nexif:imageWidth
@@ -92,7 +92,7 @@ The smallest F number of the lens. The unit is the APEX value. Ordinarily it is 
 Image width. The number of columns of image data, equal to the number of pixels per row. In JPEG compressed data a JPEG marker is used instead of this tag.""" ;
           rdfs:domain nexif:Photo ;
           rdfs:label "imageWidth" ;
-          rdfs:range xsd:string ;
+          rdfs:range xsd:integer ;
           rdfs:subPropertyOf nexif:imageDataStruct , nexif:width , exif:imageWidth .
 
     nexif:pimSaturation
@@ -127,7 +127,7 @@ tagNumber: 41492""" ;
           rdfs:comment "An attribute relating to recording offset" ;
           rdfs:domain nexif:Photo ;
           rdfs:label "recOffset" ;
-          rdfs:range xsd:string ;
+          rdfs:range xsd:integer ;
           rdfs:subPropertyOf exif:recOffset , nexif:exifAttribute .
 
     nexif:focalPlaneYResolution
@@ -136,7 +136,7 @@ tagNumber: 41492""" ;
 The number of pixels in the image height (Y) direction per FocalPlaneResolutionUnit on the camera focal plane.""" ;
           rdfs:domain nexif:Photo ;
           rdfs:label "focalPlaneYResolution" ;
-          rdfs:range xsd:string ;
+          rdfs:range xsd:float ;
           rdfs:subPropertyOf nexif:pictTaking , exif:focalPlaneYResolution , nexif:resolution .
 
     nexif:imageDataStruct
@@ -250,7 +250,7 @@ tagNumber: 15""" ;
 The value of brightness. The unit is the APEX value. Ordinarily it is given in the range of -99.99 to 99.99. Note that if the numerator of the recorded value is FFFFFFFF.H, Unknown shall be indicated.""" ;
           rdfs:domain nexif:Photo ;
           rdfs:label "brightnessValue" ;
-          rdfs:range xsd:string ;
+          rdfs:range xsd:float ;
           rdfs:subPropertyOf nexif:pictTaking , exif:brightnessValue .
 
     nexif:digitalZoomRatio
@@ -259,7 +259,7 @@ The value of brightness. The unit is the APEX value. Ordinarily it is given in t
 The digital zoom ratio when the image was shot. If the numerator of the recorded value is 0, this indicates that digital zoom was not used.""" ;
           rdfs:domain nexif:Photo ;
           rdfs:label "digitalZoomRatio" ;
-          rdfs:range xsd:string ;
+          rdfs:range xsd:float ;
           rdfs:subPropertyOf nexif:pictTaking , exif:digitalZoomRatio .
 
     nexif:resolution
@@ -267,7 +267,7 @@ The digital zoom ratio when the image was shot. If the numerator of the recorded
           rdfs:comment "a rational number representing a resolution. Could be a subProperty of other general schema." ;
           rdfs:domain nexif:Photo ;
           rdfs:label "resolution" ;
-          rdfs:range xsd:string ;
+          rdfs:range xsd:float ;
           rdfs:subPropertyOf exif:resolution .
 
     nexif:gpsLatitudeRef
@@ -285,7 +285,7 @@ Indicates whether the latitude is north or south latitude. The ASCII value 'N' i
 The number of pixels per ResolutionUnit in the ImageLength direction. The same value as XResolution is designated.""" ;
           rdfs:domain nexif:Photo ;
           rdfs:label "yResolution" ;
-          rdfs:range xsd:string ;
+          rdfs:range xsd:float ;
           rdfs:subPropertyOf nexif:imageDataStruct , exif:yResolution , nexif:resolution .
 
     nexif:flash
@@ -304,7 +304,7 @@ tagNumber: 306""" ;
           rdfs:domain nexif:Photo ;
           rdfs:label "dateTime" ;
           rdfs:range xsd:dateTime ;
-          rdfs:subPropertyOf exif:dateTime , nexif:date , nexif:exifAttribute .
+          rdfs:subPropertyOf exif:dateTime , nexif:date , nexif:exifAttribute , nie:lastModified .
 
     nexif:gpsMapDatum
           a       rdf:Property ;
@@ -356,7 +356,7 @@ tagNumber: 41488""" ;
 tagNumber: 41493""" ;
           rdfs:domain nexif:Photo ;
           rdfs:label "exposureIndex" ;
-          rdfs:range xsd:string ;
+          rdfs:range xsd:float ;
           rdfs:subPropertyOf exif:exposureIndex , nexif:pictTaking .
 
     nexif:componentsConfiguration
@@ -374,7 +374,7 @@ tagNumber: 37121""" ;
 The distance to the subject, given in meters. Note that if the numerator of the recorded value is FFFFFFFF.H, Infinity shall be indicated; and if the numerator is 0, Distance unknown shall be indicated.""" ;
           rdfs:domain nexif:Photo ;
           rdfs:label "subjectDistance" ;
-          rdfs:range xsd:string ;
+          rdfs:range xsd:float ;
           rdfs:subPropertyOf nexif:meter , nexif:pictTaking , exif:subjectDistance .
 
     nexif:exposureTime
@@ -383,7 +383,7 @@ The distance to the subject, given in meters. Note that if the numerator of the 
 Exposure time, given in seconds (sec).""" ;
           rdfs:domain nexif:Photo ;
           rdfs:label "exposureTime" ;
-          rdfs:range xsd:string ;
+          rdfs:range xsd:float ;
           rdfs:subPropertyOf nexif:seconds , nexif:pictTaking , exif:exposureTime .
 
     nexif:make
@@ -401,7 +401,7 @@ tagNumber: 271""" ;
 The number of rows per strip. This is the number of rows in the image of one strip when an image is divided into strips. With JPEG compressed data this designation is not needed and is omitted.""" ;
           rdfs:domain nexif:Photo ;
           rdfs:label "rowsPerStrip" ;
-          rdfs:range xsd:string ;
+          rdfs:range xsd:integer ;
           rdfs:subPropertyOf nexif:recOffset , exif:rowsPerStrip .
 
     nexif:dateTimeOriginal
@@ -463,7 +463,7 @@ Light source such as Daylight, Tungsten, Flash etc.""" ;
 tagNumber: 41989""" ;
           rdfs:domain nexif:Photo ;
           rdfs:label "focalLengthIn35mmFilm" ;
-          rdfs:range xsd:string ;
+          rdfs:range xsd:integer ;
           rdfs:subPropertyOf nexif:pictTaking , nexif:length , exif:focalLengthIn35mmFilm .
 
     nexif:dateAndOrTime
@@ -506,7 +506,7 @@ tagNumber: 24""" ;
 tagNumber: 282""" ;
           rdfs:domain nexif:Photo ;
           rdfs:label "xResolution" ;
-          rdfs:range xsd:string ;
+          rdfs:range xsd:float ;
           rdfs:subPropertyOf nexif:imageDataStruct , exif:xResolution , nexif:resolution .
 
     nexif:fNumber
@@ -515,7 +515,7 @@ tagNumber: 282""" ;
 F number""" ;
           rdfs:domain nexif:Photo ;
           rdfs:label "fNumber" ;
-          rdfs:range xsd:string ;
+          rdfs:range xsd:float ;
           rdfs:subPropertyOf exif:fNumber , nexif:pictTaking .
 
     nexif:exifVersion
@@ -532,7 +532,7 @@ Exif Version""" ;
           rdfs:comment "Height of an object" ;
           rdfs:domain nexif:Photo ;
           rdfs:label "height" ;
-          rdfs:range xsd:string ;
+          rdfs:range xsd:integer ;
           rdfs:subPropertyOf exif:height , nexif:length .
 
     nexif:pixelXDimension
@@ -562,7 +562,7 @@ tagNumber: 40962""" ;
 The lens aperture. The unit is the APEX value.""" ;
           rdfs:domain nexif:Photo ;
           rdfs:label "apertureValue" ;
-          rdfs:range xsd:string ;
+          rdfs:range xsd:float ;
           rdfs:subPropertyOf exif:apertureValue , nexif:pictTaking .
 
     nexif:meter
@@ -632,7 +632,7 @@ The white balance mode set when the image was shot.""" ;
 tagNumber: 34855""" ;
           rdfs:domain nexif:Photo ;
           rdfs:label "isoSpeedRatings" ;
-          rdfs:range xsd:string ;
+          rdfs:range xsd:integer ;
           rdfs:subPropertyOf nexif:pictTaking , exif:isoSpeedRatings .
 
     nexif:pixelYDimension
@@ -641,7 +641,7 @@ tagNumber: 34855""" ;
 tagNumber: 40963""" ;
           rdfs:domain nexif:Photo ;
           rdfs:label "pixelYDimension" ;
-          rdfs:range xsd:string ;
+          rdfs:range xsd:integer ;
           rdfs:subPropertyOf exif:pixelYDimension , nexif:height , nexif:imageConfig .
 
     nexif:userComment
@@ -677,7 +677,7 @@ tagNumber: 284""" ;
 tagNumber: 41486""" ;
           rdfs:domain nexif:Photo ;
           rdfs:label "focalPlaneXResolution" ;
-          rdfs:range xsd:string ;
+          rdfs:range xsd:float ;
           rdfs:subPropertyOf exif:focalPlaneXResolution , nexif:pictTaking , nexif:resolution .
 
     nexif:shutterSpeedValue
@@ -686,7 +686,7 @@ tagNumber: 41486""" ;
 Shutter speed. The unit is the APEX (Additive System of Photographic Exposure) setting""" ;
           rdfs:domain nexif:Photo ;
           rdfs:label "shutterSpeedValue" ;
-          rdfs:range xsd:string ;
+          rdfs:range xsd:float ;
           rdfs:subPropertyOf nexif:pictTaking , exif:shutterSpeedValue .
 
     nexif:dateTimeDigitized
@@ -704,7 +704,7 @@ tagNumber: 36868""" ;
 The offset to the start byte (SOI) of JPEG compressed thumbnail data. This is not used for primary image JPEG data.""" ;
           rdfs:domain nexif:Photo ;
           rdfs:label "jpegInterchangeFormat" ;
-          rdfs:range xsd:string ;
+          rdfs:range xsd:integer ;
           rdfs:subPropertyOf nexif:recOffset , exif:jpegInterchangeFormat .
 
     nexif:interoperabilityIndex
@@ -811,7 +811,7 @@ A character string recording the name of the method used for location finding. T
 tagNumber: 37386""" ;
           rdfs:domain nexif:Photo ;
           rdfs:label "focalLength" ;
-          rdfs:range xsd:string ;
+          rdfs:range xsd:float ;
           rdfs:subPropertyOf nexif:mm , exif:focalLength , nexif:pictTaking .
 
     nexif:length
@@ -910,7 +910,7 @@ tagNumber: 41985""" ;
 tagNumber: 514""" ;
           rdfs:domain nexif:Photo ;
           rdfs:label "jpegInterchangeFormatLength" ;
-          rdfs:range xsd:string ;
+          rdfs:range xsd:integer ;
           rdfs:subPropertyOf nexif:recOffset , exif:jpegInterchangeFormatLength .
 
     nexif:imageDescription
@@ -1075,7 +1075,7 @@ tagNumber: 259""" ;
 The exposure bias. The unit is the APEX value. Ordinarily it is given in the range of -99.99 to 99.99.""" ;
           rdfs:domain nexif:Photo ;
           rdfs:label "exposureBiasValue" ;
-          rdfs:range xsd:string ;
+          rdfs:range xsd:float ;
           rdfs:subPropertyOf nexif:pictTaking , exif:exposureBiasValue .
 
     nexif:imageLength
@@ -1084,8 +1084,8 @@ The exposure bias. The unit is the APEX value. Ordinarily it is given in the ran
 Image height. The number of rows of image data. In JPEG compressed data a JPEG marker is used.""" ;
           rdfs:domain nexif:Photo ;
           rdfs:label "imageLength" ;
-          rdfs:range xsd:string ;
-          rdfs:subPropertyOf nexif:imageDataStruct , exif:imageLength , nexif:height .
+          rdfs:range xsd:integer ;
+          rdfs:subPropertyOf nexif:imageDataStruct , exif:imageLength , nexif:height , nfo:height.
 
     nexif:gpsImgDirection
           a       rdf:Property ;
@@ -1135,7 +1135,7 @@ tagNumber: 318""" ;
 tagNumber: 277""" ;
           rdfs:domain nexif:Photo ;
           rdfs:label "samplesPerPixel" ;
-          rdfs:range xsd:string ;
+          rdfs:range xsd:integer ;
           rdfs:subPropertyOf nexif:imageDataStruct , exif:samplesPerPixel .
 
     nexif:yCbCrPositioning
@@ -1153,7 +1153,7 @@ tagNumber: 531""" ;
 The strobe energy at the time the image is captured, as measured in Beam Candle Power Seconds (BCPS).""" ;
           rdfs:domain nexif:Photo ;
           rdfs:label "flashEnergy" ;
-          rdfs:range xsd:string ;
+          rdfs:range xsd:float ;
           rdfs:subPropertyOf exif:flashEnergy , nexif:pictTaking .
 
     nexif:gpsDest
@@ -1177,7 +1177,7 @@ Information specific to compressed data. The compression mode used for a compres
           rdfs:comment "Width of an object" ;
           rdfs:domain nexif:Photo ;
           rdfs:label "width" ;
-          rdfs:range xsd:string ;
+          rdfs:range xsd:integer ;
           rdfs:subPropertyOf nexif:length , exif:width .
 
     nexif:referenceBlackWhite
@@ -1293,7 +1293,7 @@ tagNumber: 41484""" ;
 tagNumber: 4098""" ;
           rdfs:domain nexif:Photo ;
           rdfs:label "relatedImageLength" ;
-          rdfs:range xsd:string ;
+          rdfs:range xsd:integer ;
           rdfs:subPropertyOf exif:relatedImageLength , nexif:interopInfo , nexif:height .
 
     nexif:gpsStatus
@@ -1453,10 +1453,10 @@ tagNumber: 42016""" ;
                   "http://www.semanticdesktop.org/ontologies/2007/05/10/nexif#" ;
           nao:hasDefaultNamespaceAbbreviation
                   "nexif" ;
-          nao:lastModified "2008-10-05T19:45:51.703Z" ;
+          nao:lastModified "2010-02-11T05:22:41Z" ;
           nao:status "Unstable" ;
           nao:updatable "0 " ;
-          nao:version "Revision-8" .
+          nao:version "9" .
 
     <http://www.semanticdesktop.org/ontologies/2007/05/10/nexif_metadata#>
           a       nrl:GraphMetadata ;
