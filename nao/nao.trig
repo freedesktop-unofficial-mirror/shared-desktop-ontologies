@@ -98,7 +98,7 @@
           nrl:inverseProperty nao:hasTopic .
 
     <http://www.semanticdesktop.org/ontologies/2007/08/15/nao#hasSubResource>
-          a       rdf:Property, nrl:SymmetricProperty ;
+          a       rdf:Property ;
           rdfs:comment "Defines a relationship between a resource and one or more sub resources" ;
           rdfs:label "has Subresource" ;
           rdfs:range rdfs:Resource ;
@@ -106,7 +106,7 @@
           nrl:inverseProperty nao:hasSuperResource .
 
     <http://www.semanticdesktop.org/ontologies/2007/08/15/nao#hasSuperResource>
-          a       rdf:Property, nrl:SymmetricProperty ;
+          a       rdf:Property ;
           rdfs:comment "Defines a relationship between a resource and one or more super resources" ;
           rdfs:label "has Superresource" ;
           rdfs:range rdfs:Resource ;
@@ -349,7 +349,7 @@
           a       nrl:Ontology , nrl:DocumentGraph ;
           nao:hasDefaultNamespace "http://www.semanticdesktop.org/ontologies/2007/08/15/nao#" ;
           nao:hasDefaultNamespaceAbbreviation "nao" ;
-          nao:lastModified "2009-07-20T14:59:09.500Z" ;
+          nao:lastModified "2010-03-18T10:50:48Z" ;
           nao:serializationLanguage "TriG" ;
           nao:status "Unstable" ;
           nrl:updatable "0" ;
