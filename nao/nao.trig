@@ -122,6 +122,13 @@
           rdfs:subPropertyOf <http://www.semanticdesktop.org/ontologies/2007/08/15/nao#annotation> ;
           nrl:inverseProperty nao:hasTag .
 
+    <http://www.semanticdesktop.org/ontologies/2007/08/15/nao#isDataGraphFor>
+          a       rdf:Property ;
+          rdfs:label "is data graph for" ;
+          rdfs:comment "Links a named graph to the resource for which it contains metadata. Its typical usage would be to link the graph containing extracted file metadata to the file resource. This allows for easy maintenance later on." ;
+          rdfs:domain nrl:InstanceBase ;
+          rdfs:range rdfs:Resource .
+
     <http://www.semanticdesktop.org/ontologies/2007/08/15/nao#version>
           a       rdf:Property ;
           rdfs:comment "Specifies the version of a graph, in numeric format" ;
@@ -349,7 +356,7 @@
           a       nrl:Ontology , nrl:DocumentGraph ;
           nao:hasDefaultNamespace "http://www.semanticdesktop.org/ontologies/2007/08/15/nao#" ;
           nao:hasDefaultNamespaceAbbreviation "nao" ;
-          nao:lastModified "2010-03-18T10:50:48Z" ;
+          nao:lastModified "2010-03-19T12:31:43Z" ;
           nao:serializationLanguage "TriG" ;
           nao:status "Unstable" ;
           nrl:updatable "0" ;
