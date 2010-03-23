@@ -173,6 +173,42 @@ nfo: {nfo:horizontalResolution
           rdfs:label "Filesystem" ;
           rdfs:subClassOf nfo:DataContainer .
 
+    nfo:filesystemType
+          a       rdf:Property ;
+          rdfs:comment "Type of filesystem such as ext3 and ntfs." ;
+          rdfs:domain nfo:Filesystem ;
+          rdfs:range xsd:string ;
+          rdfs:label "filesystemType" .
+
+    nfo:totalSpace
+          a       rdf:Property ;
+          rdfs:comment "Total storage space of the filesystem, which can be different from nie:contentSize because the latter includes filesystem format overhead." ;
+          rdfs:domain nfo:Filesystem ;
+          rdfs:range xsd:integer ;
+          rdfs:label "totalSpace" .
+
+    nfo:freeSpace
+          a       rdf:Property ;
+          rdfs:comment "Unoccupied storage space of the filesystem." ;
+          rdfs:domain nfo:Filesystem ;
+          rdfs:range xsd:integer ;
+          rdfs:label "freeSpace" .
+
+    nfo:occupiedSpace
+          a       rdf:Property ;
+          rdfs:comment "Occupied storage space of the filesystem." ;
+          rdfs:domain nfo:Filesystem ;
+          rdfs:range xsd:integer ;
+          rdfs:label "occupiedSpace" .
+
+    nfo:uuid
+          a       rdf:Property ;
+          rdfs:subPropertyOf nie:identifier ;
+          rdfs:comment "Universally unique identifier of the filesystem. In the future, this property may have its parent changed to a more generic class." ;
+          rdfs:domain nfo:Filesystem ;
+          rdfs:range xsd:string ;
+          rdfs:label "uuid" .
+
     nfo:definesFunction
           a       rdf:Property ;
           rdfs:comment "A name of a function/method defined in the given source code file." ;
