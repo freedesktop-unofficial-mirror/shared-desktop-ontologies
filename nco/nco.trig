@@ -184,7 +184,7 @@ nco: {nco:region
 
     nco:nickname
           a       rdf:Property ;
-          rdfs:comment "A nickname of the Object represented by this Contact. This is an equivalen of the 'NICKNAME' property as defined in RFC 2426 Sec. 3.1.3." ;
+          rdfs:comment "A nickname of the Object represented by this Contact. This is an equivalent of the 'NICKNAME' property as defined in RFC 2426 Sec. 3.1.3." ;
           rdfs:domain nco:Contact ;
           rdfs:label "nickname" ;
           rdfs:range xsd:string .
@@ -350,7 +350,7 @@ nco: {nco:region
 
     nco:photo
           a       rdf:Property ;
-          rdfs:comment "Photograph attached to a Contact. The DataObject refered to by this property is usually interpreted as an nfo:Image. Inspired by the PHOTO property defined in RFC 2426 sec. 3.1.4" ;
+          rdfs:comment "Photograph attached to a Contact. The DataObject referred to by this property is usually interpreted as an nfo:Image. Inspired by the PHOTO property defined in RFC 2426 sec. 3.1.4" ;
           rdfs:domain nco:Contact ;
           rdfs:label "photo" ;
           rdfs:range nie:DataObject ;
@@ -560,7 +560,7 @@ nco: {nco:region
 
     nco:sound
           a       rdf:Property ;
-          rdfs:comment "Sound clip attached to a Contact. The DataObject refered to by this property is usually interpreted as an nfo:Audio. Inspired by the SOUND property defined in RFC 2425 sec. 3.6.6." ;
+          rdfs:comment "Sound clip attached to a Contact. The DataObject referred to by this property is usually interpreted as an nfo:Audio. Inspired by the SOUND property defined in RFC 2425 sec. 3.6.6." ;
           rdfs:domain nco:Contact ;
           rdfs:label "sound" ;
           rdfs:range nie:DataObject ;
