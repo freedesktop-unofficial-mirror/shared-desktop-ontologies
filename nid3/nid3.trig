@@ -107,8 +107,9 @@ The 'Internet radio station name' frame contains the name of the internet radio 
     nid3:comments
           a       rdf:Property ;
 	  nao:deprecated true ;
-          rdfs:comment "COMM - This frame is indended for any kind of full text information that does not fit in any other frame. It consists of a frame header followed by encoding, language and content descriptors and is ended with the actual comment as a text string. Newline characters are allowed in the comment text string. There may be more than one comment frame in each tag, but only one with the same language and content descriptor." ;
+          rdfs:comment "COMM - This frame is indended for any kind of full text information that does not fit in any other frame. It consists of a frame header followed by encoding, language and content descriptors and is ended with the actual comment as a text string. Newline characters are allowed in the comment text string. There may be more than one comment frame in each tag, but only one with the same language and content descriptor. Deprecated in favor of the more generic nie:comment." ;
           rdfs:domain nid3:ID3Audio ;
+          rdfs:subPropertyOf nie:comment ;
           rdfs:label "comments" ;
           rdfs:range xsd:string .
 
@@ -400,7 +401,7 @@ The 'Band/Orchestra/Accompaniment' frame is used for additional information abou
           a       rdf:Property ;
 	  nao:deprecated true ;
           rdfs:comment """TLAN
-The 'Language(s)' frame should contain the languages of the text or lyrics spoken or sung in the audio. The language is represented with three characters according to ISO-639-2. If more than one language is used in the text their language codes should follow according to their usage.""" ;
+The 'Language(s)' frame should contain the languages of the text or lyrics spoken or sung in the audio. The language is represented with three characters according to ISO-639-2. If more than one language is used in the text their language codes should follow according to their usage. Deprecated in favor of the more generic nie:language.""" ;
           rdfs:domain nid3:ID3Audio ;
           rdfs:label "language" ;
           rdfs:range xsd:string ;
@@ -603,7 +604,7 @@ The 'Size' frame contains the size of the audiofile in bytes, excluding the ID3v
           a       rdf:Property ;
 	  nao:deprecated true ;
           rdfs:comment """TIT2
-The 'Title/Songname/Content description' frame is the actual name of the piece (e.g. \"Adagio\", \"Hurricane Donna\").""" ;
+The 'Title/Songname/Content description' frame is the actual name of the piece (e.g. \"Adagio\", \"Hurricane Donna\"). Deprecated in favor of the more generic nie:title.""" ;
           rdfs:domain nid3:ID3Audio ;
           rdfs:label "title" ;
           rdfs:range xsd:string ;

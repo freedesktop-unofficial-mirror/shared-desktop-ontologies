@@ -889,11 +889,11 @@ tagNumber: 41993""" ;
           a       rdf:Property ;
 	  nao:deprecated true ;
           rdfs:comment """tagNumber: 33432
-Copyright information. In this standard the tag is used to indicate both the photographer and editor copyrights. It is the copyright notice of the person or organization claiming rights to the image.""" ;
+Copyright information. In this standard the tag is used to indicate both the photographer and editor copyrights. It is the copyright notice of the person or organization claiming rights to the image. Deprecated in favor of the more generic nie:copyright.""" ;
           rdfs:domain nexif:Photo ;
           rdfs:label "copyright" ;
           rdfs:range xsd:string ;
-          rdfs:subPropertyOf dc:rights , exif:copyright , nexif:exifAttribute .
+          rdfs:subPropertyOf dc:rights , exif:copyright , nexif:exifAttribute, nie:copyright .
 
     nexif:customRendered
           a       rdf:Property ;
