@@ -8,7 +8,7 @@ project(shared-desktop-ontologies)
 # ===============================================================================================
 set(SHAREDDESKTOPONTOLOGIES_VERSION_MAJOR 0)
 set(SHAREDDESKTOPONTOLOGIES_VERSION_MINOR 3)
-set(SHAREDDESKTOPONTOLOGIES_VERSION_RELEASE 60)
+set(SHAREDDESKTOPONTOLOGIES_VERSION_RELEASE 61)
 set(SHAREDDESKTOPONTOLOGIES_VERSION "${SHAREDDESKTOPONTOLOGIES_VERSION_MAJOR}.${SHAREDDESKTOPONTOLOGIES_VERSION_MINOR}.${SHAREDDESKTOPONTOLOGIES_VERSION_RELEASE}")
 
 
@@ -70,3 +70,5 @@ install_ontology(nid3/nid3 nie)
 install_ontology(pimo/pimo pimo)
 install_ontology(tmo/tmo pimo)
 install_ontology(nso/nso nepomuk)
+install_ontology(ndo/ndo nepomuk)
+install_ontology(nuao/nuao nepomuk)

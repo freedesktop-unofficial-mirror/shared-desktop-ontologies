@@ -1,3 +1,11 @@
+0.4
+	05/042010 - trueg:
+		  Added NDO and NUAO ontologies to the distributed ontologies.
+		  Both are still marked as being in the "Testing" state.
+
+	05/042010 - trueg:
+		  Fixed syntax error in nid3.trig
+
 0.3
 	03/08/2010 - phreedom:
 		Added nrl:DiscardableInstanceBase
