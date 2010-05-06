@@ -1,10 +1,35 @@
 0.4
-	05/042010 - trueg:
+	05/04/2010 - trueg:
 		  Added NDO and NUAO ontologies to the distributed ontologies.
 		  Both are still marked as being in the "Testing" state.
 
-	05/042010 - trueg:
+	05/04/2010 - trueg:
 		  Fixed syntax error in nid3.trig
+
+	03/12/2010 - m4db0b
+		Deprecated NMO properties with range nco:Contact and added equivalent
+                ones with range nco:ContactMedium:
+		Deprecated properties:
+			nmo:to
+                        nmo:cc
+                        nmo:bcc
+                        nmo:from
+                        nmo:primaryRecipient
+                        nmo:replyTo
+                        nmo:recipient
+                        nmo:secondaryRecipient
+                        nmo:sender
+			
+		New properties:
+			nmo:emailTo
+			nmo:emailCc
+			nmo:emailBcc
+			nmo:messageFrom
+			nmo:primaryMessageRecipient
+			nmo:messageReplyTo
+			nmo:messageRecipient
+			nmo:secondaryMessageRecipient
+			nmo:messageSender
 
 0.3
 	03/08/2010 - phreedom:
