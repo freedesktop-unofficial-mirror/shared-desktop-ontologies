@@ -1,7 +1,7 @@
 # required by cmake
 cmake_minimum_required(VERSION 2.6)
 
-project(shared-desktop-ontologies)
+project(shared-desktop-ontologies NONE)
 
 
 # set the version to be used by SharedDesktopOntologiesConfig.cmake
