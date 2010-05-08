@@ -207,7 +207,7 @@ nuao: {
           nao:serializationLanguage "TriG" ;
           nao:status "Testing" ;
           nrl:updatable "0" ;
-          nao:version "1" .
+          nao:version "2" .
 
     <http://www.semanticdesktop.org/ontologies/2010/01/25/nuao/metadata>
           a       nrl:GraphMetadata , nrl:DocumentGraph ;
