@@ -64,6 +64,12 @@ nuao: {
         rdfs:range xsd:duration ;
         nrl:maxCardinality "1"^^xsd:nonNegativeInteger .
 
+    nuao:involves
+        a rdf:Property ;
+        rdfs:comment "Relates an event to the resources that are involved in the event." ;
+        rdfs:domain nuao:Event ;
+        rdfs:label "involves" ;
+        rdfs:range rdfs:Resource .
 
 
     nuao:DesktopEvent
@@ -71,14 +77,6 @@ nuao: {
         rdfs:comment """A desktop event: activity performed by an user. A "hook" class that should be extended by other ontologies such as desktop service ontology to specify which application or service was involved in the desktop event.""" ;
         rdfs:label "desktop event" ;
         rdfs:subClassOf nuao:Event .
-
-    nuao:involvedInEvent
-        a rdf:Property ;
-        rdfs:comment "Points to a detailed description of an event that involved this resource." ;
-        rdfs:domain rdfs:Resource ;
-        rdfs:label "involved in event" ;
-        rdfs:range nuao:DesktopEvent .
-
 
 
     nuao:firstEvent
