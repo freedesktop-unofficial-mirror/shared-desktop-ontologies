@@ -1,3 +1,7 @@
+0.5
+	05/08/2010 - trueg
+		  Fixed graph URIs in NDO metadata.
+	
 0.4
 	05/04/2010 - trueg:
 		  Added NDO and NUAO ontologies to the distributed ontologies.
