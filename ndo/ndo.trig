@@ -43,9 +43,9 @@
 @prefix nco:     <http://www.semanticdesktop.org/ontologies/2007/03/22/nco#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 @prefix nie:     <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#> .
-@prefix nfo:     <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo> .
+@prefix nfo:     <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#> .
 
-<http://www.semanticdesktop.org/ontologies/2010/04/30/ndo> {
+ndo: {
 
     ndo:P2PFile
         a rdfs:Class ;
@@ -88,7 +88,7 @@
 
 <http://www.semanticdesktop.org/ontologies/2010/04/30/ndo/metadata>
 {
-    <http://www.semanticdesktop.org/ontologies/2010/04/30/ndo>
+    ndo:
           a       nrl:DocumentGraph , nrl:KnowledgeBase ;
           nao:hasDefaultNamespace "http://www.semanticdesktop.org/ontologies/2010/04/30/ndo#" ;
           nao:hasDefaultNamespaceAbbreviation "ndo" ;
@@ -101,5 +101,5 @@
     <http://www.semanticdesktop.org/ontologies/2010/04/30/ndo/metadata>
           a       nrl:GraphMetadata , nrl:DocumentGraph ;
           nao:serializationLanguage "TriG" ;
-          nrl:coreGraphMetadataFor <http://www.semanticdesktop.org/ontologies/2010/04/30/ndo> .
+          nrl:coreGraphMetadataFor ndo: .
 }
