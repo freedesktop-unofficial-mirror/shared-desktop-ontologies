@@ -661,6 +661,23 @@ nco: {nco:region
           rdfs:domain nco:IMAccount ;
           rdfs:label "imStatusMessage" ;
           rdfs:range xsd:string .
+ 
+    nco:start
+          a rdf:Property ;
+          rdfs:comment "Start datetime for the role, such as: the datetime of joining a project or organization, datetime of starting employment, datetime of marriage" ;
+          rdfs:label "start" ;
+          rdfs:domain nco:Role ;
+          rdfs:range  xsd:dateTime ;
+          nrl:maxCardinality 1 .
+
+    nco:end
+          a rdf:Property;
+          rdfs:comment "End datetime for the role, such as: the datetime of leaving a project or organization, datetime of ending employment, datetime of divorce. If absent or set to a date in the future, the role is currently active." ;
+          rdfs:label "end" ;
+          rdfs:domain nco:Role ;
+          rdfs:range  xsd:dateTime ;
+          nrl:maxCardinality 1 .
+
 }
 
 <http://www.semanticdesktop.org/ontologies/2007/03/22/nco_metadata#> {nco:  a       nrl:Ontology ;
