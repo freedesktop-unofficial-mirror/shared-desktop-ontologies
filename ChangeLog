@@ -1,14 +1,25 @@
 0.5
+	05/09/2010 - phreedom
+		Added new properties:
+		      nco:start
+		      nco:end
+		to allow defining nco:Roles that only span a certain time.
+
+	05/09/2010 - phreedom
+		Inverted property ndo:involvedInEvent by switching
+		domain and range. The new property is named
+		ndo:involved.
+	
 	05/08/2010 - trueg
-		  Fixed graph URIs in NDO metadata.
+		Fixed graph URIs in NDO metadata.
 	
 0.4
 	05/04/2010 - trueg:
-		  Added NDO and NUAO ontologies to the distributed ontologies.
-		  Both are still marked as being in the "Testing" state.
+		Added NDO and NUAO ontologies to the distributed ontologies.
+		Both are still marked as being in the "Testing" state.
 
 	05/04/2010 - trueg:
-		  Fixed syntax error in nid3.trig
+		Fixed syntax error in nid3.trig
 
 	03/12/2010 - m4db0b
 		Deprecated NMO properties with range nco:Contact and added equivalent
