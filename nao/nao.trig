@@ -344,6 +344,14 @@
 	  rdfs:label	"deprecated" ;
 	  rdfs:domain	rdfs:Resource ;
 	  rdfs:range	rdfs:Resource .
+
+    nao:userVisible
+          a rdf:Property ;
+          rdfs:range xsd:boolean ;
+          rdfs:label "user visible" ;
+          rdfs:comment "Mark a property, class, or even resource as user visible or not. Non-user-visible entities should never be presented to the user. By default everything is user-visible." ;
+          nao:userVisible false ;
+          nrl:maxCardinality 1 .
 }
 
 <http://www.semanticdesktop.org/ontologies/2007/08/15/nao/metadata> {
