@@ -731,7 +731,7 @@ nfo: {nfo:horizontalResolution
 
     nfo:fileLastModified
           a       rdf:Property ;
-	  nao:deprecated true;
+	  nao:deprecated true ;
           rdfs:comment "last modification date" ;
           rdfs:domain nfo:FileDataObject ;
           rdfs:label "fileLastModified" ;
