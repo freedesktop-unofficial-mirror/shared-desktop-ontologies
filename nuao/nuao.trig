@@ -52,16 +52,16 @@ nuao: {
         a rdf:Property ;
         rdfs:comment "The time of the start of the event" ;
         rdfs:domain nuao:Event ;
-        rdfs:label "start" ;
+        rdfs:label "start time" ;
         rdfs:range xsd:dateTime ;
         nrl:maxCardinality "1"^^xsd:nonNegativeInteger .
 
-    nuao:duration
+    nuao:end
         a rdf:Property ;
-        rdfs:comment "Duration of the event" ;
+        rdfs:comment "The time the event finished" ;
         rdfs:domain nuao:Event ;
-        rdfs:label "duration" ;
-        rdfs:range xsd:duration ;
+        rdfs:label "end time" ;
+        rdfs:range xsd:dateTime;
         nrl:maxCardinality "1"^^xsd:nonNegativeInteger .
 
     nuao:involves
@@ -207,7 +207,7 @@ nuao: {
           nao:serializationLanguage "TriG" ;
           nao:status "Testing" ;
           nrl:updatable "0" ;
-          nao:version "2" .
+          nao:version "3" .
 
     <http://www.semanticdesktop.org/ontologies/2010/01/25/nuao/metadata>
           a       nrl:GraphMetadata , nrl:DocumentGraph ;
