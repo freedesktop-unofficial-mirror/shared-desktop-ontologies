@@ -329,7 +329,8 @@ nie: {nie:characterSet
 
     nie:coreGraph
           a       rdf:Property ;
-          rdfs:comment "Connects the data object with the graph that contains information about it." ;
+          nao:deprecated true ;
+          rdfs:comment "Connects the data object with the graph that contains information about it. Deprecated in favor of a more generic nao:isDataGraphFor." ;
           rdfs:domain nie:DataObject ;
           rdfs:label "coreGraph" ;
           rdfs:range nrl:InstanceBase .
