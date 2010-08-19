@@ -48,9 +48,14 @@ endmacro(INSTALL_ONTOLOGY)
 # base ontologies
 install_ontology(base/rdf core)
 install_ontology(base/rdfs core)
-install_ontology(base/dcterms dc)
-install_ontology(base/dctype dc)
-install_ontology(base/dces dc)
+
+option(ENABLE_DCMI
+       "enable DCMI ontologies. This installs DCMI ontologies (http://dublincore.org/)." ON)
+if(ENABLE_DCMI)
+  install_ontology(base/dcterms dc)
+  install_ontology(base/dctype dc)
+  install_ontology(base/dces dc)
+endif(ENABLE_DCMI)
 
 # Nepomuk base ontologies
 install_ontology(nrl/nrl nepomuk)
