@@ -347,6 +347,7 @@
 
     nao:userVisible
           a rdf:Property ;
+          rdfs:domain rdfs:Resource ;
           rdfs:range xsd:boolean ;
           rdfs:label "user visible" ;
           rdfs:comment "Mark a property, class, or even resource as user visible or not. Non-user-visible entities should never be presented to the user. By default everything is user-visible." ;
