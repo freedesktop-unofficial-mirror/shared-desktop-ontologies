@@ -173,7 +173,7 @@ nie: {nie:characterSet
           rdfs:range xsd:string .
 
     nie:isPartOf
-          a       rdf:Property ;
+          a       rdf:Property, nrl:FunctionalProperty ;
           rdfs:comment "Generic property used to express containment relationships between DataObjects. NIE extensions are encouraged to provide more specific subproperties of this one. It is advisable for actual instances of DataObjects to use those specific subproperties. Note to the developers: Please be aware of the distinction between containment relation and provenance. The isPartOf relation models physical containment, a nie:DataObject (e.g. an nfo:Attachment) is a 'physical' part of an nie:InformationElement (a nmo:Message). Also, please note the difference between physical containment (isPartOf) and logical containment (isLogicalPartOf) the former has more strict meaning. They may occur independently of each other." ;
           rdfs:domain nie:DataObject ;
           rdfs:label "isPartOf" ;
@@ -335,7 +335,7 @@ nie: {nie:characterSet
           rdfs:range nrl:InstanceBase .
 
     nie:hasPart
-          a       rdf:Property ;
+          a       rdf:Property, nrl:InverseFunctionalProperty ;
           rdfs:comment "Generic property used to express 'physical' containment relationships between DataObjects. NIE extensions are encouraged to provide more specific subproperties of this one. It is advisable for actual instances of DataObjects to use those specific subproperties. Note to the developers: Please be aware of the distinction between containment relation and provenance. The hasPart relation models physical containment, an InformationElement (a nmo:Message) can have a 'physical' part (an nfo:Attachment).  Also, please note the difference between physical containment (hasPart) and logical containment (hasLogicalPart) the former has more strict meaning. They may occur independently of each other." ;
           rdfs:domain nie:InformationElement ;
           rdfs:label "hasPart" ;
